@@ -1,0 +1,138 @@
+\documentclass[11pt]{amsart}
+\setlength{\textwidth}{\paperwidth} %% for 1 inch margins
+\addtolength{\textwidth}{-2in}
+\setlength{\textheight}{\paperheight} %% for 1 inch margins
+\addtolength{\textheight}{-1.5in}
+\calclayout % centre text block horizontally
+%%%%%%%%%%%%%% PACKAGES
+%
+% amsmath, amsthm, makeidx are included in the amsart document class
+%
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}  % AMS theorem environments and proof environment -- load after amsmath
+\usepackage{latexsym}
+\usepackage{mathtools} %%% for floor and ceiling functions
+%\usepackage[pdftex,linktocpage=true,pdfborder=true]{hyperref}
+\usepackage[pdftex,colorlinks,linktocpage=true,citecolor=blue,linkcolor=magenta]{hyperref}
+
+%%%%%%%%%%%% MACROS
+\newcommand\diag{\operatorname{diag}}   %%%%%%%%% diag matrix
+\newcommand\tr{\mbox{tr}\,}   %%%%%%%%% trace
+\newcommand\C{\mathbb C}    %%%%%%%%% the set of complex numbers
+\newcommand\R{\mathbb R}    %%%%%%%%% the set of real numbers
+\newcommand\Z{\mathbb Z}    %%%%%%%%% the set of integers
+\newcommand\N{\mathbb N}
+\newcommand\Q{\mathbb Q}
+
+%% Paired Delimieters
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+%% Call as \ceil{x} or \ceil*{x}  to add \left and \right
+
+%%%%%%%%%%%% END MACROS%
+%---BEGIN DOCUMENT----------
+%
+\begin{document}
+%------------------------Front matter-----------------------
+\title[]{Peer-Evaluation of Mathematical Writing}
+%    author one information
+%\author[J.~M.~Smith]{Jerrod M.~Smith}
+%\address{Department of Mathematics \& Statistics, University of Calgary}
+%\curraddr{}
+%\email{jerrod.smith@ucalgary.ca}
+%\urladdr{}
+%\thanks{}
+\date{\today}
+\maketitle
+%-------------------Main document---------------------------
+\section*{Why are we doing this?}
+Communicating mathematical ideas clearly in writing is a skill that takes practice.  It is challenging to learn how to write mathematics well while you are immersed in learning the concepts themselves.  Evaluating the clarity of your own writing is also difficult because \textit{you know what you mean to say}.
+ 
+Our goals in evaluating the mathematical writing of ours peers are to
+\begin{enumerate}
+	\item provide useful formative feedback to our peers so that they may improve their writing,
+	\item discover that we face challenges that our peers are facing as they learn to write mathematics,
+	\item improve our own mathematical writing by analyzing and constructively critiquing the writing of others.\footnote{Recent research has shown that the best way to improve your mathematical writing is to read, analyze, and correct proofs that contain (serious) errors. See, for instance: A.~Selden and J.~Selden, \textit{Validations of Proofs Considered as Texts: Can Undergraduates Tell Whether an Argument Proves a Theorem?}. Journal for Research in Mathematics Education, Vol. 34, No. 1 (2003), pp. 4--36. (\href{http://www.jstor.org/stable/30034698}{stable link}).}
+\end{enumerate}
+
+\section*{The Rubric}
+
+\begin{center}
+\begin{tabular}{|p{2.3cm}||p{4.5cm} |p{4.5cm} |p{4.5cm} |}
+\hline
+	\textbf{Rating} & \qquad \qquad \textbf{Beginning (1)}  & \quad \qquad  \textbf{Developing (2)}   &  \qquad \textbf{Accomplished (3)}  \\
+\hline
+\hline
+Notation & Some variables and/or new/non-standard are not defined; \underline{consistent} mistakes are made with standard notation, e.g., $Z$ instead of $\Z$; $=$ used incorrectly & Variables are all defined; \underline{few mistakes} are made with standard notation; $=$ is used correctly; for example, may make mistakes with $\in$ and $\subset$ & Variables are all defined; all standard notation is used correctly; new notation is efficient and helpful\\
+\hline
+Language \& Clarity & Arguments are unclear or confusing; contains many spelling and grammar mistakes; overuse of symbols and equations instead of sentences  &  Sometimes challening to read or understand arguments, contains \underline{few} spelling and grammar mistakes; full sentences used to clarify equations & Easy to read and understand arguments; contains \underline{very few} spelling and grammar mistakes; use of full sentences balanced well with equations and symbols adding to the clarity; \\
+\hline
+Logic & Contains \textit{false} statements; \underline{begins with} or \underline{assumes} the conclusion; quantifiers ``for all", ``there exists" used incorrectly; hard to understand logical connections & Follows the proof handbook; \underline{most} logical connections clear; \underline{few} missing/implied quantifiers; all assumptions and conclusion present & Follows proof handbook; connections between statements are clear; quantifiers ``for all", ``there exists" are present and used correctly; easy to follow argument  \\
+\hline
+Completeness & Many details are missing; Theorems are used without checking assumptions; uses words like ``obvious" to cover up missing details & Few missing details; most assumptions of Theorems used are checked; things called ``obvious" really are true and easy to check & All necessary details are present; the assumptions of Theorems used are checked; nothing ``obvious" is left out \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Some Common Errors}
+
+\subsection*{Notation}
+\begin{itemize}
+	\item Declaring a variable, but forgetting to say what it is, i.e., working with $n = 2k$ but forgetting to say that $n$ and $k$ are integers.
+	\item Reusing one variable for two different purposes
+	\item Interchanging $\in$ and $\subset$
+	\item Misuse of the number zero $0$ and the empty set $\emptyset$
+	\item Misuse of the notation $a\, \vert\, b$ for ``$a$ divides $b$", i.e., do \textbf{not} write `` $2 \,\vert\, 6 = 3$".  Instead write: ``$2$ divides $6$",  ``$6$ divided by $2$ is $3$", or ``$\frac{6}{2} = 3$."
+\end{itemize}
+
+
+\subsection*{Language \& Clarity}
+\begin{itemize}
+	\item Overuse of symbols.  Often ``$\Rightarrow$" is overused and used incorrectly.
+	\item Please, please, please \textbf{don't} use $\therefore$ and $\because$.  See, it looks terrible!
+	\item Using ``Obvious", ``Clearly", etc. to cover up missing details.
+\end{itemize}
+
+\subsection*{Logic \& Mathematical Errors}
+
+\begin{itemize}
+	\item Including false implications in a proof.  For instance, writing: ``Since $x\in \R$ is nonzero, $x$ must be positive", instead of the correct statement ``Since $x\in \R$ is nonzero, we know that either $x$ is positive or $x$ is negative." 
+	\item To prove ``if $P$ then $Q$", you cannot assume that $Q$ is true -- you must suppose that $P$ is true and argue that $Q$ is true.
+	\item The negation of $P \Rightarrow Q$ is \textbf{not} ``NOT $P \Rightarrow$ NOT $Q$".  The negation of $P \Rightarrow Q$ is in fact the statement ``$P$ and NOT $Q$".
+	\item Interchanging ``there exists = $\exists$" and ``for all = $\forall$"
+	\item Writing ``for all $k\in \Z$" as part of an induction hypothesis.
+	\item Writing ``Suppose" when you mean ``Choose" (when proving an existence statement)
+	\item Writing ``Choose" when you should ``Suppose" (when proving a ``for all" statement)
+	\item The number $0$ is even (don't make the mistake of saying that ``$0$ is neither even nor odd").
+	\item The number $1$ is not prime (by definition primes are greater than $1$).
+\end{itemize}
+	
+\subsection*{Completeness}
+\begin{itemize}
+	\item Forgetting to write out the negation when you are proving that a statement is false.
+	\item Forgetting to indicate that your proof is an argument by contradiction.
+	\item Forgetting to indicate that your proof is an argument by mathematical induction.
+	\item Assuming that a proof must be written at a level appropriate for the instructor, and thus omitting important details.  Think of proof writing as an opportunity to demonstrate your clear understanding of the topic.
+	\item My advice: write your proof for your ``future-self", i.e., write down all the details that you might forget later, or write your proof for an audience of your peers.
+	\item More advice: if you are using a definition that we gave in class, make sure that you carefully prove that an object satisfies the definition, i.e., to show that $6$ is even write ``$ 6= 2 \times 3$ and since $3 \in \Z$ the number $6$ is even."
+\end{itemize}
+
+\vfill 
+
+
+%\hfill --- Jerrod M. Smith, December 2020, Calgary, AB
+
+%-------------------Bibliography----------------------------
+%% ***   Set the bibliography style.   ***
+%% (change according to your preference)
+%\bibliographystyle{amsplain}
+
+%% ***   Set the bibliography file.   ***
+%\bibliography{jerrod-refs}
+%
+
+%-------------------End document----------------------------
+\end{document}
