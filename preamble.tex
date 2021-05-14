@@ -1,0 +1,247 @@
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim} %% for command \begin{comment} \end{comment}
+\usepackage{bm} % bold math
+\usepackage{mathtools}
+\usepackage{xcolor} % to define colours
+\usepackage{todonotes}
+\usepackage{pdfpages} %% including whole pages pdf files
+\usepackage{multicol}
+%\usepackage{draftwatermark}
+%	\SetWatermarkText{Draft. Date.}
+%	\SetWatermarkScale{4}
+\usepackage[pdftex,colorlinks,linktocpage=true,citecolor=blue,linkcolor=magenta]{hyperref} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Coloured Box Environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem
+\newcounter{thm}[section] \setcounter{thm}{0}
+\renewcommand{\thethm}{\arabic{chapter}.\arabic{section}.\arabic{thm}}
+\newenvironment{thm}[2][]{%
+\refstepcounter{thm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=cyan!30]
+{\strut Theorem~\thethm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=cyan!30]
+{\strut Theorem~\thethm:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=cyan!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lemma
+\newenvironment{lem}[2][]{%
+\refstepcounter{thm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=olive!30]
+{\strut Lemma~\thethm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=olive!30]
+{\strut Lemma~\thethm:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=olive!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Corollary
+\newenvironment{cor}[2][]{%
+\refstepcounter{thm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=violet!30]
+{\strut Corollary~\thethm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=violet!30]
+{\strut Corollary~\thethm:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=violet!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Warning
+\newenvironment{warn}[2][]{%
+\refstepcounter{thm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=red!30]
+{\strut WARNING~\thethm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=red!30]
+{\strut WARNING~\thethm:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=red!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Example
+\newenvironment{eg}[2][]{%
+\refstepcounter{thm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=teal!30]
+{\strut Example~\thethm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=teal!30]
+{\strut Example~\thethm:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=teal!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exercise
+\newenvironment{xca}[2][]{%
+\refstepcounter{thm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=orange!30]
+{\strut Exercise~\thethm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=orange!30]
+{\strut Exercise~\thethm:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=orange!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Flawed Proof
+\newcounter{flaw}[section]\setcounter{flaw}{0}
+\renewcommand{\theflaw}{\arabic{chapter}.\arabic{section}.\arabic{flaw}}
+\newenvironment{flaw}[2][]{%
+\refstepcounter{flaw}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=darkgray!30]
+{\strut Flawed Proof~\theflaw};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=darkgray!30]
+{\strut Flawed Proof~\theflaw:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=darkgray!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\qed\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Proof
+\newcounter{prf}[section]\setcounter{prf}{0}
+\renewcommand{\theprf}{\arabic{chapter}.\arabic{section}.\arabic{prf}}
+\newenvironment{prf}[2][]{%
+\refstepcounter{prf}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%x
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=cyan!30]
+{\strut Proof~\theprf};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=cyan!30]
+{\strut Proof~\theprf:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=cyan!30,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\qed\end{mdframed}}
+
+%%%%%%%%%%%% MACROS %%%%%%%%%%%% MACROS
+%%%%%%%%%%%% MACROS %%%%%%%%%%%% MACROS
+%% new commands 
+\newcommand{\ip}[2]{\langle #1 , #2 \rangle}    %this is to get the correct brackets for inner product
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand\diag{\operatorname{diag}}   %%%%%%%%% diag matrix
+\newcommand\tr{\mbox{tr}\,}   %%%%%%%%% trace
+\newcommand\C{\mathbb C}    %%%%%%%%% the set of complex numbers
+\newcommand\R{\mathbb R}    %%%%%%%%% the set of real numbers
+\newcommand\Z{\mathbb Z}    %%%%%%%%% the set of integers
+\newcommand\N{\mathbb N}
+\newcommand\Q{\mathbb Q}
+\newcommand\fp{\mathbb F_p} %%% finite field with p elements
+\newcommand\fq{\mathbb F_q} %%% finite field with q elements
+\newcommand\style{\mathcal}
+\newcommand\tran{{}^t} %% Transpose on the left
+\newcommand{\eqdef}{\coloneqq} %% Def 
+\newcommand{\ds}{\displaystyle}
+
+%% math operators
+\DeclareMathOperator{\ran}{Im} %% image
+\DeclareMathOperator{\col}{col} %% column space
+\DeclareMathOperator{\row}{row} %% row space
+\DeclareMathOperator{\spn}{span} %% span
+\DeclareMathOperator{\rank}{rank} %% rank
+\DeclareMathOperator{\nullsp}{null} %% nullspace
+\DeclareMathOperator{\nullity}{nullity} %% nullity
+\DeclareMathOperator{\pr}{proj} %projection
+\DeclareMathOperator{\ev}{\bf{ev}} %% evaluation
+\DeclareMathOperator{\id}{Id} %% identity
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+%% Call as \ceil{x} or \ceil*{x}  to add \left and \right

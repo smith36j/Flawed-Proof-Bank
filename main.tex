@@ -1,0 +1,343 @@
+\documentclass[12pt]{book}
+\include{preamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%------------------------Front matter-----------------------
+\title{A Resource Bank for Writing Intensive Mathematics Courses}
+
+\author{Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva\\ and Christian Bagshaw}
+
+\date{%
+Department of Mathematics \& Statistics, University of Calgary, Calgary, Alberta, Canada, T2N 1N4\\
+\href{http://proof.ucalgaryblogs.ca}{\texttt{http://proof.ucalgaryblogs.ca}}\\[2ex]%
+lauren.dedieu@ucalgary.ca\\
+jerrod.smith@ucalgary.ca\\[2ex]
+\today
+}
+
+\maketitle
+%----------------------License Information-----------------------------
+
+\vspace{50cm}
+
+\begin{center}
+
+This work was financially supported by a grant from the Taylor Institute for Teaching and Learning at the University of Calgary.
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+
+
+\includegraphics{CC.PNG}
+
+\smallskip
+
+This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
+
+\end{center}
+
+
+
+
+%----------------------Table of Contents-----------------------------
+\clearpage
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+%----------------------Main document-----------------------------
+%----------------------PART ONE INTRODUCTION-----------------------------
+
+\chapter{How do students learn to write proofs?}
+%-----------------%-----------------
+\section{Introduction}\label{sec-intro}
+%-----------------%-----------------
+At the University of Calgary, MATH 271 Discrete Mathematics, MATH 273 Numbers and Proofs, and MATH 311 Linear Methods II often serve as students' first introduction to writing mathematical proofs.  The resources in this document are largely based on the topics covered in these classes.  These three proof-based courses are important not only in terms of content but also in helping students develop their mathematical communication skills.  A first course in writing precise mathematical proofs is a major milestone in students' mathematical careers and is often the time at which students have the opportunity to learn what \emph{doing mathematics} is really like.  
+
+Learning to write rigorous, clear and concise logical arguments, in the midst of learning mathematical content, is challenging.
+  In our experience teaching these courses, students often note that they ``don't know where to start" writing a proof.  
+  Students also often make several typical mistakes of the novice proof writer  
+  (e.g., assuming that what you want to prove is true, improper use of the `equals' symbol, confusion about how to prove that a statement is false, etc.) often despite explicit warnings about these mistakes.
+
+Recent research has shown that an effective way for students to improve their mathematical writing is to read, analyze, and correct proofs that contain (serious) errors \cite{Selden_2003}.  
+The approach to supporting students that we aim to facilitate with this resource is to provide students with an artificial sample proof that contains various mistakes and to have students identify the error and correct the proof.   
+By asking students to grapple with proofs that they know are flawed, we intend to \emph{show} our students what not to do (rather than tell them).  
+This approach has the added benefit of encouraging critical, engaged reading of mathematical texts.  
+
+Combining error-correction activities, together with scaffolding, peer-assessment, and other techniques can provide a robust learning experience for students that goes beyond asking students to ``prove it!" We hope that adding these resources, and proof-correction activities to your courses help your students too!
+
+
+%-----------------%-----------------
+\section{How to use this document}\label{sec-how-to}
+%-----------------%-----------------
+The resources in Part \hyperref[part-proofs]{I} of this document consist of
+\begin{enumerate}
+	\item sample flawed proofs,
+	\item classifications and brief explanations of the major errors in each flawed proof, and
+	\item `corrected'\footnote{Your version of a `correct' proof may differ from ours, and this in part motivated our decision to create an open resource.} versions of the proofs.
+\end{enumerate}
+These resources are largely intended as prompts for discussion activities.  We recommend that learners first engage with the flawed proof (with or without access to the corrected proof) and attempt to identify and correct the errors. Learners should then discuss their findings with peers, compare how they would correct the proof, and perhaps discuss how they would evaluate or assess the proof with a rubric.  Of course, learners could also use this resource individually to practice reading, understanding, and correcting flawed mathematical writing. \\
+
+In Part \hyperref[part-additional]{II} of this document, we've included sample activities and assessments (Chapter \ref{ch-activity}) and sample rubrics (Chapter \ref{ch-rubrics})  for self- and peer-evaluation activities. \\
+
+The error classifications (Section \ref{sec-error}) classify the type and severity of the error, but do not include explanations of \emph{why} the identified items are indeed errors. This detailed coding scheme is largely intended for use by instructors and teaching assistants. However, you may find it useful to introduce some of this language to your students to help them articulate the types of errors they are seeing (e.g. assertion, omission, false statement). \\
+
+Of course, as this document is an open resource the error classifications and corrected proofs are available to students online.  So, while the resources here will not be suitable for take-home or online assessments, we believe that the resources will be valuable in promoting student learning via independent study and discussion based activities.
+
+\include{Error/section-error-classification}
+
+%----------------------PART TWO RESOURCES-----------------------------
+\part{Flawed Proofs}\label{part-proofs}
+
+%----------------------CHAPTER THREE STATEMENTS, LOGIC, ELEMENTARY NUMBER THEORY
+\chapter{Elementary Topics}\label{ch-element}
+The topics covered in this chapter fit into the first halves of MATH 271 Discrete Mathematics and MATH 273 Numbers and Proofs at the University of Calgary, but are also common to many courses serving as an introduction to mathematical proof.  Topics include
+\begin{itemize}
+ 	\item divisibility, the gcd and modular arithmetic
+ 	\item definition of even and odd integers, and
+ 	\item basic properties of rational and real numbers.
+\end{itemize}
+In these exercises and proofs, learners are confronted with familiar notions from school mathematics in the unfamiliar setting of mathematical rigour.
+
+Given its importance as proof technique, and its difficulty for the novice learner,
+Mathematical Induction, is covered in its own dedicated chapter (see Chapter \ref{ch-ind}).
+
+%-----------------%-----------------%%
+\include{Elementary/inequality_converse_contrapositive} %MATH 271; revised
+\include{Elementary/basic_divisibility} %MATH 271; revised
+\include{Elementary/contraconv} %MATH 271; revised
+\include{Elementary/negevenint} %MATH 271; revised
+\include{Elementary/intaddfrac} %MATH 271; revised
+\include{Elementary/divisibility_sum} %MATH 271; revised
+\include{Elementary/divmodarith} %MATH 271;
+\include{Elementary/contra_parity} %MATH 271; revised
+\include{Elementary/direct_mod} %MATH 273
+\include{Elementary/gcd_multiple} % MATH 271/273; revised
+\include{Elementary/parityproperty} %MATH 273
+\include{Elementary/infinite_primes} %MATH 273
+%April 20 2021 \include{Elementary/divis_product_wrongdef} %MATH 271
+
+
+%----------------------CHAPTER FOUR MATHEMATICAL INDUCTION
+\chapter{Mathematical Induction}\label{ch-ind}
+
+Mathematical Induction is a fundamental tool in a mathematician's toolbox.  At the University of Calgary, Mathematical Induction is first introduced to students in MATH 271 Discrete Mathematics and MATH 273 Numbers and Proof.
+The exercises here involve divisibility, summation formulas, inequalities, well-ordering, and recursively defined sequences.
+
+%-----------------%-----------------
+\include{Induction/ind-div-hyp-fa} % MATH 271; revised
+\include{Induction/sum_induction} %MATH 273; revised
+\include{Induction/binary} %MATH 271/273;
+\include{Induction/inequality_induction} %MATH 271; revised
+\include{Induction/induction_multiple_base_cases} %MATH 271; revised
+\include{Induction/pascal_induction} %MATH 271; revised
+\include{Induction/wop_induction} % MATH 273; revised
+\include{Induction/recursive_induction} % MATH 271; revised
+\include{Induction/sequence_induction} %MATH 271/273 %Added April 20 2021 
+
+%----------------------CHAPTER FIVE DISCRETE MATHEMATICS
+\chapter{Discrete Mathematics}\label{ch-discrete}
+The topics in this chapter are covered in MATH 271 Discrete Mathematics at the University of Calgary.
+Topics include
+\begin{itemize}
+	\item elementary set theory	
+	\item basic properties of functions (one-to-one, onto, composition, etc.)
+	\item elementary counting problems and probability, and
+	\item equivalence relations and modular arithmetic.
+\end{itemize}
+
+%-----------------%-----------------%%%%%%
+\include{Discrete/demorgans} %MATH 271; revised
+\include{Discrete/equal_sets} %MATH 271; revised
+\include{Discrete/powerset_subset} %MATH 271; revised
+\include{Discrete/powerset_subsetagain} %MATH271/273
+\include{Discrete/set_containment} %MATH 271/273; revised
+\include{Discrete/null_contradiction_sets} %MATH 271
+\include{Discrete/injective_comp} %MATH 273; revised
+\include{Discrete/divisors_injection_surjection} %MATH 273; revised
+\include{Discrete/injective_onto_image} %MATH 271/273; revised and second version added
+\include{Discrete/cart_product} % MATH 271
+\include{Discrete/cart_product_again} % MATH 271
+\include{Discrete/almost_rational} %
+\include{Discrete/rat_from_int} %MATH 273
+\include{Discrete/counting_subsets} %MATH 271
+\include{Discrete/card_combo} %MATH 271
+\include{Discrete/condish_coins} %MATH 271
+\include{Discrete/onetoone_notonto} %MATH 271
+\include{Discrete/matrix_graf} %MATH 271
+\include{Discrete/cong_add_mult} %MATH 271
+\include{Discrete/bayes_proof} %
+\include{Discrete/z_to_n} %
+\include{Discrete/lessthan} %
+\include{Discrete/equiv_mod} %
+\include{Discrete/set_containment_subtle} %MATH 271 %Added April 20 2021 
+\include{Discrete/surjection_backwards} %MATH 271 %Added April 20 2021 
+\include{Discrete/injection_subtle} %MATH 271 %Added April 20 2021 
+
+
+%----------------------CHAPTER SIX LINEAR ALGEBRA
+\chapter{Linear Algebra}\label{ch-lin}
+The material in this chapter is designed to fit within a typical second course in abstract linear algebra and is based on the material covered in MATH 311: Linear Methods {\rm{II}} at the University of Calgary.
+
+Topics include: subspaces, span, linear independence, bases and dimension in finite dimensional real vector spaces; eigenvalues, eigenvectors and orthogonality  in $\R^n$, row and column spaces, the Rank-Nullity theorem, the Gram-Schmidt Algorithm,  similar matrices,  orthogonal diagonalization; linear transformations, kernel, image, injections and surjections, isomorphisms, inverses, the matrix of a linear transformation and change of basis.
+
+The following topics, which may appear in your course, are omitted: complex vector spaces, inner products, positive definite matrices, canonical matrix forms (i.e., Jordan Canonical Form, etc.), infinite dimensional vector spaces, and many others.
+
+%-----------------%-----------------
+\include{Linear_Algebra/skewsym} %MATH 311
+\include{Linear_Algebra/intersect_subspaces} %MATH 311
+\include{Linear_Algebra/sumsubspaces} %MATH 311
+\include{Linear_Algebra/lin_sub_v1} %MATH 311
+\include{Linear_Algebra/lin-ind-col-sp}
+\include{Linear_Algebra/lin_ind_subset} %MATH 311
+\include{Linear_Algebra/uniqueness_basis_rep} %MATH 311
+\include{Linear_Algebra/orthogindependence} %MATH 311
+\include{Linear_Algebra/similar_matrices_eigenvalues}
+\include{Linear_Algebra/column_space_containment}
+\include{Linear_Algebra/columnsspace_invert} %MATH 311
+\include{Linear_Algebra/mult_add_vectorspace} %MATH 311
+\include{Linear_Algebra/polynomial_subspace} %MATH 311
+\include{Linear_Algebra/span_minimal_subspace}
+\include{Linear_Algebra/0inspan} %MATH 311
+\include{Linear_Algebra/basis_span_poly} %MATH 311
+\include{Linear_Algebra/basis_polynomial_space}
+\include{Linear_Algebra/matrices_linear}
+\include{Linear_Algebra/lin_op_trace} %MATH 311
+\include{Linear_Algebra/scalar_op}
+\include{Linear_Algebra/one_to_one_and_onto}
+\include{Linear_Algebra/comp_lin_trans} %MATH 311
+\include{Linear_Algebra/iso_trans} %MATH 311
+\include{Linear_Algebra/compose_inverses}
+\include{Linear_Algebra/ortho_intersect}
+\include{Linear_Algebra/gram_sch_poly} %MATH 311
+\include{Linear_Algebra/ortho_inverses}
+\include{Linear_Algebra/ortho_diag} %MATH 311
+\include{Linear_Algebra/change_of_basis} %MATH 311
+
+
+%----------------------CHAPTER SEVEN ADVANCED TOPICS
+\chapter{Advanced Topics}\label{ch-adv}
+This chapter contains more advanced topics, some of which are covered in MATH 273 Numbers and Proofs at the University of Calgary, and many topics that might be covered in a first course in real analysis.
+Topics include the Well-Ordering Principle, the definition of convergence for sequences, the notion of a Cauchy sequence, elementary topology of $\R$, basic properties of complex numbers and polynomials.
+%-----------------%-----------------
+\include{Advanced/prime_product_well_ordering} %MATH 273
+\include{Advanced/conj_identities} %MATH 273
+\include{Advanced/conj_complex_poly} %MATH 273
+\include{Advanced/factor_complex_poly} %MATH 273
+\include{Advanced/sin_sinh} %Advanced
+\include{Advanced/root_limit} %MATH 273
+\include{Advanced/unique_limit} %MATH 273
+\include{Advanced/bounded_seq}
+\include{Advanced/equiv_class_reals} %MATH 273
+\include{Advanced/conv_cauchy} %Advanced
+\include{Advanced/almost_real}
+\include{Advanced/int_bound_R} %MATH 273
+\include{Advanced/compact_subset} %Advanced
+\include{Advanced/Q_notcomplete}
+\include{Advanced/gaussian_integers}
+\include{Advanced/primitive_roots}
+\include{Advanced/ftoa}
+\include{Advanced/rings}
+
+
+%----------------------PART THREE ADDITIONAL RESOURCES-----------------------------
+\part{Additional Resources}\label{part-additional}
+%-----------------%-----------------
+\chapter{Activities and Assessments}\label{ch-activity}
+In this chapter, we include some sample activities that can be adapted to use the resources from the earlier chapters.
+
+The simplest in-person activity, suitable for all of the above resources, would be a Think-Pair-Share or (small) Group-Discussion of the flawed proof.  Such an activity could then be debriefed by an instructor or teaching assistant, or a variety of follow-up activities (like a quiz where students are asked to write a correct proof of a similar statement).
+
+\include{Activity/discussion_board_1}
+\include{Activity/discussion_board_2}
+\include{Activity/reflection}
+%-----------------%-----------------
+\chapter{Rubrics}\label{ch-rubrics}
+
+In this final chapter, we provide sample self- and peer-evaluation rubrics to be used along with the activities and resources outlined in earlier chapters. We also provide a sample summative rubric that uses language inspired by Strickland and Rand's error-coding scheme (Section \ref{sec-error}).
+%-----------------%-----------------
+\section{Peer-Evaluation Rubrics}\label{sec-peer}
+%-----------------%-----------------
+Here we provide two peer-evaluation rubrics.  The first is tailored to a discrete mathematics or ``intro-to-proof" course, and the second is tailored to a course in linear algebra.   Both of the rubrics refer to a ``proof writing handbook" which we include here to provide additional context.
+\clearpage
+
+\subsection{The Proof Writing Handbook}
+Let $P$ and $Q$ be statement variables. When needed, suppose that $P=P(x)$ depends on a variable $x$.   The symbol ``$\forall$" means ``for all" or ``for any".  The symbol ``$\exists$" means ``there exists".
+\begin{center}
+\begin{tabular}{l|l}
+\textbf{Type of statement} & \textbf{What we must do to prove that it is true}\\
+\hline
+(1) If $P$, then $Q$ & Suppose that $P$ is true. \\
+(2) $\forall\, P$, $Q$ & \quad Prove that $Q$ is true. \\
+\hline 
+(3) $\exists$ $x$ $P(x)$ such that $Q$ & Choose${}^{**}$ $x$ so that $P(x)$ is true. \\
+ & \quad Prove that $Q$ is true.\\	
+\end{tabular}
+\end{center}
+${}^{**}$You \textbf{do not} need to explain how you find $x$, nor do you need to construct \textbf{all possible} $x$.
+\begin{description}
+\item[Rule \#1:] To prove that a statement is \textbf{false}, you must \textbf{write out the negation of the statement and prove that.}
+\end{description}
+
+\subsubsection*{Five Common Mistakes to Avoid}
+\begin{itemize}
+\item When proving any of the types of statements (1), (2), or (3):
+\begin{description}
+	\item[1. You cannot] suppose that $Q$ is true.
+	\item[2. You should not] overuse symbols nor violate the rules of grammar.$\dagger$
+\end{description}
+
+$\dagger$ You \textbf{must} write in full sentences and use symbols correctly.
+
+
+\item When proving a statement of the form (2) ``$\forall\, P$, $Q$":
+\begin{description}
+	\item[3. You cannot] ``choose" or exhibit an example in place of a proof.
+\end{description}
+
+\item When proving a statement of the form (3) ``$\exists$ $x$ $P(x)$ such that $Q$":
+\begin{description}
+	\item[4. You should not] attempt to construct all possible $x$ so that $P(x)$ and $Q$ are true. 
+\end{description}
+
+\item When proving a statement \textbf{by contradiction}:
+\begin{description}
+	\item[5. You cannot] claim a contradiction has been reached without explanation.$\dagger\dagger$	
+\end{description}
+
+$\dagger\dagger$ You \textbf{must} clearly identify the contradiction being made by making a statement of the form ``$P$ and NOT $P$, which is a contradiction".
+\end{itemize}
+
+\includepdf[pages=-]{Rubrics/peer-discrete.pdf}
+\includepdf[pages=-]{Rubrics/peer-linear.pdf}
+
+%-----------------%-----------------
+\section{Summative Rubrics}\label{ch-sum}
+%-----------------%-----------------
+Here is a sample summative rubric for a linear algebra course. Breaking the rubric into a \emph{Mathematics Score} and a \emph{Communication Score} helps to emphasize that mathematical communication is very important and will contribute to their grade.
+
+In practice, I usually provide this sample rubric to my students as a guide, but then fine-tune it for each individual question. In particular, for each question I break down the \emph{Mathematics Score} into concrete pieces (e.g. 1pt for showing the set is linearly independent, etc.). I grade the \emph{Communication Score} holistically. The clause that the \emph{Communication Score} may not exceed the \emph{Mathematics Score} is included so that students who trivialize the problem (e.g., submits a single sentence that contains no communication errors) do not receive a higher score than students who made several communication errors in the process of making good progress towards the problem. In practice, this clause is meant to be taken as a guideline and is not applied strictly.
+\includepdf[pages=-]{Rubrics/summative-linear.pdf}
+%-------------------Bibliography----------------------------
+%% ***   Set the bibliography style.   ***
+%% (change according to your preference)
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{amsplain}
+
+%\nocite{*}
+%% ***   Set the bibliography file.   ***
+\bibliography{sotl}
+%-----------------%-----------------
+%\appendix
+%
+%\chapter{``Thi's Bible"}
+%The following one-page handout, affectionately known at the University of Calgary as ``Thi's Bible", is designed to help novice proof writers identify exactly \emph{what needs to be done} in order to prove a mathematical statement.  In addition, some fundamental conventions and common errors are highlighted.
+%\includepdf[pages=-]{thi-bible.pdf}
+%-----------------%-----------------
+\end{document}
