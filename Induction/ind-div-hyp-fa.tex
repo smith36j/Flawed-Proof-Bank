@@ -1,0 +1,89 @@
+% Author: Jerrod Smith
+% Date: 2 July 2020
+% Revised: JMS, 3 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Mathematical Induction with Divisibility}
+
+\begin{xca}[Multiples of $8$]{xca:ind-div-hyp-fa-error}
+Prove that $5^n-4n-1$ is divisible by $8$ for all integers $n\geq 0$. 
+\end{xca}
+
+\begin{flaw}{flaw:ind-div-hyp-fa} 
+We argue by mathematical induction.
+Suppose that $n \in \Z$, $n\geq 0$.
+
+\noindent \textbf{Base case}: Consider the case $n=0$.  We see that 
+\[ 5^n - 4n - 1 = 5^0 - 4(0) - 1 = 1-1 = 0 = 8\cdot 0 \]
+is divisible by $8$.
+
+\noindent \textbf{Induction Hypothesis:} Suppose that $8$ divides $5^k - 4k -1$ for all integers $k$ such that $k\geq 0$.
+
+We must show that $8$ divides $5^{k+1} - 4(k+1) -1$.
+By the induction hypothesis, there exists an integer $\ell$ such that $5^k-4k-1 = 8\ell$.
+Now, we see that
+\begin{align*}
+	5^{k+1} - 4(k+1) -1 & = 5^{k+1} - 4k -4 - 1 \\
+	& = 5\cdot 5^k -4k -5 \\
+	& = 5\cdot 5^k -4k - 16k + 16k -5 & (\text{adding $0=-16k+16k$})\\
+	& = 5\cdot 5^k - 20k - 5 + 16k \\
+	& = 5(5^k -4k -1) + 16 k \\
+	& = 5(8\ell) + 16 k & (\text{by the induction hypothesis})\\
+	& = 8(5\ell + 2k),
+\end{align*}
+and since $5\ell + 2k \in \Z$, we have that $5^{k+1} - 4(k+1) -1$ is divisible by $8$, as required.
+
+We conclude, by the Principle of Mathematical Induction, that $8$ divides $5^n-4n-1$, for all integers $n\geq 0$.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There is only one error
+ in the Flawed Proof \ref{flaw:ind-div-hyp-fa}. 
+ 
+ 
+ \begin{description}
+ 	\item[F-A] In the Induction Hypothesis, the entire result that we are attempting to prove is asserted.  %Precisely, the quantifiers ``for all" and ``there exists" are interchanged.  We should not suppose that ``$8$ divides $5^k - 4k -1$ \textbf{for all} integers $k$ such that $k\geq 0$", but instead we should assume that ``$8$ divides $5^k - 4k -1$ \textbf{for some} integer $k$, where $k\geq 0$."
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental Assertion (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:ind-div-hyp-fa}. 
+
+\begin{prf}{prf:ind-div-hyp-fa-error}
+We argue by mathematical induction.
+Suppose that $n \in \Z$, $n\geq 0$.
+
+\noindent \textbf{Base case}: Consider the case $n=0$.  We see that 
+\[ 5^n - 4n - 1 = 5^0 - 4(0) - 1 = 1-1 = 0 = 8\cdot 0 \]
+is divisible by $8$.
+
+\noindent \textbf{Induction Hypothesis:} Suppose that there is an integer $k$, $k\geq 0$, such that $8$ divides $5^k - 4k -1$.
+
+We must show that $8$ divides $5^{k+1} - 4(k+1) -1$.
+By the induction hypothesis, there exists an integer $\ell$ such that $5^k-4k-1 = 8\ell$.
+Now, we see that
+\begin{align*}
+	5^{k+1} - 4(k+1) -1 & = 5^{k+1} - 4k -4 - 1 \\
+	& = 5\cdot 5^k -4k -5 \\
+	& = 5\cdot 5^k -4k - 16k + 16k -5 & (\text{adding $0=-16k+16k$})\\
+	& = 5\cdot 5^k - 20k - 5 + 16k \\
+	& = 5(5^k -4k -1) + 16 k \\
+	& = 5(8\ell) + 16 k & (\text{by the induction hypothesis})\\
+	& = 8(5\ell + 2k),
+\end{align*}
+and since $5\ell + 2k \in \Z$, we have that $5^{k+1} - 4(k+1) -1$ is divisible by $8$, as required.
+
+We conclude, by the Principle of Mathematical Induction, that $8$ divides $5^n-4n-1$, for all integers $n\geq 0$.
+\end{prf}

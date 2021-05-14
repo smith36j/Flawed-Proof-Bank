@@ -1,0 +1,62 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: JMS, 3 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Strong Induction}
+
+\begin{xca}[Strong Induction with Multiple Base Cases]{xca:induction_multiple_base}
+Let $n \geq 12$ be an integer. Prove there exists non-negative integers $a$ and $b$ such that $n = 4a + 5b$. 
+\end{xca}
+
+\begin{flaw}{flaw:induction_multiple_base} 
+
+We will proceed with strong induction. 
+
+\noindent \textbf{Base Case}: If $n = 12$, then we can write $12 = 4(3) + 5(0)$. So our base case holds.  
+
+\noindent  \textbf{Induction Hypothesis}: Suppose $m$ is an integer greater than $12$ such that for all integers $k$ with $12 \leq k < m$ we have that $k$ can be written as $k = 4a + 5b$ for non-negative integers $a$ and $b$. 
+
+
+\noindent \textbf{Induction Step}: If we take $m$, note that $m-4$ can be written as $m-4 = 4a + 5b$ for some non-negative integers $a$ and $b$. Rearranging we get $m = 4(a+1) + 5b$. Since $a$ is non-negative, so is $a+1$. Thus the statement holds for $m$. 
+
+Therefore by the principal of strong induction, every integer $n$ greater than or equal to $12$ can be written in the form $n = 4a + 5b$ for non-negative integers $a$ and $b$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:induction_multiple_base}. 
+ 
+ \begin{description}
+    \item[C - FI] In the induction step, the induction hypothesis does not imply that $m-4$ can be written as $m-4 = 4a + 5b$ for non-negative integers $a$ and $b$. (If $m=15$, $m-4 = 11$ cannot be written in this way). 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Content False Implication (C-FI)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:induction_multiple_base}. 
+
+\begin{prf}{prf:induction_multiple_base} 
+Let $n \in \Z$, $n\geq 12$. We will proceed with strong induction. 
+
+\noindent \textbf{Base Case}: If $n = 12$, then we can write $12 = 4(3) + 5(0)$. If $n = 13$, then we can write $13 = 4(2) + 5(1)$. If $n = 14$, then we can write $14 = 4(1) + 5(2)$. If $n = 15$, then we can write $15 = 4(0) + 5(3)$. So these four base cases hold. 
+
+\noindent \textbf{Induction Hypothesis}: Suppose $m$ is an integer greater than $15$ such that for all integers $k$ with $12 \leq k < m$ we have that $k$ can be written as $k = 4a + 5b$ for non-negative integers $a$ and $b$. 
+
+
+\noindent \textbf{Induction Step}: We must prove that there exist non-negative integers $a'$ and $b'$ so that $m = 4a' + 5b'$.  Since $m \geq 16$ and $m-4 \geq 12$, the induction hypothesis implies that $m-4$ can be written as $m-4 = 4a + 5b$ for some non-negative integers $a$ and $b$. Rearranging we get $m = 4(a+1) + 5b$. Since $a$ is non-negative, so is $a+1$. Thus the desired claim holds for $m$. 
+
+Therefore by the principal of strong induction, every integer $n$ greater than or equal to $12$ can be written in the form $n = 4a + 5b$ for some non-negative integers $a$ and $b$
+\end{prf}

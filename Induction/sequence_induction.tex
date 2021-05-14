@@ -1,0 +1,78 @@
+% Author: Kimberly Golubeva
+% Date: 20 April 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Strong Induction with Sequences}
+
+\begin{xca}{xca:sequence_induction}
+Let $a_0$, $a_1$, $a_2$, $\cdots$ be the sequence defined by $a_0=12$, $a_1=29$ and $a_n = 5a_{n-1} - 6a_{n-2}$ for all integers $n \geq 2$. Prove that $a_n = 5\cdot3^n + 7\cdot 2^n$ for all integers $n \geq 0$.
+\end{xca}
+
+\begin{flaw}{flaw:sequence_induction} %change the label
+\textbf{Base Cases (n= 0,1):} 
+$$a_0 = 12 = 5 + 7 = 5 \cdot 3^0 + 7\cdot 2^0\;.$$
+$$a_1 = 29 = 15 + 14 = 5 \cdot 3^1 + 7\cdot 2^1\;.$$
+\textbf{Inductive Hypothesis:} Let $k \geq 2$ be an integer and suppose that 
+$a_m = 5\cdot3^m + 7\cdot 2^m$ for all integers where $0 \leq m \leq k.$ We want to prove that $a_k = 5\cdot3^k + 7\cdot 2^k$. 
+
+Then \begin{align*}
+    a_k &= 5a_{k-1} - 6a_{k-2} \\
+    &= 5(5\cdot3^{k-1} + 7\cdot 2^{k-1}) - 6(5\cdot3^{k-2} + 7\cdot 2^{k-2}) \\
+    &= 25\cdot3^{k-1} + 35\cdot 2^{k-1} - 6\cdot 5\cdot3^{k-2} - 6\cdot 7\cdot 2^{k-2}) \\
+    &= 25\cdot3^{k-1} + 35\cdot 2^{k-1} - 10\cdot3^{k-1} - 21\cdot 2^{k-1}) \\
+    &=(25 - 10)3^{k-1} + (35-21) 2^{k-1} \\
+    &= (15)3^{k-1} + (14) 2^{k-1} \\
+    &= 5\cdot3^k + 7\cdot 2^k
+\end{align*}
+Thus, 
+$a_n = 5\cdot3^n + 7\cdot 2^n$ for all integers $n \geq 0$.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+ in the Flawed Proof \ref{flaw:sequence_induction}. %change the label
+
+ 
+ \begin{description}
+ 	\item[C-OS:] By letting $k \geq 2$ and then supposing that the inductive hypothesis holds for $0 \leq m \leq k$, the case where $n=2$ is unverified. The correct statement is to suppose that the inductive hypothesis holds for $0\leq~m < k$ or $0 \leq m \leq k-1$.
+ 	\item [C-A:] Asserting that the result is true for $n=2$ without verification.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Omitted Section (C-OS)
+	\item   Content Assertion (C-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:sequence_induction}. %change the label
+
+\begin{prf}{prf:sequence_induction} %change the label
+\textbf{Base Cases (n= 0,1):} 
+$$a_0 = 12 = 5 + 7 = 5 \cdot 3^0 + 7\cdot 2^0\;.$$
+$$a_1 = 29 = 15 + 14 = 5 \cdot 3^1 + 7\cdot 2^1\;.$$
+\textbf{Inductive Hypothesis:} Let $k \geq 2$ be an integer and suppose that 
+$a_m = 5\cdot3^m + 7\cdot 2^m$ for all integers where $0 \leq m < k.$ We want to prove that $a_k = 5\cdot3^k + 7\cdot 2^k$. 
+
+Then \begin{align*}
+    a_k &= 5a_{k-1} - 6a_{k-2} \\
+    &= 5(5\cdot3^{k-1} + 7\cdot 2^{k-1}) - 6(5\cdot3^{k-2} + 7\cdot 2^{k-2}) \\
+    &= 25\cdot3^{k-1} + 35\cdot 2^{k-1} - 6\cdot 5\cdot3^{k-2} - 6\cdot 7\cdot 2^{k-2}) \\
+    &= 25\cdot3^{k-1} + 35\cdot 2^{k-1} - 10\cdot3^{k-1} - 21\cdot 2^{k-1}) \\
+    &=(25 - 10)3^{k-1} + (35-21) 2^{k-1} \\
+    &= (15)3^{k-1} + (14) 2^{k-1} \\
+    &= 5\cdot3^k + 7\cdot 2^k
+\end{align*}
+Thus, 
+$a_n = 5\cdot3^n + 7\cdot 2^n$ for all integers $n \geq 0$.
+\end{prf}

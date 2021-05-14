@@ -1,0 +1,67 @@
+% Author: Christian Bagshaw
+% Date: 2020
+% Revised: JMS, Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Induction and Well-Ordering}
+
+\begin{xca}[Induction Implies Well-Ordering]{xca:wop_induction}
+Prove that the principle of strong induction implies the Well-Ordering Principle. 
+\end{xca}
+
+\begin{flaw}{flaw:wop_induction} 
+
+We will use strong induction to prove the Well-Ordering Principle. Let $X \subseteq \mathbb{N}$ and define $P(n)$ as ``if $n \in X$, then $X$ has a least element". We will apply strong induction to $P(n)$ with $n_0 = 1$. \\
+
+\noindent\textbf{Base Case}: Consider the case when $n=1$. Since $1$ is the smallest of all natural numbers, if $1 \in X$ then $X$ has a least element, 1 itself. Thus $P(1)$ holds. 
+
+\noindent\textbf{Induction Hypothesis}: Suppose that $n > 1$ and it holds true for $n-1$. 
+
+
+\noindent\textbf{Induction Step}: Suppose $n \in X$. If $X$ contains any element less than $n$, then by the induction hypothesis $X$ contains a least element. On the other hand, if $X$ does not contain any element less than $n$ then $n$ is its least element. Thus $P(n)$ holds.  \\
+
+
+Therefore by the principle of strong induction, $P(n)$ holds for all natural numbers $n$. This means that for any subset $X$ of the natural numbers, if $X$ contains some $n \in \mathbb{N}$ (that is, if $X$ is non-empty) then $X$ has a least element. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:wop_induction}. 
+ 
+ \begin{description}
+    \item[WM] The author is attempting to use induction, not strong induction.  
+    \item[C-LU] The induction hypothesis is imprecise.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Wrong Method (WM)
+	\item Content Locally Unintelligible (C-LU)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:wop_induction}. 
+
+\begin{prf}{prf:wop_induction} 
+We will use strong induction to prove the Well-Ordering Principle. Let $X \subseteq \mathbb{N}$ and define $P(n)$ to be the statement ``if $n \in X$, then $X$ has a least element". We will apply strong induction to $P(n)$ with $n_0 = 1$. \\
+
+\noindent\textbf{Base Case}: Consider the case when $n=1$.  Suppose that $1 \in X$, since $1$ is the smallest of all natural numbers, then $X$ has a least element, 1 itself. Thus $P(1)$ holds. 
+
+\noindent\textbf{Induction Hypothesis}: Suppose that $n > 1$ and that for all $k \in \mathbb{N}$ with $1 \leq k < n$, if $k \in X$ then $X$ has a least element. That is, suppose $P(k)$ holds for $1 \leq k < n$. 
+
+\noindent\textbf{Induction Step}: Suppose $n \in X$. If $X$ contains any natural number less than $n$, then by the induction hypothesis $X$ contains a least element. On the other hand, if $X$ does not contain any element less than $n$ then $n$ is its least element. Thus $P(n)$ holds.  \\
+
+
+Therefore by the principle of strong induction, $P(n)$ holds for all natural numbers $n$. This means that for any subset $X$ of the natural numbers, if $X$ contains some $n \in \mathbb{N}$ (that is, if $X$ is non-empty) then $X$ has a least element. 
+
+
+\end{prf}

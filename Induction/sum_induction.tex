@@ -1,0 +1,85 @@
+% Author: Kimberly Golubeva
+% Date: 27 July 2020
+% Revised: JMS 3 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Summation Formula Induction}
+
+\begin{xca}{xca:sum_induction}
+Prove that
+$$\sum_{i=1}^n i = \frac{n(n+1)}{2}\;,$$
+ for all integers $n \geq 1.$
+\end{xca}
+
+
+\begin{flaw}{flaw:sum_induction} 
+\textbf{Base Case (n=1):} 
+\begin{align*}
+    \sum_{i=1}^1 i & = \frac{1+(1+1)}{2} \\
+    1 &= \frac{2}{2} \\
+    1 &= 1
+\end{align*}
+\textbf{Induction Hypothesis:} Suppose that $k \geq 1$ is an integer and that 
+$$\sum_{i=1}^k i = \frac{k(k+1)}{2}\;.$$ Then
+$$\sum_{i=1}^{k+1} i = \frac{(k+1)(k+2)}{2}\;.$$
+So
+\begin{align*}
+    \sum_{i=1}^{k+1} i &= \left(\sum_{i=1}^k i\right) + (k+1) \\
+    &= \frac{k(k+1)}{2} + (k+1) & (\text{by the IH})\\
+    &= \frac{k(k+1) + 2(k+1)}{2} \\
+    &= \frac{(k+1)(k+2)}{2}\;.
+\end{align*}
+Thus, 
+$$\sum_{i=1}^n i = \frac{n(n+1)}{2}\;,$$
+ for all integers $n \geq 1.$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:sum_induction}. 
+
+ 
+ \begin{description}
+ 	\item[C-FI/C-A:] The base contains a false implication.  Moreover, the base case begins with the assertion of what needs to be shown.
+ 	\item[C-A:] The induction hypothesis contains the assertion of the induction step.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content False Implication (C-FI)
+	\item   Content Assertion (C-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:sum_induction}. 
+
+\begin{prf}{prf:sum_induction} 
+Suppose that $n$ is an integer and $n\geq 1$.
+
+\noindent \textbf{Base Case (n=1):} Suppose $n=1$. Then
+$$\sum_{i=1}^1 i = 1 = \frac{2}{2} = \frac{1(2)}{2} = \frac{1(1+1)}{2}.$$ 
+\textbf{Induction Hypothesis:} Suppose that $k \geq 1$ is an integer and that 
+$$\sum_{i=1}^k i = \frac{k(k+1)}{2}\;.$$
+We want to prove that 
+$$\sum_{i=1}^{k+1} i = \frac{(k+1)(k+2)}{2}\;.$$
+It follows that 
+\begin{align*}
+    \sum_{i=1}^{k+1} i &= \left(\sum_{i=1}^k i\right) + (k+1) \\
+    &= \frac{k(k+1)}{2} + (k+1)  & (\text{by the induction hypothesis})\\
+    &= \frac{k(k+1) + 2(k+1)}{2} \\
+    &= \frac{(k+1)(k+2)}{2}\;.
+\end{align*}
+Thus, by induction, 
+$$\sum_{i=1}^n i = \frac{n(n+1)}{2}\;,$$
+ for all integers $n \geq 1.$
+\end{prf}

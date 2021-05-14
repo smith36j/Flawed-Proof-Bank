@@ -1,0 +1,88 @@
+% Author: Kimberly Golubeva
+% Date: 6 August 2020
+% Revised: JMS, 3 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Inequality Induction}
+
+\begin{xca}{xca:inequality_induction}
+Prove by induction that 
+$$\sum_{i=1}^n \frac{1}{\sqrt{i}} > \sqrt{n}\;,$$
+for all integers $n \geq 2.$
+\end{xca}
+
+\begin{flaw}{flaw:inequality_induction} 
+\textbf{Base Case (n=2):} 
+$$\sum_{i=1}^2 \frac{1}{\sqrt{i}} = \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} = \frac{\sqrt{2}+1}{\sqrt{2}} >  \frac{1 + 1}{\sqrt{2}} = \frac{2}{\sqrt{2}} = \sqrt{2}\;.$$ 
+
+\noindent \textbf{Induction Hypothesis:} Suppose that 
+$\ds \sum_{i=1}^k \frac{1}{\sqrt{i}} > \sqrt{k}\;.$
+
+\noindent We want to prove that 
+$\ds \sum_{i=1}^{k+1} \frac{1}{\sqrt{i}} > \sqrt{k+1}\;.$
+
+\noindent From the inductive hypothesis,
+\begin{align*}
+    \sum_{i=1}^{k+1} \frac{1}{\sqrt{i}} &= \sum_{i=1}^{k} \frac{1}{\sqrt{i}} + \frac{1}{\sqrt{k+1}} = \sqrt{k+1}\;.
+\end{align*}
+Thus, for all integers $n \geq 2,$
+$$\sum_{i=1}^n \frac{1}{\sqrt{i}} > \sqrt{n}\;.$$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:inequality_induction}. 
+
+ 
+ \begin{description}
+ 	\item[N-N:] The integer $k$ is undefined and not quantified. 
+ 	\item[C-LO:] Failed to state a range for $k$ in the inductive step. 
+ 	\item[F-FI:] The induction hypothesis was not used where it is claimed to be invoked.
+ 	\item[FS:] The claimed equality $$\sum_{i=1}^{k} \frac{1}{\sqrt{i}} + \frac{1}{\sqrt{k+1}}
+    = \sqrt{k+1}\;,$$
+    is not justified, and is in fact false.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Novice Notation (N-N)
+	\item   Content Local Omission (C-LO)
+	\item   Fundamental False Implication (F-FI) 
+	\item   False Statement (FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:inequality_induction}. 
+
+\begin{prf}{prf:inequality_induction} 
+Suppose that $n \geq 2$ is an integer.
+
+\noindent \textbf{Base Case (n=2):} Consider $n=2$.  We have
+$$\sum_{i=1}^2 \frac{1}{\sqrt{i}} = \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} = \frac{\sqrt{2}+1}{\sqrt{2}} >  \frac{1 + 1}{\sqrt{2}} = \frac{2}{\sqrt{2}} = \sqrt{2}\;.$$ 
+
+\noindent \textbf{Induction Hypothesis:} Suppose that $k \geq 2$ is an integer and suppose that 
+$\ds\sum_{i=1}^k \frac{1}{\sqrt{i}} > \sqrt{k}\;.$
+
+\noindent We want to prove that 
+$\ds \sum_{i=1}^{k+1} \frac{1}{\sqrt{i}} > \sqrt{k+1}\;.$
+
+\noindent From the induction hypothesis, it follows that 
+\begin{align*}
+    \sum_{i=1}^{k+1} \frac{1}{\sqrt{i}} &= \sum_{i=1}^{k} \frac{1}{\sqrt{i}} + \frac{1}{\sqrt{k+1}} \\
+    &> \sqrt{k} + \frac{1}{\sqrt{k+1}} \\
+    &= \frac{\sqrt{k}\sqrt{k+1}+1}{\sqrt{k+1}} \\
+    &>\frac{k+1}{\sqrt{k+1}} \\
+    &= \sqrt{k+1}\;.
+\end{align*}
+Thus, by mathematical induction, for all integers $n \geq 2,$
+$$\sum_{i=1}^n \frac{1}{\sqrt{i}} > \sqrt{n}\;.$$
+\end{prf}

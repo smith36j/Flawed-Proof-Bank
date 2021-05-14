@@ -1,0 +1,108 @@
+% Author: Jerrod Smith
+% Date: 9 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{A recursive sequence}
+
+\begin{xca}{xca:label}
+	The sequence $\{b_n\}_{n=0}^\infty = \{b_0,b_1,b_2,\ldots\}$ is defined by: $b_0 = 1$, $b_1 = 8$, and for all integers $n\geq 2$, \[b_n = b_{n-1}+2b_{n-2}\]  Prove that $b_n = 3 (2^n) - 2(-1)^n$, for all integers $n\geq 0$.
+\end{xca}
+
+\begin{flaw}{flaw:rec-seq-ind} 
+Suppose $n$ is a non-negative integer.
+
+\noindent\textbf{Base case}
+
+If $n=0$, then $b_0 = 3(2^0)-2(-1)^0 = 3(1) -2(1) = 3-2=1$.
+
+If $n=1$, then $b_1 = 3(2^1)-2(-1)^2 = 3(2) -2(-1) = 6+2 = 8$.
+
+So the base cases hold.
+
+\noindent\textbf{Induction Hypothesis}
+
+Suppose that for all integers $k\geq 1$, we have $b_m  = 3 (2^m) - 2(-1)^m$, for all integers $0 \leq m \leq k$.
+
+\noindent\textbf{Inductive Step}
+
+We must show that $b_{k+1} = 3 (2^{k+1}) - 2(-1)^{k+1}$.
+
+Since $k+1 \geq 2$, by definition of $b_{k+1}$, we see that
+\begin{align*}
+	b_{k+1} %& = b_{k+1-1} + 2b_{k+1-2}	\\
+			& = b_{k} + 2 b_{k-1} \\
+			& = 3 (2^k) - 2(-1)^k + 2[ 3 (2^{k-1}) - 2(-1)^{k-1} ] & (\text{by the induction hypothesis})\\
+			%\& = 3(2^k) - 2(-1)^k + 3(2^k) - 4(-1)^{k-1} \\
+			%& = 3(2^k) + 3(2^k) - 2(-1)^k -4(-1)^{k-1}\\
+			%& = 2\cdot 3(2^k) -2(-1)^{k-1}[(-1) + 2] \\
+			%& = 3(2^{k+1}) - 2(-1)^{k-1}(1) \\
+			%& = 3(2^{k+1}) - 2(-1)^{k-1}(-1)^2 & (\text{since $1=(-1)^2$})\\ 
+			& = 3(2^{k+1}) - 2(-1)^{k+1},
+\end{align*}
+as required.  
+
+We conclude, by the Principle of Mathematical Induction (Strong Form), that $b_n = 3 (2^n) - 2(-1)^n$, for all integers $n\geq 0$.	
+
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:rec-seq-ind}. 
+
+ 
+ \begin{description}
+ 	\item[C-A] Result is asserted in the base case.	
+ 	\item[F-A] Entire result is asserted in the induction hypothesis.
+ 	\item[N-A] Calculation in inductions step could use more detail.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	 Content Assertion (C-A)
+	\item    Fundamental Assertion (F-A)
+	\item    Novice Assertion (N-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:rec-seq-ind}. 
+
+\begin{prf}{prf:rec-seq-ind} 
+Suppose that $n \in \Z$, $n\geq 0$.
+
+\noindent\textbf{Base case:} Consider $n=0$ and $n=1$.
+If $n=0$, then \[3(2^n) - 2(-1)^n = 3(1) - 2(1) = 3-2 = 1 = b_0.\]
+If $n=1$, then\[3(2^n) - 2(-1)^n = 3(2) - 2(-1) = 6+2 = 8 = b_1.\]
+
+\noindent\textbf{Induction Hypothesis:} Suppose that there exists an integer $k\geq 1$ such that for all integers $m$ if $0 \leq m \leq k$, then $b_m  = 3 (2^m) - 2(-1)^m$.
+
+\noindent\textbf{Inductive Step}
+
+We must show that $b_{k+1} = 3 (2^{k+1}) - 2(-1)^{k+1}$.
+
+Since $k+1 \geq 2$, by definition of $b_{k+1}$, we see that
+\begin{align*}
+	b_{k+1} & = b_{k+1-1} + 2b_{k+1-2}	\\
+			& = b_{k} + 2 b_{k-1} \\
+			& = 3 (2^k) - 2(-1)^k + 2[ 3 (2^{k-1}) - 2(-1)^{k-1} ] & (\text{by the induction hypothesis})\\
+			& = 3(2^k) - 2(-1)^k + 3(2^k) - 4(-1)^{k-1} \\
+			& = 3(2^k) + 3(2^k) - 2(-1)^k -4(-1)^{k-1}\\
+			& = 2\cdot 3(2^k) -2(-1)^{k-1}[(-1) + 2] \\
+			& = 3(2^{k+1}) - 2(-1)^{k-1}(1) \\
+			& = 3(2^{k+1}) - 2(-1)^{k-1}(-1)^2 & (\text{since $1=(-1)^2$})\\ 
+			& = 3(2^{k+1}) - 2(-1)^{k+1},
+\end{align*}
+as required.  
+
+We conclude, by the Principle of Mathematical Induction (Strong Form), that $b_n = 3 (2^n) - 2(-1)^n$, for all integers $n\geq 0$.	
+
+\end{prf}
