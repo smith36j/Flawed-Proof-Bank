@@ -1,0 +1,68 @@
+% Author: Kimberly Golubeva
+% Date: 10 August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Definition of a Subspace}
+
+\begin{xca}{xca:polynomial_subspace}
+Consider the vectorspace $P_3$, where $P_3$ is the space of polynomials with degree less than or equal to $3.$ Let $$S_1 = \{p(x) : p(1) = 0\} \subseteq P_3 \;.$$ Is $S_1$ a subspace of $P_3$?
+
+
+\end{xca}
+
+\begin{flaw}{flaw:polynomial_subspace} %change the label
+Yes, $S_1$ is a subspace of $P_3.$ We will prove this using the Subspace Test.
+
+\begin{enumerate}
+    \item \textbf{$\vec{0} \in P_3$ is in $S_1:$} In $P_3$, $\vec{0}$ is given by the constant polynomial $\vec{0} = q(x) = 0.$ By definition of $S_1$, we have $q(1) = 0$, which implies that $\vec{0} \in S_1.$
+    \item \textbf{$S_1$ is closed under addition:} Let $p(x), q(x) \in S_1.$ Then, by definition of $S_1, p(1) = q(1) = 0.$ Thus,
+    $$(p+q)(1) = p(1) + q(1) = 0 + 0 = 0\;,$$
+    which implies $(p+q)(x) \in S_1$ and so $S_1$ is closed under addition.
+    \item \textbf{$S_1$ is closed under multiplication:} Let $p(x), q(x) \in S_1.$ Then, by definition of $S_1, p(1) = q(1) = 0.$ Thus,
+    $$p(1)q(1)=0\times 0 =0 \;,$$
+    which implies $(pq)(x) \in S_1$ and so $S_1$ is closed under multiplication.
+\end{enumerate}
+Since $S_1 \subseteq P_3$ and satisfies the conditions of the Subspace Test, we can conclude that it is a subspace.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+ in the Flawed Proof \ref{flaw:polynomial_subspace}. %change the label
+
+
+ \begin{description}
+ 	\item[EO-(F-MT):] The third condition of the Subspace Test is closure under scalar multiplication (not closure under multiplication). This led to the verification of closure under scalar multiplication to be omitted from the proof.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Error-caused Omission due to Fundamental Misusing Theorem (EO-(F-MT))
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:polynomial_subspace}. %change the label
+
+\begin{prf}{prf:polynomial_subspace} %change the label
+Yes, $S_1$ is a subspace of $P_3.$ We will prove this using the Subspace Test.
+
+\begin{enumerate}
+    \item \textbf{$\vec{0} \in P_3$ is in $S_1:$} In $P_3$, $\vec{0}$ is given by the constant polynomial $\vec{0} = q(x) = 0.$ Since $\vec{0} = q(x) = 0$ sends everything to 0, we have $q(1) = 0$, which implies that $\vec{0} \in S_1.$
+    \item \textbf{$S_1$ is closed under addition:} Let $p(x), q(x) \in S_1.$ Then,  we know $p(1) = q(1) = 0.$ Thus,
+    $$(p+q)(1) = p(1) + q(1) = 0 + 0 = 0\;,$$
+    which implies $(p+q)(x) \in S_1$ and so $S_1$ is closed under addition.
+    \item \textbf{$S_1$ is closed under scalar multiplication:} Let $p(x) \in S_1.$ Then, we know $p(1) = 0.$ Further, consider $k \in \mathbb{R}.$ Then,
+    $$(kp)(1)=kp(1)=k(0)=0 \;,$$
+    which implies $(kp)(x) \in S_1$ and so $S_1$ is closed under scalar multiplication.
+\end{enumerate}
+Since $S_1 \subseteq P_3$ and satisfies the conditions of the Subspace Test, we can conclude that $S_1$ is a subspace of $P_3$.
+\end{prf}

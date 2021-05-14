@@ -1,0 +1,93 @@
+% Author: Lauren DeDieu
+% Date: 10 July 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Subspaces and Nullspace}
+
+\textbf{Subspace Test:} A set $U\subseteq\mathbb{R}^n$ is called a \textbf{subspace} of $\mathbb{R}^n$ if it satisfies the following:
+\begin{itemize}
+\item Zero Vector: $\vec{0}\in U$.
+\item Closed Under Addition: $\vec{x},\vec{y}\in U \Rightarrow\vec{x}+\vec{y}\in U$.
+\item Closed Under Scalar Multiplication: $\vec{x}\in U \Rightarrow k\vec{x}\in U \, \forall \, k\in\mathbb{R}$.
+\end{itemize}
+
+\begin{xca}{xca:lin-ind-col-sp}
+Let $A$ be an $m\times n$ matrix. Prove that $\mathrm{null}(A)$ is a subspace of $\mathbb{R}^n$ by using the definition of a subspace (i.e. the Subspace Test).
+\end{xca}
+
+\begin{flaw}{flaw:lin_sub_v1}
+\[\mathrm{null}(A)=\{\vec{x}\,|\,A\vec{x}=\vec{0}\}.\]
+
+For a set to be a subspace 3 conditions must hold:
+
+\begin{enumerate}
+\item closed under addition
+\item closed under multiplication
+\item must contain $\vec{0}$
+\end{enumerate}
+
+Members of $\mathrm{nul}(A)$ will have $\mathrm{dim}(\mathrm{null}(A))=n$ since $A$ is an $m\times n$ matrix. \\
+
+Thus ($\vec{x}+\vec{y})\in\mathbb{R}^n$ for any arbitrary $\vec{y}\in\mathbb{R}^n$ holds. \\
+
+And $(k\vec{x})\in\mathbb{R}$ for any arbitrary scalar $\in\mathbb{R}$ holds. \\
+
+And $\vec{x}=\vec{0}$ is implied by the line above where $k=0$.
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors in the Flawed Proof \ref{flaw:lin_sub_v1}.
+
+\begin{description}
+	\item[C-FI:] The matrix $A$ having size $m\times n$ does not imply $\mathrm{dim}(\mathrm{null}(A))=n$.
+\item[EO-(C-VG):] Misunderstanding of what it means for a set to be closed under addition and closed under scalar multiplication leads to omission of major parts of the proof.
+\item[C-A] Claiming closed under scalar multiplication implies contains the zero vector, but hasn't shown $\mathrm{null}(A)$ is nonempty.
+\item[N-O] The variable $\vec{x}$ is not defined. 
+\item[N-N] Using $\in$ in the middle of a sentence: ``for any arbitrary scalar $\in\mathbb{R}$''.
+\item[N-FI] The claim $(k\vec{x})\in\mathbb{R}$ is false.
+\item[WM] Not showing that the zero vector is contained in $\mathrm{null}(A)$ using the definition of a subspace as the prompt requires.
+\end{description}
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content False Implication (C-FI)
+	\item 	Error-Caused Omission due to Content Vocabulary $\&$ Grammar (EO-(C-VG)) (EO-(C-VG))
+    \item   Content Assertion (C-A)
+    \item Novice Local Omission (N-O)
+    \item Novice Notation (N-N)
+    \item Novice False Implication
+    \item   Wrong Method (WM)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:lin_sub_v1}.
+\begin{prf}{prf:lin_sub_v1}
+By definition, \[\mathrm{null}(A)=\{\vec{x}\in\mathbb{R}^n\,|\, A\vec{x}=\vec{0}\}.\] \\
+
+\noindent The zero vector $\vec{0}\in\mathrm{null}(A)$, since $A\vec{0}=\vec{0}$. \\
+
+\noindent Suppose $\vec{x},\vec{y}\in\mathrm{null}(A)$. By definition, this means $A\vec{x}=\vec{0}$ and $A\vec{y}=\vec{0}$. Hence,
+\begin{align*}
+A(\vec{x}+\vec{y}) &= A\vec{x}+A\vec{y} \\
+&= \vec{0} + \vec{0} \\
+&= \vec{0},
+\end{align*}
+and hence $\vec{x}+\vec{y}\in\mathrm{null}(A)$. \\
+
+\noindent Let $k\in\mathbb{R}$ and $\vec{x}\in\mathrm{null}(A)$. Then
+\begin{align*}
+A(k\vec{x}) &= k(A\vec{x}) \\ &= k\vec{0} \\ &= \vec{0},
+\end{align*}
+and hence $k\vec{x}\in\mathrm{null}(A)$. \\
+
+\noindent Therefore $\mathrm{null}(A)$ is a subspace of $\mathbb{R}^n$.
+\end{prf} 

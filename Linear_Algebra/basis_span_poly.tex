@@ -1,0 +1,52 @@
+% Author: Kimberly Golubeva
+% Date: 21 August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Basis of a Polynomial Space }
+
+\begin{xca}{xca:basis_span_poly}
+Is $S = \{ x^3 + 2, \; x^2-3x+1, \; 5 \}$ a basis of $U =\text{span}(S)?$
+\end{xca}
+
+\begin{flaw}{flaw:basis_span_poly} %change the label
+Since $U$ is the span of $S$, then by definition of a basis, $S$ is trivially a basis of $U.$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:basis_span_poly}. %change the label
+
+
+ \begin{description}
+ 	\item[EO-(C-VG):] Misunderstanding the definition of basis caused omission of the linear independence section of the proof. A basis $S$ of a vector space $U$ must span $U$ and be linearly independent.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Error-caused Omission due to Content Vocabulary and Grammar (EO-(C-VG))
+	%\item   Content Omitted Sections (C-OS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:basis_span_poly}. %change the label
+
+\begin{prf}{prf:basis_span_poly} %change the label
+In order for $S$ to be a basis of $U$, it must satisfy two conditions: \\
+
+First, $S$ must span $U$. In this case, since we have that $U =\text{span}(S),$ we know that $S$ spans $U.$ \\
+
+Secondly, the set $S$ must be linearly independent. Since the three polynomials in $S$ have different degrees, this implies that they are linearly independent. \\
+
+Thus, since $S$ spans $U$ and is linearly independent, we can conclude that $S$ is a basis of $U.$
+\end{prf}

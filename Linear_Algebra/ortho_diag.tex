@@ -1,0 +1,124 @@
+% Author: Kimberly Golubeva
+% Date: 14 September 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Orthogonal Diagonalization}
+
+\begin{xca}{xca:ortho_diag}
+Find an orthogonal matrix $P$ that orthogonally diagonalizes
+$$A = \begin{pmatrix} 3 &-2 \\ -2 &0 \end{pmatrix}\;,$$
+and indicate what the corresponding diagonal matrix is.
+\end{xca}
+
+\begin{flaw}{flaw:ortho_diag} %change the label
+First, we find the eigenvalues of the matrix $A$:
+$$C_A(\lambda) = \text{det}\begin{pmatrix} \lambda -1 & 2 \\
+2 & \lambda \end{pmatrix} = \lambda^2 - 3\lambda -4 = (\lambda - 4)(\lambda +1)\;,$$
+and so the eigenvalues of $A$ are given by $\lambda_1 = 4$ and $\lambda_2 = -1.$ \\
+
+Next, we find the eigenvectors corresponding to $\lambda_1$ and $\lambda_2.$\\
+
+To find the eigenvector associated with $\lambda_1 = 4$, we solve the equation $A - 4I = 0.$
+$$\left(\begin{array}{cc|c}
+-1 &-2 &0 \\
+-2 &-4 &0
+\end{array}\right) \rightarrow \left(\begin{array}{cc|c}
+1 &2 &0 \\
+0 &0 &0
+\end{array}\right) \implies v_1 = \begin{pmatrix} -2\\
+1 \end{pmatrix}.$$
+
+To find the eigenvector associated with $\lambda_2 = -1$, we solve the equation $A - (-1)I = 0$.
+$$\left(\begin{array}{cc|c}
+4 &-2 &0 \\
+-2 &1 &0
+\end{array}\right) \rightarrow \left(\begin{array}{cc|c}
+2 &-1 &0 \\
+0 &0 &0
+\end{array}\right) \implies v_2 = \begin{pmatrix} 1\\
+2 \end{pmatrix}.$$
+
+Finally, the matrix $P$ which diagonalizes $A$ is given by
+
+$$P = \begin{pmatrix} -2 &1 \\ 1 &2 \end{pmatrix}\;,$$
+where $P$ diagonalizes $A$ to
+$$P^{-1}AP = D = \begin{pmatrix} 4 &0 \\ 0 &-1 \end{pmatrix}\;.$$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:ortho_diag}. %change the label
+
+
+ \begin{description}
+ \item[N-FS:] Apparent typo when solving for the eigenvalues: the first entry should be $\lambda-3$ (not $\lambda - 1$).
+     
+ 	\item[EO-(C-VG):] An orthogonal matrix which diagonalizes $A$ is not found due to misunderstanding the definition of orthogonal diagonalization  (i.e. the solution diagonalizes $A$, but does not orthogonally diagonalize $A$).
+ 
+ \item[N-N:] Minor notational mistakes. In particular, to say that we are solving the equations $A - 4I = 0$ and $A - (-1)I = 0$ is imprecise. We are solving the equations $(A - 4I)\vec{x} = \vec{0}$ and $(A - (-1)I)\vec{x} = \vec{0}$. Moreover, it is customary to give vectors, $v_1$ and $v_2$, vector hats.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+
+\item Novice False Statement (N-FS)
+
+	\item 	Error-caused Omission due to Content Vocabulary and Grammar (EO-(C-VG))
+
+\item Novice Notation (N-N)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:ortho_diag}. %change the label
+
+\begin{prf}{prf:ortho_diag} %change the label
+First, we find the eigenvalues of the matrix $A$:
+$$C_A(\lambda) = \text{det}\begin{pmatrix} \lambda -3 & 2 \\
+2 & \lambda \end{pmatrix} = \lambda^2 - 3\lambda -4 = (\lambda - 4)(\lambda +1)\;,$$
+and so the eigenvalues of $A$ are given by $\lambda_1 = 4$ and $\lambda_2 = -1.$ \\
+
+Next, we find the eigenvectors corresponding to $\lambda_1$ and $\lambda_2.$\\
+
+To find the eigenvector associated with $\lambda_1 = 4$, we solve the homogeneous equation $(A - 4I)\vec{x} = \vec{0}$:
+$$\left(\begin{array}{cc|c}
+-1 &-2 &0 \\
+-2 &-4 &0
+\end{array}\right) \rightarrow \left(\begin{array}{cc|c}
+1 &2 &0 \\
+0 &0 &0
+\end{array}\right) \implies \vec{v}_1 = \begin{pmatrix} -2\\
+1 \end{pmatrix} \in E_4(A).$$
+
+To find the eigenvector associated with $\lambda_2 = -1$, we solve the homogeneous equation $(A - (-1)I)\vec{x} = \vec{0}$:
+$$\left(\begin{array}{cc|c}
+4 &-2 &0 \\
+-2 &1 &0
+\end{array}\right) \rightarrow \left(\begin{array}{cc|c}
+2 &-1 &0 \\
+0 &0 &0
+\end{array}\right) \implies \vec{v}_2 = \begin{pmatrix} 1\\
+2 \end{pmatrix} \in E_{-1}(A).$$
+
+We know that $\vec{v}_1$ and $\vec{v}_2$ are orthogonal since
+$$\vec{v}_1 \cdot \vec{v}_2 = -2(1) + 1(2) = 0\;.$$
+
+Next, we normalize $\vec{v}_1$ and $\vec{v}_2$:
+$$\lVert \vec{v}_1 \rVert = \sqrt{5} = \lVert \vec{v}_2 \rVert\;.$$
+
+Hence, the orthogonal matrix $P$ which diagonalizes $A$ is given by
+
+$$P = \frac{1}{\sqrt{5}} \begin{pmatrix} -2 &1 \\ 1 &2 \end{pmatrix}\;,$$
+and
+$$P^{-1}AP = D = \begin{pmatrix} 4 &0 \\ 0 &-1 \end{pmatrix}\;.$$
+\end{prf}

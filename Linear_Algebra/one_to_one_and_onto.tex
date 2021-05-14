@@ -1,0 +1,51 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{One-to-One and Onto}
+
+\begin{xca}[Differentiation Map]{xca:derivative_map}
+Let $P$ be the infinite vector space consisting of all polynomials with real coefficients. Let $T: P \to P$ be the linear transformation defined by \[T(a_0 + a_1x + a_2x^2 +... + a_nx^n) = a_1 + 2a_2x + 3a_3x^2 ... + na_nx^{n-1}\] for $a_0, ..., a_n \in \mathbb{R}$. Is $T$ is one-to-one? Is $T$ is onto? Explain. \\
+
+\end{xca}
+
+\begin{flaw}{flaw:derivative_map} %change the
+$T(a) = T(b) = a = b = T(a_0 + a_1x + a_2x^2 +... + a_nx^n) = T(b_0 + a_1x + b_2x^2 +... + b_nx^n) = a_0 + a_1x + a_2x^2 +... + a_nx^n  = b_0 + b_1x + b_2x^2 +... + b_nx^n$. \\
+
+$b = T(a) = b_0 + b_1x + b_2x^2 +... + b_nx^n = T(a_0 + a_1x + a_2x^2 +... + a_nx^n)$.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:derivative_map}.
+
+ \begin{description}
+    \item[F-LU] The proof in general isn't readable. Nothing is defined and no explanations are given.
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Fundamental Locally Unintelligible (F-LU)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:derivative_map}. %change the label
+
+\begin{prf}{prf:derivative_map} %change the label
+The linear transformation $T$ is not one-to-one since $T(1) = 0$ and $T(0) = 0$, but $1 \neq 0$. \\
+
+To show $T$ is onto, we will show $P\subseteq \mathrm{im}(T)$. Let $p(x)=a_0 + a_1x + ... + a_nx^n \in P$. Now consider $q(x) = a_0x + \frac{a_1}{2}x^2 + ... + \frac{a_n}{n+1}x^{n+1}\in P$. We have \[T(q(x)) = T(a_0x + \frac{a_1}{2}x^2 + ... + \frac{a_n}{n+1}x^{n+1}) = a_0 + a_1x + ... + a_nx^n = p(x).\] Hence, $p(x)\in\mathrm{im}(T)$. Therefore, $T$ is onto.
+\end{prf} 

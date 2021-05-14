@@ -1,0 +1,550 @@
+% Author: Kimberly Golubeva
+% Date: 5 August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Definition of a Vector space}
+
+\begin{xca}{xca:mult_add_vectorspace}
+Let $V = \mathbb{R}^2$ equipped with the usual scalar multiplication of $\mathbb{R}^2$ and addition defined as:
+
+$$\begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+c \\
+d
+\end{pmatrix} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix}\;.$$
+Is $V$ is a vectorspace? If so, prove it. If not, specify which axioms hold and which fail.
+\end{xca}
+
+\begin{flaw}{flaw:mult_add_vectorspace} %change the label
+
+V is a vectorspace.
+\begin{enumerate}
+\item Closure Under Addition: Let $\vec{u}, \vec{v} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\;,$$
+for some $a,b,c,d \in \mathbb{R}.$
+Then:
+$$\begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+c \\
+d
+\end{pmatrix} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix} \in V.$$
+
+\item Commutative Under Addition: Let $\vec{u}, \vec{v} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\;,$$
+for some $a,b,c,d \in \mathbb{R}.$
+Then:
+$$\vec{u} + \vec{v} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+c \\
+d
+\end{pmatrix} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix} = \begin{pmatrix}
+ca \\
+db
+\end{pmatrix} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix} + \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \vec{v} + \vec{u}\;.$$
+
+\item Associative Under Addition: Let $\vec{u}, \vec{v}, \vec{w} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ , } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix} \text{ and } \vec{w} = \begin{pmatrix}
+e \\
+f
+\end{pmatrix}\;,$$
+for some $a,b,c,d,e,f \in \mathbb{R}.$ Then:
+$$\vec{u} + \left(\vec{v}+\vec{w}\right) = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+ce \\
+df
+\end{pmatrix} = \begin{pmatrix}
+ace \\
+bdf
+\end{pmatrix}\;,$$
+$$\left(\vec{u} + \vec{v}\right)+\vec{w} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix} + \begin{pmatrix}
+e \\
+f
+\end{pmatrix} = \begin{pmatrix}
+ace \\
+bdf
+\end{pmatrix}\;.$$
+
+\item Contains Additive Identity: \\
+Suppose $\vec{0} = \begin{pmatrix}
+w_1 \\
+w_2
+\end{pmatrix}.$ Then for $\vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix},$ we need:
+$$\begin{pmatrix}
+w_1 \\
+w_2
+\end{pmatrix} + \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;.$$
+In particular, this implies
+$$\begin{pmatrix}
+w_1a \\
+w_2b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;.$$
+If $a \neq 0,$ then $w_1 = \frac{a}{a} = 1.$ \\
+If $a = 0,$ then $w_1a=a$ holds for any $w_1$. \\
+Similarly, $w_2b=b \implies w_2=1$. \\
+Thus, $$\vec{0} = \begin{pmatrix}
+1 \\
+1
+\end{pmatrix}\;.$$
+
+\item Additive Inverses: Let $\vec{u}, \vec{v} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\;,$$
+for some $a,b,c,d \in \mathbb{R}.$ Set $c= \frac1a$ and $d=\frac1b$. Then:
+$$\begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+\frac1a \\
+\frac1b
+\end{pmatrix} = \begin{pmatrix}
+a\left(\frac1a\right) \\
+b\left(\frac1b\right) \end{pmatrix} = \begin{pmatrix}
+1 \\
+1
+\end{pmatrix} = \vec{0}\;.$$
+
+\item Closure Under Scalar Multiplication: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then for $k \in \mathbb{R}:$
+$$k\vec{u} = k \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+ka \\
+kb
+\end{pmatrix} \in V.$$
+
+\item Distributive Under Multiplication: Let $\vec{u}, \vec{v} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\;,$$
+for some $a,b,c,d \in \mathbb{R}.$ Then for $k \in \mathbb{R}:$
+$$k(\vec{u}+\vec{v}) = k \left(\begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\right) = \begin{pmatrix}
+kac \\
+kbd
+\end{pmatrix} \in V.$$
+
+\item Vector Distributivity: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then for $k,m \in \mathbb{R}:$
+$$\left(k+m\right)\vec{u} = \left(k+m\right) \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+ka \\
+kb
+\end{pmatrix} + \begin{pmatrix}
+ma \\
+mb
+\end{pmatrix} = k\vec{u} + m\vec{u}\;.$$
+
+\item Associative Under Multiplication:: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then for $k,m \in \mathbb{R}:$
+$$k\left(m\vec{u}\right) = k \begin{pmatrix}
+ma \\
+mb
+\end{pmatrix} = \begin{pmatrix}
+kma \\
+kmb
+\end{pmatrix}\;, $$
+$$\left(km\right)\vec{u} = km \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+kma \\
+kmb
+\end{pmatrix}\;.$$
+
+\item Multiplicative Identity: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then
+$$1 * \vec{u} = 1 * \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} * 1 = \vec{u} * 1\;.$$
+\end{enumerate}
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:mult_add_vectorspace}. %change the label
+
+
+ \begin{description}
+ 	\item[F-O:] In axiom $5$ forgot to consider the case when $a$ and $b$ are zero, which led to an erroneous conclusion.
+ 	\item[C-OS:] In axiom $7,$ omitted the section $k \vec{u} + k \vec{v}$, which led to an erroneous conclusion.
+ 	\item[C-FS:] In axiom $8,$ incorrectly concluded that
+$$\left(k+m\right) \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+ka \\
+kb
+\end{pmatrix} + \begin{pmatrix}
+ma \\
+mb
+\end{pmatrix}.$$
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental Local Omission (F-O)
+	\item   Content Omitted Section (C-OS)
+	\item   Content False Statement (C-FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:mult_add_vectorspace}. %change the label
+
+\begin{prf}{prf:mult_add_vectorspace} %change the label
+$V$ is not a vectorspace because it violates three of the vectorspace axioms. Namely, it violates axioms $5,7$ and $8.$
+\begin{enumerate}
+    \item Closure Under Addition: Let $\vec{u}, \vec{v} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\;,$$
+for some $a,b,c,d \in \mathbb{R}.$
+Then:
+$$\begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+c \\
+d
+\end{pmatrix} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix} \in V.$$
+\item Commutative Under Addition: Let $\vec{u}, \vec{v} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix}\;,$$
+for some $a,b,c,d \in \mathbb{R}.$
+Then:
+$$\vec{u} + \vec{v} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+c \\
+d
+\end{pmatrix} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix} = \begin{pmatrix}
+ca \\
+db
+\end{pmatrix} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix} + \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \vec{v} + \vec{u}\;.$$
+
+\item Associative Under Addition: Let $\vec{u}, \vec{v}, \vec{w} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} \text{ , } \vec{v} = \begin{pmatrix}
+c \\
+d
+\end{pmatrix} \text{ and } \vec{w} = \begin{pmatrix}
+e \\
+f
+\end{pmatrix}\;,$$
+for some $a,b,c,d,e,f \in \mathbb{R}.$ Then:
+$$\vec{u} + \left(\vec{v}+\vec{w}\right) = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} + \begin{pmatrix}
+ce \\
+df
+\end{pmatrix} = \begin{pmatrix}
+ace \\
+bdf
+\end{pmatrix}\;,$$
+$$\left(\vec{u} + \vec{v}\right)+\vec{w} = \begin{pmatrix}
+ac \\
+bd
+\end{pmatrix} + \begin{pmatrix}
+e \\
+f
+\end{pmatrix} = \begin{pmatrix}
+ace \\
+bdf
+\end{pmatrix}\;.$$
+
+\item Contains Additive Identity: \\
+Suppose $\vec{0} = \begin{pmatrix}
+w_1 \\
+w_2
+\end{pmatrix}.$ Then for $\vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix},$ we need:
+$$\begin{pmatrix}
+w_1 \\
+w_2
+\end{pmatrix} + \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;.$$
+In particular, this implies
+$$\begin{pmatrix}
+w_1a \\
+w_2b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;.$$
+If $a \neq 0,$ then $w_1 = \frac{a}{a} = 1.$ \\
+If $a = 0,$ then $w_1a=a$ holds for any $w_1.$ \\
+Similarly, $w_2b=b \implies w_2=1$. \\
+Thus, $$\vec{0} = \begin{pmatrix}
+1 \\
+1
+\end{pmatrix}\;.$$
+
+\item Additive Inverses: Consider $\vec{u} = \begin{pmatrix}
+0 \\
+0
+\end{pmatrix}$. We will show that $\vec{u}$ does not have an additive inverse. Suppose $(-\vec{u}) = \begin{pmatrix}
+v_1 \\
+v_2
+\end{pmatrix}.$ Then
+$$\vec{u} + (-\vec{u}) = \vec{0} \iff \begin{pmatrix}
+0 \cdot v_1 \\
+0 \cdot v_2
+\end{pmatrix} = \begin{pmatrix}
+1 \\
+1
+\end{pmatrix} \iff  \begin{pmatrix}
+0 \\
+0
+\end{pmatrix} = \begin{pmatrix}
+1 \\
+1
+\end{pmatrix}\;,$$
+which is impossible. Thus, this axiom fails.
+
+\item Closure Under Scalar Multiplication: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then for $k \in \mathbb{R}:$
+$$k\vec{u} = k \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+ka \\
+kb
+\end{pmatrix} \in V.$$
+
+\item Distributive Under Multiplication: Consider
+$$\vec{u} = \begin{pmatrix}
+1 \\
+0
+\end{pmatrix} \text{ and } \vec{v} = \begin{pmatrix}
+1 \\
+1
+\end{pmatrix}\;.$$
+Then for $k =2,$
+$$k(\vec{u}+\vec{v}) = 2 \begin{pmatrix}
+1 \cdot 1 \\
+0 \cdot 1
+\end{pmatrix} = 2 \begin{pmatrix}
+1 \\
+0
+\end{pmatrix} = \begin{pmatrix}
+2 \\
+0
+\end{pmatrix}\;. $$
+On the other hand,
+
+$$k\vec{u}+ k\vec{v} = \begin{pmatrix}
+2 \\
+0
+\end{pmatrix} + \begin{pmatrix}
+2 \\
+2
+\end{pmatrix} = \begin{pmatrix}
+2\cdot 2 \\
+0 \cdot 2
+\end{pmatrix} = \begin{pmatrix}
+4 \\
+0
+\end{pmatrix}\;. $$
+
+Thus, this axiom fails.
+
+\item Vector Distributivity: Consider
+$$\vec{u} = \begin{pmatrix}
+3 \\
+0
+\end{pmatrix}\;.$$
+Then for $k = m =1,$
+$$(k+m) \vec{u} = (1+1) \begin{pmatrix}
+3 \\
+0
+\end{pmatrix} = 2 \begin{pmatrix}
+3 \\
+0
+\end{pmatrix} = \begin{pmatrix}
+6 \\
+0
+\end{pmatrix}\;. $$
+On the other hand,
+
+$$k\vec{u}+ k\vec{u} = \begin{pmatrix}
+3 \\
+0
+\end{pmatrix} + \begin{pmatrix}
+3 \\
+0
+\end{pmatrix} = \begin{pmatrix}
+3\cdot 3 \\
+0 \cdot 0
+\end{pmatrix} = \begin{pmatrix}
+9 \\
+0
+\end{pmatrix}\;. $$
+
+Thus, this axiom fails, and so $V$ is not a vectorspace.
+
+\item Associative Under Multiplication:: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then for $k,m \in \mathbb{R}:$
+$$k\left(m\vec{u}\right) = k \begin{pmatrix}
+ma \\
+mb
+\end{pmatrix} = \begin{pmatrix}
+kma \\
+kmb
+\end{pmatrix}\;, $$
+$$\left(km\right)\vec{u} = km \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+kma \\
+kmb
+\end{pmatrix}\;.$$
+
+\item Multiplicative Identity: Let $\vec{u} \in V$ where $$ \vec{u} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix}\;,$$
+for some $a,b \in \mathbb{R}.$ Then
+$$1 * \vec{u} = 1 * \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} = \begin{pmatrix}
+a \\
+b
+\end{pmatrix} * 1 = \vec{u} * 1\;.$$
+\end{enumerate}
+\end{prf}

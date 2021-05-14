@@ -1,0 +1,50 @@
+% Author: Christian Bagshaw
+% Date: Sept 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Orthogonal Sets}
+
+\begin{xca}[Intersection of Orthogonal Sets]{xca:ortho_intersect}
+ Let $S$ and $T$ be subsets of $\mathbb{R}^n$. Suppose $S$ and $T$ are orthogonal; that is, suppose $\bm{s}\cdot \bm{t} = 0$ for all $\bm{s}\in S$ and all $\bm{t} \in T$. Prove that either $S \cap T = \{\bm{0}\}$ or $S \cap T = \emptyset$
+\end{xca}
+
+\begin{flaw}{flaw:ortho_intersect} %change the label
+If $S \cap T = \{\bm{0}\}$, then $\bm{s} \cdot \bm{t} = 0$ since $\bm{0} \cdot \bm{0} = 0$.\\
+
+\noindent If $S \cap T = \emptyset$, then there is nothing to take the dot product of so it is vacuously true.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:ortho_intersect}
+
+ \begin{description}
+    \item[WP:] Misunderstanding of what needed to be proven.
+    \item[NO:] Variables $\bm{s}$ and $\bm{t}$ are not defined.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Wrong Problem (WP)
+    \item Novice Omission (NO)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:ortho_intersect}. %change the label
+
+\begin{prf}{prf:ortho_intersect} %change the label
+We will show that if there exists some $\bm{v} \in S \cap T$, then $\bm{v} = \bm{0}$. This will show that either the intersection is empty, or it only contains the zero vector. \\
+
+\noindent Let $\bm{v} \in S \cap T$. Then $\bm{v} \in S$ and $\bm{v} \in T$.  Since all elements of $S$ are orthogonal to all elements of $T$,  this means that $\bm{v} \cdot \bm{v} = 0$, which implies that $||\bm{v}||=0$. This is only possible if $\bm{v} = \bm{0}$. Therefore, $S \cap T = \{\bm{0}\}$ or $S \cap T = \emptyset$.
+\end{prf} 

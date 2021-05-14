@@ -1,0 +1,67 @@
+% Author: Kimberly Golubeva
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Orthogonality and Linear Independence}
+
+\begin{xca}{xca:orthogindependence}
+Suppose that $\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$ is an orthogonal set in $\mathbb{R}^3$. Prove that the set $\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$ is linearly independent.
+\end{xca}
+
+\begin{flaw}{flaw:orthogindependence} %change the label
+Suppose that $\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$ is an orthogonal set. Since this set is orthogonal, then for any vectors in the set, their dot product is equal to zero. Now suppose that $t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3 = \vec{0}$. We want to prove that $t_1=t_2=t_3=0.$ We will do this by taking dot products. So we have
+\begin{align*}
+    \left(t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3\right) \cdot \vec{v}_1 &= t_1\vec{v}_1 \cdot \vec{v}_1 \implies t_1 = 0\;, \\
+    \left(t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3\right) \cdot \vec{v}_2 &= t_2\vec{v}_2 \cdot \vec{v}_2 \implies t_2 = 0\;, \\
+    \left(t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3\right) \cdot \vec{v}_3 &= t_3\vec{v}_3 \cdot \vec{v}_3  \implies t_3 = 0\;.
+\end{align*}
+Thus, it must be the case that $t_1=t_2=t_3=0$ and so we can conclude that $\{\vec{v}_1, \vec{v}_2,\vec{v}_3 \}$ is linearly independent.
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:orthogindependence}. %change the label
+
+
+ \begin{description}
+ 	\item[C-VG:] The definition of orthogonal set is not correctly stated. The flawed proof states ``for any vectors in the set, their dot product is equal to zero'', but they should have stated ``$\vec{v}_i \cdot \vec{v}_j = 0$ for all $i \neq j$''.
+ 	\item[N-O:] Did not define $t_1, t_2, t_3.$ Moreover, both sides of the equation $t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3 = \vec{0}$ should have been dotted with $\vec{v}_i$ for $1\leq i\leq 3$, however only the right-hand side was written.
+ 	\item[C-A:] The assertion $t_i\vec{v}_i \cdot \vec{v}_i=0$ implies $t_i=0$ requires justification. This holds because we know that the vectors in our set are nonzero, by definition of an orthogonal set.
+ 	%\item[C-OS:] Failure to assert the fact that $\vec{v} \cdot \vec{0} = 0$ for all $\vec{v} \in \mathbb{R}^3$ resulted in sections of the proof to be omitted.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Vocabulary and Grammar (C-VG)
+	\item   Novice Local Omission (N-O)
+	\item   Content False Implication (C-FI)
+	%\item   Content Omitted Sections (C-OS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:orthogindependence}. %change the label
+
+\begin{prf}{prf:orthogindependence} %change the label
+
+Suppose $\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$ is an orthogonal set. Suppose that $t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3 = \vec{0}$ for some $t_1, t_2, t_3 \in \mathbb{R}.$  By the definition of orthogonality, we know 
+$$\vec{v}_1 \cdot \vec{v}_2 = \vec{v}_1 \cdot \vec{v}_3 = \vec{v}_2 \cdot \vec{v}_3 = \vec{0}$$ and \[\vec{v}_1, \vec{v}_2, \vec{v}_3 \neq \vec{0}.\] Since these vectors are nonzero, we know $\lVert \vec{v}_i \rVert^2 \neq 0$ for all $1\leq i \leq 3$.  Hence, it follows that
+\begin{align*}
+    0 &= \vec{0} \cdot \vec{v}_1 = \left(t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3\right) \cdot \vec{v}_1 = t_1\vec{v}_1 \cdot \vec{v}_1  = t_1 \lVert \vec{v}_1 \rVert^2 \implies t_1 = 0\;, \\
+    0 &= \vec{0} \cdot \vec{v}_2 = \left(t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3\right) \cdot \vec{v}_2 = t_2\vec{v}_2 \cdot \vec{v}_2  = t_2 \lVert \vec{v}_2 \rVert^2 \implies t_2 = 0\;, \\
+    0 &= \vec{0} \cdot \vec{v}_3 = \left(t_1\vec{v}_1 + t_2\vec{v}_2 + t_3\vec{v}_3\right) \cdot \vec{v}_3 = t_3\vec{v}_3 \cdot \vec{v}_3  = t_3 \lVert \vec{v}_3 \rVert^2 \implies t_3 = 0\;.
+\end{align*}
+
+Therefore, we have $t_1=t_2=t_3=0$, and so we can conclude that $\{\vec{v}_1, \vec{v}_2,\vec{v}_3\}$ is linearly independent.
+\end{prf} 

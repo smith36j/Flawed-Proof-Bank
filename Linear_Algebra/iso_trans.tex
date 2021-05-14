@@ -1,0 +1,77 @@
+% Author: Kimberly Golubeva
+% Date: 1 September 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Isomorphism of a Linear Transformation}
+
+\begin{xca}{xca:iso_trans}
+Prove that the linear map $T: P_1 \rightarrow \mathbb{R}^2$ defined by
+$$T(a + bx) = \begin{pmatrix} a \\ a + b \end{pmatrix}\;,
+$$
+is an isomorphism and find $T^{-1}.$ (You do not need to confirm that $T$ is linear.)
+\end{xca}
+
+\begin{flaw}{flaw:iso_trans} %change the label
+We prove that ker$(T) = \{ \vec{0} \}$. Suppose that $a + bx \in$ ker$(T)$. Then
+$$\begin{pmatrix} a \\ a + b \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}\;, $$
+which implies that $a = b = 0$, and so ker$(T) = \{ \vec{0} \}.$ This means that $T$ is injective. Thus, $T$ is an isomorphism. \\
+
+Finally, we must find $T^{-1}.$ We need $T(T^{-1})=I.$ We have
+$$T(a + bx) = \begin{pmatrix} a \\ a + b \end{pmatrix}\;.$$
+So then
+$$T(T^{-1}) = \begin{pmatrix} a \\ a + b \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\;, $$
+which means that $a=1$ and $a + b = 1.$ In particular, $a = 1$ and $b = 1-a.$
+Thus,
+$$T^{-1} = \begin{pmatrix} 1 \\ 1-a \end{pmatrix}\;.$$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:iso_trans}. %change the label
+
+
+ \begin{description}
+ 	\item[C-OS:] Omitted surjectivity in proving that $T$ is an isomorphism.
+ 	\item[EO-(C-VG):] No progress is made towards finding the inverse due to misunderstanding the definition of an inverse.
+ 	\item[C-FS:] The claim that $$T(T^{-1}) = \begin{pmatrix} a \\ a + b \end{pmatrix}\;,$$
+ 	is incorrect.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Omitted Sections (C-OS)
+	\item   Error-caused Omission due to Content Vocabulary and Grammar (EO-(C-VG))
+	\item   Content False Statement (C-FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:iso_trans}. %change the label
+
+\begin{prf}{prf:iso_trans} %change the label
+Since dim$(P_1) =$ dim$(\mathbb{R}^2) = 2$, to show $T$ is an isomorphism it suffices to show that $T$ is injective. \\
+
+Since $T$ is linear, we know that $T$ is injective exactly when ker$(T) = \{ \vec{0} \}$. Suppose that $a + bx \in$ ker$(T)$. Then
+$$T(a+bx)=\begin{pmatrix} a \\ a + b \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}\;, $$
+which implies that $a = b = 0$, and so ker$(T) = \{ \vec{0} \}.$ This means that $T$ is injective. Therefore, $T$ is an isomorphism. \\
+
+\noindent Now, we must find $T^{-1}.$
+Suppose that
+$$T(a + bx) = \begin{pmatrix} c \\ d \end{pmatrix}\;.$$
+This implies
+$$\begin{pmatrix} a \\ a + b \end{pmatrix} = \begin{pmatrix} c \\ d \end{pmatrix}\;, $$
+and so $a=c$ and $a + b = d.$ In particular, $a = c$ and $b = d-c.$ Then
+$$T^{-1} \begin{pmatrix} c \\ d \end{pmatrix} = T^{-1}(T(a+bx))=a+bx=c+(d-c)x\;.$$
+Thus,
+$$T^{-1} \begin{pmatrix} c \\ d \end{pmatrix} = c+(d-c)x\;.$$
+\end{prf}

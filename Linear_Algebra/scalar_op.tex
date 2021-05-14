@@ -1,0 +1,54 @@
+% Author: Christian Bagshaw
+% Date: Sept 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Linear Maps on Complex Vector Spaces}
+
+\begin{xca}[Operator on $\mathbb{C}$ is scalar]{xca: scalar_operator}
+Consider $\mathbb{C}$ as a vector space over itself. Let $T: \mathbb{C} \to \mathbb{C}$ be a linear transformation. Prove that there exists some $c \in \mathbb{C}$ such that $T(x) = cx$ for all $x \in \mathbb{C}$.
+\end{xca}
+
+\begin{flaw}{flaw:scalar_operator} %change the label
+If $c \in \mathbb{C}$, then for $x \in \mathbb{C}$
+$$T(x) = \frac{cT}{c}x $$
+so let $c = \frac{cT}{c}$, so
+$$T(x) = cx $$
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:scalar_operator}
+
+ \begin{description}
+    \item[F-FS] Writing $T(x) = \frac{cT}{c}x$ and treating this as a constant demonstrates a misunderstanding of what $T$ is.
+    \item[C-N] Reusing the variable $c$ as $c = \frac{cT}{c}$ is confusing.
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Fundamental False Statement (F-FS)
+    \item Content Notation (C-N)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:scalar_operator}. %change the label
+
+\begin{prf}{prf:scalar_operator} %change the label
+Let $T: \mathbb{C} \to \mathbb{C}$ be a linear operator over $\mathbb{C}$ as a vector space over itself. Suppose $T(1) = c$. Then for any $x \in \mathbb{C}$
+$$T(x) = T(1x) = xT(1) = xc = cx. $$
+
+\end{prf} 

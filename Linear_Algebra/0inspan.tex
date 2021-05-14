@@ -1,0 +1,51 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Zero is in the Span}
+
+\begin{xca}[Zero is in the Span]{xca:0inspan}
+Decide whether the following statement is TRUE or FALSE. If it's true, then prove it. If it's false, then  find an explicit counterexample. \\
+
+Let $V$ be a vector space. If $S \subseteq V$ is non-empty, then ${\bf{0}} \in \text{span}(S)$.
+\end{xca}
+
+\begin{flaw}{flaw:0inspan} %change the label
+The statement is false and we will give a counterexample. Let
+$$S = \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}\right\}.$$
+Then clearly ${\bf{0}} \notin \text{span}(S)$ since
+$$\begin{bmatrix} 1 \\ 0 \end{bmatrix} \neq \begin{bmatrix} 0 \\ 0 \end{bmatrix}. $$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:0inspan}.
+
+ \begin{description}
+    \item[EO-(C-VG)] No progress is made towards the proof, due to misunderstanding what the span of a set is.
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Error-Caused Omission due to Content Vocabulary and Grammar (EO-(C-VG))
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:0inspan}. %change the label
+
+\begin{prf}{prf:0inspan} %change the label
+The statement is true. Indeed, let $V$ be a vector space and $S$ a non-empty subset of $V$. Since $S$ is non-empty, there exists a $v \in S$. Hence, ${\bf{0}} = 0v \in \text{span}(S)$, since $\text{span}(S)$ is the set of all linear combinations of elements in $S$.
+\end{prf} 

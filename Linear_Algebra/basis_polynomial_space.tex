@@ -1,0 +1,57 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Basis}
+
+\begin{xca}[Basis of Polynomial Subspace]{xca:basis_poly}
+Let $P_n$ denote the vector space of polynomials of degree at most $n$ with real coefficients, for some integer $n \geq 1$. \\
+
+Suppose $S$ is a subset of $P_n$ with $n+1$ distinct polynomials. Suppose $p(0) = 0$ for all $p(x) \in S$. Is it possible for $S$ to be a basis for $P_n$? Explain.
+\end{xca}
+
+\begin{flaw}{flaw:basis_poly} %change the label
+From class I know a basis has two things. It has the same number of vectors as the dimension and it is linearly independent. The dimension of $P_n$ is $n$, but $S$ has $n+1$ vectors. So it can't be a basis.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:basis_poly}
+
+ \begin{description}
+    \item[N-VG] Writing in the first person (the use of the word ``I'') in a proof is typically not conventional in mathematics.
+    \item[EO-(F-FS)] The vector space $P_n$ has dimension $n+1$ (not $n$). This error led to no substantial progress being made towards the proof.
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Novice Vocabulary and Grammar (N-VG)
+    \item Error-caused Omission due to Fundamental False Statement (EO-(F-FS))
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:basis_poly}. %change the label
+
+\begin{prf}{prf:basis_poly} %change the label
+It is not possible for $S$ to be a basis for $P_n$. \\
+
+Suppose $S = \{p_0(x), ..., p_{n}(x)\}$ for $p_0(x), ..., p_{n}(x) \in P_n$. Since $p_i(x)\in S$, we know that $p_i(0)=0$ for all $1\leq i \leq n$.  \\
+
+If $S$ were a basis for $P_n$, then $S$ spans $P_n$. Since $x-1\in P_n$, this would mean that we could write $x-1$ as a linear combination of elements in $S$. Namely we could write \[x-1 = a_0p_0(x) + ... + a_{n}p_n(x)\] for some $a_0, ..., a_n \in \mathbb{R}$. Evaluating both sides of this equation at $x = 0$ we have:
+\[0-1 = a_0(0) + ... + a_n(0) = 0,\] which implies $-1=0$. This is a contradiction. \\
+
+Therefore, $S$ cannot be a basis for $P_n$.
+\end{prf} 

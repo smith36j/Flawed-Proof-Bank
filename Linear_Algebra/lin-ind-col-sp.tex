@@ -1,0 +1,66 @@
+% Author: Jerrod Smith
+% Date: 23 June 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Linear Independence}
+
+Let $\underline{\bm{0}}$ denote the $m\times n$ zero matrix.
+
+\begin{xca}{xca:lin-ind-col-sp}
+Let $C$ be a nonzero $m\times n$ matrix and let $\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell$ be nonzero vectors in $\R^n$.  Prove that if $\{C\bm{v}_1,C\bm{v}_2,\ldots, C\bm{v}_\ell\}$ is linearly independent, then $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent.
+\end{xca}
+
+\begin{flaw}{flaw:lin-ind-col-sp}
+Suppose $\{C\bm{v}_1,C\bm{v}_2,\ldots, C\bm{v}_\ell\}$ is linearly independent. Then
+	\[a_1(C\bm{v}_1) + a_2(C\bm{v}_2) + \ldots + a_\ell (C\bm{v}_\ell) = \vec{0}_m\]
+	implies that $
+	a_1 = a_2 = \ldots = a_\ell = 0$.
+	Now, we have that \[	\vec{0}_m = a_1(C\bm{v}_1) + a_2(C\bm{v}_2) + \ldots + a_\ell (C\bm{v}_\ell)
+		 = C(a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell) \]
+and, since $C\neq \underline{\bm{0}}$, it follows that $\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell$.
+We know that $a_1 = a_2 = \ldots = a_\ell = 0$.  This implies that $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors in the Flawed Proof \ref{flaw:lin-ind-col-sp}.
+
+\begin{description}
+	\item[F-Log:] The Flawed Proof \ref{flaw:lin-ind-col-sp} incorrectly begins by considering a linear combination of the vectors  $C\bm{v}_1,C\bm{v}_2,\ldots, C\bm{v}_\ell$.  In order to prove that the set $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent, we must prove that: if $\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell$ for some scalars $a_i \in \R$, $1\leq i \leq \ell$, then $a_i = 0$ for all $1\leq i \leq \ell$.  In order to prove this statement, we must begin with the assumption that ``$\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell$ for some scalars $a_i \in \R$, $1 \leq i \leq \ell$".
+		\item[N-O:] The coefficients $a_1, a_2, \ldots, a_\ell$ are undefined.
+
+	\item[C-FI:] The implication ``since $C\neq \underline{\bm{0}}$, it follows that $\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell$" is false.  In this setting, the claim that $\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell$ is equivalent to stating that $\nullsp(C) = \{\vec{0}_n\}$. But the fact that $C$ is a nonzero matrix does not imply that the nullspace of $C$ is equal to $\{\vec{0}_n\}$. For example, the nonzero matrix $C = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ has nullspace $\nullsp(C) = \spn \left \{ \begin{bmatrix} 0 \\ 1 \end{bmatrix} \right \}$.
+	\item[C-FI:] The implication ``We know that $a_1 = a_2 = \ldots = a_\ell = 0$.  This implies that $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent." is false.  The fact that $\vec{0}_n = 0\bm{v}_1 + 0\bm{v}_2 + \ldots + 0\bm{v}_\ell$ does not imply that $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent. To prove that $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent, one must show that $a_1 = a_2 = \ldots = a_\ell = 0$ is the \textbf{only solution} to the equation $\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell$, where $a_i \in \R$, $1\leq i \leq \ell$.
+\end{description}
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental Logical Order (F-Log)
+	\item 	Novice Local Omission (N-O)
+	\item   Content False Implication (C-FI)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:lin-ind-col-sp}.
+\begin{prf}{prf:lin-ind-col-sp}
+Let $C$ be a nonzero $m\times n$ matrix and let $\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell$ be nonzero vectors in $\R^n$.
+Suppose that $\{C\bm{v}_1,C\bm{v}_2,\ldots, C\bm{v}_\ell\}$ is linearly independent.
+Suppose that
+\[
+\vec{0}_n = a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell
+\]
+for some scalars $a_i \in \R$, $1 \leq i \leq \ell$.  Multiplying this equation by the $m\times n$ matrix $C$ we obtain
+\begin{align*}
+	\vec{0}_m  & = C\, \vec{0}_n\\
+	& = C(a_1\bm{v}_1 + a_2\bm{v}_2 + \ldots + a_\ell\bm{v}_\ell) \\
+& = a_1(C\bm{v}_1) + a_2(C\bm{v}_2) + \ldots + a_\ell (C\bm{v}_\ell).
+\end{align*}
+Since $\{C\bm{v}_1,C\bm{v}_2,\ldots, C\bm{v}_\ell\}$ is linearly independent, it must be the case that $a_i = 0$ for all $1\leq i \leq \ell$.  Thus, the set $\{\bm{v}_1, \bm{v}_2,\ldots \bm{v}_\ell\}$ is linearly independent.
+\end{prf} 

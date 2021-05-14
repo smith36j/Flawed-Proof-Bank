@@ -1,0 +1,68 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Similar Matrices}
+
+\begin{xca}[Similar Matrices and Eigenvalues ]{xca:similar_eigen}
+Prove similar matrices have the same set of eigenvalues.
+\end{xca}
+
+\begin{flaw}{flaw:similar_eigen} %change the label
+Since they are similar this means there exists some invertible matrix $P$ such that $A = P^{-1}BP$. The characteristic polynomial for $B$ is given by $\det(B - I\lambda)$. Now making substitutions we can get
+\begin{align*}
+    \det(B - I\lambda) &= \det(P^{-1}AP - II\lambda)\\
+    &= \det(P^{-1}AP) - \det(P^{-1}PI\lambda)\\
+    &= \det(P^{-1})\det(A)\det(P) - \det(P^{-1})\det(P)\det(I\lambda)\\
+    &= \det(P^{-1})\big{(}\det(A) - \det(I\lambda)\big{)}\det(P)\\
+    &= \det(P^{-1})\det(A - I\lambda)\det(P)\\
+    &= \det(P)^{-1}\det(P)\det(A - I\lambda)\\
+    &= \det(A - I\lambda).
+\end{align*}
+Thus $\det(A - I\lambda) = \det(B - I\lambda)$, so $A$ and $B$ have the same characteristic polynomial and hence the same eigenvalues.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:similar_eigen}.
+
+ \begin{description}
+    \item[N-O] $A$ and $B$ are not defined.
+    \item[N-N] Initially the proof writes $A = P^{-1}BP$, but later the proof makes the substitution $B = P^{-1}AP$.
+    \item[C - MT] The flawed proof assumes that determinants distribute over addition/subtraction, which is not the case.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Novice Local Omission (N-O)
+\item Novice Notation (N-N)
+\item Content Misusing Theorem (C-MT)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:similar_eigen}. %change the label
+
+\begin{prf}{prf:similar_eigen} %change the label
+Let $A$ and $B$ be similar matrices. We will show that they have the same characteristic polynomial, and hence the same eigenvalues. Since $A$ and $B$ are similar this means there exists some invertible matrix $P$ such that $A = P^{-1}BP$. The characteristic polynomial for $A$ is given by $\det(A - I\lambda)$. Now making substitutions we have
+\begin{align*}
+    \det(A - I\lambda) &= \det(P^{-1}BP - II\lambda)\\
+    &= \det(P^{-1}BP - P^{-1}PI\lambda)\\
+    &= \det(P^{-1}BP - P^{-1}I\lambda P)\\
+    &= \det(P^{-1}(B - I\lambda)P) \\
+    &= \det(P^{-1})\det(B - I\lambda)\det(P) \\
+    &= \frac{1}{\det(P)}\det(B - I\lambda)\det(P) \\
+    &= \det(B - I\lambda).
+\end{align*}
+Thus $\det(A - I\lambda) = \det(B - I\lambda)$, so $A$ and $B$ have the same characteristic polynomial and hence the same eigenvalues.
+\end{prf} 

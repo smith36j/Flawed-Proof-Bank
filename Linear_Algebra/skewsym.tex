@@ -1,0 +1,52 @@
+% Author: Christian Bagshaw
+% Date: 21 August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Skew-Symmetric Matrices}
+
+\begin{xca}{xca:skewsymmat}
+Decide whether the following statement is TRUE or FALSE. If it's true, then prove it. If it's false, then  find an explicit counterexample. \\
+
+Every $2\times 2$ skew-symmetric matrix has a determinant of zero.
+\end{xca}
+
+\begin{flaw}{flaw:skewsymmat} %change the label
+The statement is false. To see this, suppose we had a $2\times 2$ skew-symmetric matrix $A$. Then we can write $A = \begin{pmatrix}0 & a \\ -a & 0 \end{pmatrix}$ for some $a \in \mathbb{R}$. A simple computation gives $\det(A) = a^2$, and squares are always positive.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:skewsymmat}. %change the label
+
+
+ \begin{description}
+ \item[WM] The student is trying to prove that the statement is always false, but the prompt says to find an explicit counterexample if the statement is false.
+ \item[EO-(F-FS):] An explicit counterexample is omitted due to the false statement that $a^2$ is always positive.
+
+ 	\item[C-A:] The claim that every $2\times 2$ skew-symmetric matrix $A$ can be written in that specific form requires more justification.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+\item Wrong Method (WM)	
+\item Error-caused Omission due to Fundamental False Statement (EO-(F-FS))
+	\item Content Assertion (C-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:skewsymmat}. %change the label
+
+\begin{prf}{prf:skewsymmat} %change the label
+This statement is false. Indeed, consider $A = \begin{pmatrix}0 & 1 \\ -1 & 0 \end{pmatrix}$. This matrix $A$ is skew-symmetric since $A = -A^T$, but $\det(A) = 1 \neq 0$.
+\end{prf} 

@@ -1,0 +1,67 @@
+% Author: Christian Bagshaw
+% Date: September 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Inverse Linear Transformation}
+
+\begin{xca}[Inverse of Composition]{xca:compose_inverse}
+Let $V$ be a vector space, and let $T: V \to V$ and $S: V \to V$ be isomorphisms. Prove $(T \circ S)^{-1} = S^{-1} \circ T^{-1}$.
+
+%You may suppose $T \circ S$ is an invertible linear transformation.
+\end{xca}
+
+\begin{flaw}{flaw:compose_inverse} %change the label
+This is simple algebra.
+$$(T\circ S)^{-1} = \frac{1}{T \circ S} = \frac{1}{S} \circ \frac{1}{T} =  S^{-1} \circ T^{-1}$$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:compose_inverse}.
+
+ \begin{description}
+    \item[EO-(C-VG):] No progress is made towards the proof due to misunderstanding the definitions of inverse and composition.
+
+
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Error-caused Omission due to Content Vocabulary and Grammar (EO-(C-VG))
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:compose_inverse}. %change the label
+
+\begin{prf}{prf:compose_inverse} %change the label
+Let $\vec{v}\in V$. Then we have
+
+\begin{align*}
+    (T \circ S) \circ (S^{-1} \circ T^{-1})(\vec{v})
+    &= T \circ S(S^{-1}(T^{-1}(\vec{v}))) \\
+    &= T (T^{-1}(\vec{v}))\\
+    &= \vec{v},
+\end{align*}
+
+and
+\begin{align*}
+    (S^{-1} \circ T^{-1}) \circ (T \circ S)(\vec{v})
+    &= S^{-1} \circ T^{-1}(T( S(\vec{v}))) \\
+    &= S^{-1}( S(\vec{v}))\\
+    &= \vec{v}.
+\end{align*}
+Therefore, $(T \circ S)^{-1} = S^{-1} \circ T^{-1}$.
+\end{prf} 

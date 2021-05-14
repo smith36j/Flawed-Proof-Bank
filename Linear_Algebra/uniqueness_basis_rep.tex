@@ -1,0 +1,47 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Uniqueness of Basis Representation}
+
+\begin{xca}[Uniqueness of Basis Representation]{xca:basis-unique}
+Let $S = \{\bm{v}_1, ..., \bm{v}_n\}$ be a basis of $\mathbb{R}^n$. Prove that every vector $\bm{x}\in \mathbb{R}^n$ can be expressed in the form $\bm{x} = c_1\bm{v}_1+ ...+ c_n\bm{v}_n$ in exactly one way, where $c_1, ..., c_n \in \mathbb{R}$.
+\end{xca}
+
+\begin{flaw}{flaw:basis-unique} %change the label
+By definition of a basis, we can write every vector $\bm{x} \in \mathbb{R}^n$ in the form $\bm{x} = c_1\bm{v}_1+ ...+ c_n\bm{v}_n$ for $c_1, ..., c_n \in \mathbb{R}^n$. Suppose we had another basis $T = \{\bm{w}_1, ..., \bm{w}_n\}$  such that $\bm{x} = c_1\bm{w}_1+ ...+ c_n\bm{w}_n$. This means that $c_1\bm{v}_1+ ...+ c_n\bm{v}_n = c_1\bm{w}_1+ ...+ c_n\bm{w}_n $. Rearranging means \[c_1(\bm{v}_1-\bm{w}_1)+...+c_n(\bm{v}_n-\bm{w}_n) = \vec{0}.\] Because these are bases they are linearly independent, so $c_1 = ... = c_n = 0$. This means that $\bm{x} = 0$. So the only vector that can be written in multiple ways is the zero vector.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors in the Flawed Proof \ref{flaw:basis-unique}.
+
+
+ \begin{description}
+    \item[WM] Introducing a second basis $T$ is irrelevant to the problem.
+    \item[F-N ] The double use of $c_1, ..., c_n$ as coefficients, which should be in $\R$ and not $\R^n$, in linear combinations is incorrect; different coefficients should be used for each basis.
+    \item[C-FI] The assertion that $c_1(\bm{v}_1-\bm{w}_1)+...+c_n(\bm{v}_n-\bm{w}_n) = \vec{0}$ implies $c_1=...=c_n=0$ is incorrect. Although $S$ and $T$ are bases, we cannot say anything about $\bm{v}_1-\bm{w}_1, ..., \bm{v}_n-\bm{w}_n$.
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Wrong Method (WM)
+	\item Fundamental Notation (F-N)
+	\item Content False Implication (C-FI)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:basis-unique}.
+
+\begin{prf}{prf:basis-unique}
+By definition of a basis, we can write every vector $\bm{x} \in \mathbb{R}^n$ in the form $\bm{x} = c_1\bm{v}_1+ ...+ c_n\bm{v}_n$ for $c_1, ..., c_n \in \mathbb{R}$. Suppose we could also write it as $\bm{x} = d_1\bm{v}_1+ ...+ d_n\bm{v}_n$ for $d_1, ..., d_n \in \mathbb{R}$. Equating the two equations gives \[c_1\bm{v}_1+ ...+ c_n\bm{v}_n = d_1\bm{v}_1+ ...+ d_n\bm{v}_n\] and rearranging gives \[(c_1-d_1)\bm{v}_1+ ...+ (c_n-d_n)\bm{v}_n=\vec{0}.\] Because $S$ is linearly independent, this implies $c_1-d_1=0, ..., c_n-d_n=0$, which further implies $c_1 = d_1, ..., c_n=d_n$. So the two ways of writing $\bm{x}$ are the same.
+
+\end{prf} 
