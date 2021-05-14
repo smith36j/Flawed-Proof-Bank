@@ -1,0 +1,67 @@
+% Author: Christian Bagshaw
+% Date: September 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Cauchy Sequences}
+
+\begin{xca}[Almost Real]{xca:almost_real}
+Let $C$ be the set of all Cauchy sequences of rational numbers. Let $\sim$ be a relation on $C$ given by $(a_n) \sim (b_n)$ if and only if $|a^2_n - b^2_n| \to 0$. Prove $\sim$ is an equivalence relation.
+\end{xca}
+
+\begin{flaw}{flaw:almost_real} %change the label
+Suppose $(a_n) \sim (b_n)$, which means $|a^2_n - b^2_n| \to 0$. Well factoring the left means $|a_n - b_n||a_n+b_n| \to 0$, which means $|a_n - b_n| \to 0$. In class we showed that this relation is an equivalence relation, so this one is too.
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:almost_real}.
+
+ \begin{description}
+    \item[C-FI] ``$|a_n - b_n||a_n+b_n| \to 0$'' does not imply ``$|a_n - b_n| \to 0$''.
+    \item[N-VG] The relation they are referring to from class should be explicitly stated.
+    \item[F-A] Referring to some other relation and saying this implies the result side-steps the entire problem itself.
+
+
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Content False Implication (C-FI)
+    \item Novice Vocabulary Grammar (N-VG)
+    \item Fundamental Assertion (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:almost_real}. %change the label
+
+\begin{prf}{prf:almost_real} %change the label
+Let $(a_n), (b_n), (c_n)$ be Cauchy sequences of rational numbers. We will show $\sim$ satifies the definition of an equivalence relation.
+\begin{itemize}
+    \item Reflexive:\\
+    Note that $|a^2_n - a^2_n| = |0|$, and this constant sequence converges to $0$. So $(a_n) \sim (a_n)$.
+    \item Symmetric:\\
+    Suppose $(a_n) \sim (b_n)$. This means $|a^2_n - b^2_n| \to 0$. But we can interchange the terms under absolute value sign, so this means that $|b^2_n - a^2_n| \to 0$. So $(b_n) \sim (a_n)$.
+    \item Transitive \\
+    Suppose $(a_n) \sim (b_n)$ and $(b_n) \sim (c_n)$. Let $\epsilon > 0$. Since $(a_n) \sim (b_n)$ we know that there exists some $N_1$ such that for all $n \geq N_1$, $|a_n^2 - b_n^2| < \epsilon/2$. Similarly, since $(b_n) \sim (c_n)$ we know that there exists some $N_2$ such that for all $n \geq N_2$, $|b_n^2 - c_n^2| < \epsilon/2$. Let $N = \max\{N_1, N_2\}$. Let $n \geq N$. We have
+    \begin{align*}
+        |a_n^2 - c_n^2| &= |a_n^2 -b_n^2 + b_n^2 - c_n^2| \\ &\leq |a_n^2 - b_n^2| + |b_n^2 - c_n^2| \\ &< \epsilon/2 + \epsilon/2 \\ &= \epsilon.
+    \end{align*}
+    So by the definition of a convergent sequence, this means that $|a_n^2 - c_n^2| \to 0$, and hence $(a_n) \sim (c_n)$.
+\end{itemize}
+Therefore $\sim$ is an equivalence relation.
+\end{prf} 

@@ -1,0 +1,92 @@
+
+% Author: Kimberly Golubeva
+% Date: 28 September 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Factoring Complex Polynomials}
+
+\begin{xca}{xca:factor_complex_poly}
+For each of the following polynomials $p(z)$.  Prove that there exists a polynomial $h(z)$ such that \[p(z) = (z-z_0)h(z) + p(z_0).\]
+\begin{itemize}
+    \item $p(z) = z^2$  and $z_0 = i$\;,
+    \item $p(z) = z^3 + z^2 + z$ and $z_0=-1$\;.
+\end{itemize}
+\end{xca}
+
+\begin{flaw}{flaw:factor_complex_poly} %change the label
+First, we find $h(z)$ when $p(z) = z^2$  and $z_0 = i$\;:
+\begin{align*}
+    p(z) &= (z - z_0)h(z) + p(z_0) \\
+    &= (z + i)h(z) + p(i) \\
+    &= (z + i)h(z) - 1 \\
+    &= (z + i)(z - i) - 1 \\
+    &= z^2 - zi + zi - i^2 - 1 \\
+    &= z^2 + 1 -1 \\
+    &= z^2\;,
+\end{align*}
+and so $h(z) = z-i\;.$
+
+\noindent Next, we find $h(z)$ when $p(z) = z^3 + z^2 + z$  and $z_0 = -1$\;:
+\begin{align*}
+    p(z) &= (z - z_0)h(z) + p(z_0) \\
+    &= (z + 1)h(z) + p(-1) \\
+    &= (z + 1)(z^2 +1) - 1 \\
+    &= z^3 + z^2 +z +1 -1\\
+    &= z^3 + z^2 +z\;,
+\end{align*}
+and so $h(z) = z^2+1\;.$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:factor_complex_poly}. %change the label
+
+
+ \begin{description}
+ 	\item[N-FS:] There is an apparent typo in the first calculation: the polynomial $p(z)$ should be written as $p(z) = (z - i)h(z) + p(i)$ as opposed to $p(z) = (z + i)h(z) + p(i).$
+ 	\item[N-Log:] In the first calculation, they use $h(z) = z-i$ and then claim that their calculation implies that $h(z) = z-i$. A similar mistake is made in the second calculation.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Novice False Statement (N-FS)
+	\item   Novice Logical Order (N-Log)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:factor_complex_poly}. %change the label
+
+\begin{prf}{prf:factor_complex_poly} %change the label
+First consider $p(z) = z^2$  and $z_0 = i$.  Choose $h(z) = z+i$. Indeed, if $h(z) = z+i$, then we have
+
+\begin{align*}
+    p(z) &= (z - z_0)h(z) + p(z_0) \\
+    &= (z - i)(z+i) + p(i) \\
+    &= (z - i)(z +i) - 1 \\
+    &= z^2 - zi + zi - i^2 - 1 \\
+    &= z^2 + 1 -1 \\
+    &= z^2\;.
+\end{align*}
+
+Now, consider $p(z) = z^3 + z^2 + z$  and $z_0 = -1$.  Choose $h(z) = z^2+1$. Indeed, if $h(z) = z^2+1$ then we have:
+
+\begin{align*}
+    p(z) &= (z - z_0)h(z) + p(z_0) \\
+    &= (z + 1)(z^2+1) + p(-1) \\
+    &= (z + 1)(z^2 +1) - 1 \\
+    &= z^3 + z^2 +z +1 -1\\
+    &= z^3 + z^2 +z\;.
+\end{align*}
+\end{prf}

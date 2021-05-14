@@ -1,0 +1,59 @@
+
+% Author: Kimberly Golubeva
+% Date: 7 September 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Equivalence Classes of Real Numbers}
+
+\begin{xca}{xca:equiv_class_reals}
+Consider the Cauchy sequences $a_n = \frac{1}{3}$ and $b_n = 0.\underbrace{333\cdots3}_{n-\text{many}}$ for all $n$. Show that the sequences $a_n$ and $b_n$ are in the same equivalence class.
+\end{xca}
+
+\begin{flaw}{flaw:equiv_class_reals} %change the label
+Notice that $b_n \rightarrow \frac{1}{3}$ and so $b_n = a_n.$ Then,
+$$| a_n - b_n | = 0.$$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:equiv_class_reals}. %change the label
+
+
+ \begin{description}
+ 	%\item[C-VG:] Misunderstanding the definitions of sequences and limits (i.e. if two sequences have the same limit, this does not mean that the sequences themselves are equal).
+	\item[C-FI:] The fact that $b_n \rightarrow \frac{1}{3}$ does not imply that $b_n = a_n$ (i.e. if two sequences have the same limit, this does not mean that the sequences themselves are equal).
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	%\item 	Content Vocabulary and Grammar (C-VG)
+	\item 	Content False Implication (C-FI)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:equiv_class_reals}. %change the label
+
+\begin{prf}{prf:equiv_class_reals} %change the label
+Consider the sequences $(a_n)$ and $(b_n)$ defined above.
+We have
+\begin{align*}
+    |a_n - b_n| &= 0.\underbrace{000\cdots0}_{n-\text{many}}333\ldots \\
+    &< 0.\underbrace{000\cdots0}_{(n-1)-\text{many}}3 \\
+    &=\frac{3}{10^n}.
+\end{align*}
+We have $\displaystyle\lim_{n\rightarrow\infty} \frac{3}{10^n} =0$. Therefore, the sequence $a_n-b_n$ converges to 0. \\
+
+\noindent Thus $a_n$ and $b_n$ are in the same equivalence class.
+\end{prf}

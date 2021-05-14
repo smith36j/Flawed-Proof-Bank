@@ -1,0 +1,66 @@
+% Author: Christian Bagshaw
+% Date: Sept 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Primitive Roots of Unity}
+
+\begin{xca}[Primitive Roots of Unity]{xca:primitive_roots}
+Let $n \in \mathbb{N}$. Let
+$$P = \{\beta \in \mathbb{C} \: | \: \text{$\beta^n = 1$ but $\beta^k \neq 1$ for every positive integer $k < n$}\}. $$
+Let  $$Q =\{e^{2i\pi k/n} \: | \: k \in \{1,...,n\} \:\: \text{and} \:\: \gcd(k,n) = 1\}. $$
+Show $P = Q$.
+
+\end{xca}
+
+\begin{flaw}{flaw:primitive_roots} %change the label
+Let $n \in \mathbb{N}$. In polar form, we can write $1 = e^{0\pi i}$. So, its $n$-th roots, or all the complex numbers whose $n$-th powers are equal to $1$, are of the form $e^{2ki\pi/n}$, for positive integers $k < n$. So elements in $P$ must be of this form. We just need to show that they all satisfy $\gcd(k,n) = 1$.  \\
+
+\noindent Let $\beta \in Q$. We can write $\beta = e^{2ki\pi/n}$ for some positive integer $k < n$ with $\gcd(n,k) = 1$. Then $\beta^n = e^{2ki\pi} = 1$. So $\beta \in P$.\\
+
+\noindent Suppose $\beta \in P$. If it were in $Q$ then we could write it as $\beta = e^{2ki\pi/n}$ for some positive integer $k < n$ with $\gcd(n,k) = 1$, which means $\beta^n = 1$, so $\beta \in P$ as we assumed. So there is no contradiction. So $\beta \in Q$. \\
+
+\noindent Thus $P=Q$.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:primitive_roots}. %change the
+
+ \begin{description}
+    \item[EO-(C-FI)] In the second paragraph, $\beta^n = 1$ does not imply $\beta \in P$. This error causes the omission of part of the proof.
+    \item[F-FI] The third paragraph uses faulty logic, and again $\beta^n = 1$ does not imply $\beta \in P$.
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Error-Caused Omission due to Content False Implication (EO-(C-FI))
+	\item Fundamental False Implication (F-FI)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:primitive_roots}. %change the label
+
+\begin{prf}{prf:primitive_roots} %change the label
+Let $n \in \mathbb{N}$. \\
+
+%In polar form, we can write $1 = e^{0\pi i}$. So, its $n$-th roots, or all the complex numbers whose $n$-th powers are equal to $1$, are of the form $e^{2ki\pi/n}$, for positive integers $k < n$. So elements in $P$ must be of this form. We just need to show that they all satisfy $\gcd(k,n) = 1$.  \\
+
+\noindent We will first show that $Q\subseteq P$. Let $\beta \in Q$. We know that $\beta = e^{2ki\pi/n}$ for a positive integer $k \leq n$ with $\gcd(n,k) = 1$. We have $\beta^n =e^{2ki\pi}=1$. So, it suffices to show that if $\beta^r=1$ for a positive integer $r$, then $r\geq n$. Suppose $\beta^r = 1$ for a positive integer $r$. Then $e^{2kri\pi/n} = 1$, which means that $kr/n$ is an integer. Hence, $n|kr$. Since $\gcd(n,k) = 1$ this means that $n|r$. Therefore $r\geq n$ since $r$ is a positive integer. Hence, $\beta \in P$, and therefore $Q\subseteq P$. \\
+
+\noindent We will now show that $P\subseteq Q$. Suppose $\beta \in P$. Since $\beta^n=1$, we know that $\beta=e^{2ki\pi/n}$ for some positive integer $k\leq n$.  In order to derive a contradiction, suppose $\beta \notin Q$. This would imply that $\gcd(k,n) =d > 1$. Since $d|k$, since implies that $\beta ^{n/d} = e^{2ki\pi/d} = 1$. However, $0 < n/d < n$, which implies that $\beta \notin P$, which is a contradiction. Hence, $\beta\in Q$, and so $P \subseteq Q$.\\
+
+\noindent Thus $P=Q$.
+\end{prf} 

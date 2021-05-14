@@ -1,0 +1,55 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Well-Ordering Principle}
+
+\begin{xca}[Product of Primes]{xca:wop}
+Without the use of induction, prove every integer greater than 1 can be factored as a product of primes.
+\end{xca}
+
+\begin{flaw}{flaw:wop} %change the label
+We will use the well-ordering principle. Let $M$ be the set of all integers greater than one that cannot be factored as a product of primes. Assume that $M$ is not empty. Then by the well-ordering principle, there exists some least element $n \in M$. We know that $n$ is not prime, since if it was $n$ would be a product of one prime and hence would not be in $M$. So $n$ is composite. \\
+
+This means we can write $n = xy$ for some positive integers $x$ and $y$ with $1 < x,y < n$. But, since $x < n$ this means $x$ is minimal, not $n$. We assumed that $n$ was the least element, so this is a contradiction. \\
+
+Thus $M$ does not have a least element, so it must be empty. Therefore all integers can be factored as a product of primes.
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is only one error
+ in the Flawed Proof \ref{flaw:wop}. %change the label
+
+ \begin{description}
+    \item[F-FI]  The implication ``since $x < n$ this means $x$ is minimal, not $n$'' is false. Minimality in this case refers to the set $M$, but $x \notin M$.
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental False Implication (F-FI).
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:wop}. %change the label
+
+\begin{prf}{prf:wop} %change the label
+We will use the well-ordering principle. Let $M$ be the set of all integers greater than one that cannot be factored as a product of primes. In order to derive a contradiction, assume that $M$ is not empty. Then by the well-ordering principle, there exists some least element $n \in M$. We know that $n$ is not prime, since if it was $n$ would be a product of one prime and hence would not be in $M$. So $n$ is composite. \\
+
+This means we can write $n = xy$ for some positive integers $x$ and $y$ with $1 < x,y < n$. Since $n$ is minimal in $M$, this means $x,y \notin M$. So we can write $x$ and $y$ as a product of primes, namely we can say $x = p_1...p_k$ and $y = q_1...q_l$ for primes $p_1,...,p_k,q_1,...,q_l$, where $k,l \in \mathbb{N}$. But now this means $n = xy = p_1...p_kq_1...q_l$ so $n$ can be written as a product of primes. Thus $n $ cannot be in $M$, which is a contradiction. \\
+
+Thus $M$ does not have a least element, so it must be empty. Therefore all integers can be factored as a product of primes.
+
+\end{prf} 

@@ -1,0 +1,60 @@
+% Author: Kimberly Golubeva
+% Date: 5 October 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Convergent Sequences are Cauchy}
+
+\begin{xca}{xca:conv_cauchy}
+Prove that if a sequence $a_n$ converges, then $a_n$ is Cauchy.
+\end{xca}
+
+\begin{flaw}{flaw:conv_cauchy} %change the label
+Suppose that $a_n \rightarrow L.$ Then
+\begin{align*}
+    \lim_{n,m \rightarrow \infty} (a_n - a_m) &= L - L \\
+    &= 0 \\
+    &< \varepsilon\;,
+\end{align*}
+and so $a_n$ is Cauchy.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:conv_cauchy}. %change the label
+
+
+ \begin{description}
+ 	\item[EO-(C-VG):] No progress is made in this proof due to misunderstanding the definitions of Cauchy, convergence and limits.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Error-Caused Omission due to Content Vocabulary and Grammar (EO-(C-VG))
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:conv_cauchy}. %change the label
+
+\begin{prf}{prf:conv_cauchy} %change the label
+ Suppose that $a_n \rightarrow L$. Fix $\varepsilon> 0$. Since $a_n \rightarrow L$ we know that there exists an $N \in \N$ such that $n \geq N$ implies that $|a_n - L| < \frac{\varepsilon}{2}.$ \\
+ 
+If $m,n \geq N$ then by the triangle inequality,
+\begin{align*}
+    |a_n - a_m| &= |a_n-L +L - a_m| \\ &\leq |a_n-L| + |a_m-L| \\
+    &< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} \\
+    &= \varepsilon\;.
+\end{align*}
+Therefore, $a_n$ is Cauchy.
+\end{prf}

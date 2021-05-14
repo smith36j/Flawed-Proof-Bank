@@ -1,0 +1,68 @@
+% Author: Christian Bagshaw
+% Date: Sept 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Least Upper Bounds}
+
+\begin{xca}[$\mathbb{Q}$ is not complete]{xca:Q_notcomplete}
+Let $A = \{r \in \mathbb{Q} \: | \: r^2 < 2\}$. Prove $A$ does not have a least upper bound in $\mathbb{Q}$.
+\end{xca}
+
+\begin{flaw}{flaw:Q_notcomplete} %change the label
+Let $\alpha = LUB(A)$.
+
+\noindent $\alpha < \sqrt{2} $ $\:\Rightarrow\:$  $ \exists \beta \in \mathbb{Q}$ s.t. $\alpha < \beta < \sqrt{2}$ $\:\Rightarrow\: $ $\alpha \neq LUB(A)$
+
+\noindent  $\alpha > \sqrt{2} \: $ $\Rightarrow$  $\: \exists \beta \in \mathbb{Q}$ s.t. $\sqrt{2} < \beta < \alpha$
+$\:\Rightarrow\: $ $\alpha \neq LUB(A)$
+
+\noindent  $\Rightarrow$ $\alpha = \sqrt{2}$ $\Rightarrow \alpha \notin \mathbb{Q}$
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:Q_notcomplete}.
+
+ \begin{description}
+    \item[N-N] $LUB(A)$ to indicate the least upper bound of a set $A$ is not standard notation. If non-standard notation is used, it should be defined.
+    \item[N-VG] More explanation for the method being used (contradiction) and explanation for the steps being taken should be given.
+    \item[N-A] Justifying the existence of $\beta$ in the proof either requires explicit construction, or  density of $\mathbb{Q}$ in $\mathbb{R}$ which should be cited.
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Novice Notation (N-N)
+    \item Novice Vocabulary and Grammar (N-VG)
+    \item Novice Assertion (N-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:Q_notcomplete}. %change the label
+
+\begin{prf}{prf:Q_notcomplete} %change the label
+Let $A = \{r \in \mathbb{Q} \: | \: r^2 < 2\}$. 
+Suppose $A$ does have a least upper bound $\alpha \in \mathbb{Q}$. We will derive a contradiction by showing that $\alpha$ must equal the irrational number $\sqrt{2}$. To do this, we will show that if $\alpha < \sqrt{2}$ or $\alpha > \sqrt{2}$, then $\alpha$ is not a least upper bound. \\
+
+Firstly, suppose $\alpha < \sqrt{2}$. We know $1 \in A$ since $1^2 < 2$. So $1 < \alpha < \sqrt{2}$. This means $\alpha^2 < 2$, so $\alpha \in A$. In order to show that $\alpha$ is not a least upper bound, we wish to show that there exists some other $\beta \in A$ with $\alpha < \beta$.  To construct $\beta$, we wish to find some positive $\epsilon \in \mathbb{Q}$ such that $\beta = \alpha + \epsilon$ and $\beta^2  = (\alpha + \epsilon)^2 < 2$. Since $\alpha<2$, if we choose $\epsilon < 1$, we have $\beta^2  = (\alpha + \epsilon)^2 = \alpha^2 + 2\alpha\epsilon + \epsilon^2 < \alpha^2 + 5\epsilon$. Hence $\beta^2<2$ exactly when $\epsilon < \frac{2 - \alpha^2}{5} $. So if $\epsilon = \frac{2 - \alpha^2}{6}$, then $\beta > \alpha$ and $\beta \in A$. Hence, if $\alpha < \sqrt{2}$, then $\alpha$ is not a least upper bound for $A$.\\
+
+Now suppose $\alpha > \sqrt{2}$. We know that $\alpha < 2$, since $1.5$ is an upper bound for $A$. So $\sqrt{2} < \alpha < 2$. In order to show that $\alpha$ is not a least upper bound, we wish to show there exists some positive $\beta' \in \mathbb{Q}$ such that $\alpha > \beta'$ but $(\beta')^2 > 2$. This would imply that $\beta'$ is an upper bound, since if $r\in A$ and $r\geq\beta'>0$, then this would imply that $r^2\geq(\beta')^2>2$, which cannot occur. To construct $\beta'$ we wish to find some positive $\epsilon \in \mathbb{Q}$ such that $\beta' = \alpha - \epsilon$ and $(\beta')^2 = (\alpha - \epsilon)^2 > 2$. Using the fact that $\alpha < 2$ we have $(\beta')^2 = \alpha^2 - 2\alpha\epsilon + \epsilon^2 > \alpha^2 - 4\epsilon+\epsilon^2 > \alpha^2 - 4\epsilon$. We have $(\beta')^2 >\alpha^2 - 4\epsilon > 2$ if and only if $\epsilon < \frac{\alpha^2-2}{4}$. So choosing $\epsilon = \frac{\alpha^2-2}{6} $ gives $\beta' < \alpha$ and $(\beta'^2) > 2$. Moreover, we have $\beta'>0$, since $\alpha < 2$ implies $\epsilon = \frac{\alpha^2-2}{6}<\frac{1}{3}$, and so $\alpha>\sqrt{2}$ implies that $\beta'=\alpha-\epsilon>0$.  Hence, $\beta'$ is a smaller upper bound than $\alpha$. Therefore, if $\alpha > \sqrt{2}$, then $\alpha$ is not a least upper bound. \\
+
+%(note $\epsilon < 1$ since $\alpha < 2$ but if $\beta < \sqrt{2}$ it couldn't be an upper bound as shown above)
+
+We have shown that if $\alpha > \sqrt{2}$ or if $\alpha < \sqrt{2}$, then $\alpha$ cannot be a least upper bound. So the only possible option is $\alpha = \sqrt{2}$. But this number is not rational, so $A$ cannot have a least upper bound in $\mathbb{Q}$.
+\end{prf} 

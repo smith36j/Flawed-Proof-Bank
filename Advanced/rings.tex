@@ -1,0 +1,55 @@
+% Author: Christian Bagshaw
+% Date: Oct 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Ring Theory}
+
+\begin{xca}[Zero Divisor or Unit]{xca:unit_zerodiv}
+Let $R$ be a finite ring with unity. Prove that every element of $R$ is either a unit or a zero divisor.
+\end{xca}
+
+\begin{flaw}{flaw:unit_zerodiv} %change the label
+Let $r\in R$. Thus by Lagrange's theorem $r^{|R|} = 1$. Thus $r(r^{|R|-1}) = 1$, thus $r$ is a unit.
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:unit_zerodiv}.
+
+ \begin{description}
+    \item[C-MT] Misuse of Lagrange's theorem.
+
+ 	
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Content Misusing Theorem (C-MT)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:unit_zerodiv}. %change the label
+
+\begin{prf}{prf:unit_zerodiv} %change the label
+Let $R$ be a finite ring with unity.
+Let $1$ denote the multiplicative identity of $R$. Fix $r \in R$. Consider the map
+\begin{align*}
+    m_r: R &\to R\\
+    x &\mapsto rx.
+\end{align*}
+We have two possibilities: either $m_r$ is injective or it is not injective. If $m_r$ is injective, then it is also surjective because $R$ is finite. Hence, there exists some $x \in R$ such that $1 = rx$, and thus $r$ is a unit. On the other hand, if $m_r$ is not injective, then there exists $x, x' \in R$ with $x\neq x'$ such that $rx = rx' \: \Rightarrow \: r(x-x') = 0$, and so $r$ is a zero divisor.
+
+\end{prf} 

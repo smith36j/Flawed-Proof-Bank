@@ -1,0 +1,86 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+%Revised LD April 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Convergent Sequences: Unique Limit}
+
+\begin{xca}[Unique Limits]{xca:unique_limit}
+Let $\{a_n\}$ be a sequence of real numbers. Let $L$ and $L'$ be limits of this sequence, that is, suppose that $\{a_n\}$ converges to $L$ and $L'$. Prove $L = L'$. That is, if a sequence converges, then the limit is unique.
+\end{xca}
+
+\begin{flaw}{flaw:unique_limit} %change the label
+By the triangle inequality, we have that
+\begin{align*}
+    |L - L'| &= |L - a_n + a_n - L'|\\
+    &\leq |L - a_n| + |L' - a_n|\\
+    &< \epsilon.
+\end{align*}
+So $|L - L'| < \epsilon$. But we can make $\epsilon$ as small as we want, so the difference between $L$ and $L'$ is infinitely small, and thus they are equal.
+\end{flaw}
+
+\begin{flaw}{flaw:limits_r_unique} %change the label
+Suppose $a_n$ converges to both $L$ and $L'.$ Then,
+\begin{align*}
+    |L - L' | &= \lim a_n - \lim a_n \\
+    &= \lim (a_n - a_n) \\
+    &= 0\;.
+\end{align*}
+Thus, the limit is unique.
+\end{flaw}
+
+
+\clearpage
+\subsection{Error classification}
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:unique_limit}.
+
+ \begin{description}
+    \item[C-O] The variable $n$ needs to be defined in relation to $L$, $L'$ and $\epsilon$.
+    \item[C-A] The final statement has the right idea, but should be made more rigorous.
+
+ 	
+ \end{description}
+
+ \bigskip
+ 
+ There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:limits_r_unique}. %change the label
+
+
+ \begin{description}
+ 	\item[EO-(F-MT): ] No progress is made towards this proof due to misusing a theorem: the properties of convergent sequences cannot be used without first establishing the uniqueness of a limit.
+ \end{description}
+
+ \bigskip
+
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Content Omission (C-O)
+    \item Content Assertion (C-A)
+    \item Error-Caused Omission due to Fundamental Misusing Theorem (EO-(F-MT))
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:unique_limit}.
+
+\begin{prf}{prf:unique_limit}
+Suppose $\{a_n\}\subseteq \R$ is a convergent sequence.   Suppose that $L$ and $L'$ are limits of the sequence $\{a_n\}$.  In order to derive a contradiction, suppose $L \neq L'$. Let $\epsilon = \frac{1}{2}|L - L'|$. Note that this implies that $\epsilon>0$ and $2 \epsilon  = |L - L'|$. \\
+
+Since $\{a_n\}$ converges to $L$, we know that there exists some $N_1 \in \mathbb{N}$ such that for all $n \geq N_1$, $|a_n - L| < \epsilon$. Similarly, since $\{a_n\}$ converges to $L'$ there exists some $N_2 \in \mathbb{N}$ such that for all $n \geq N_2$, $|a_n - L'| < \epsilon$. Let $N = \max\{N_1, N_2\}$.  By the triangle inequality we can see that for all $n \geq N$ we have
+\begin{align*}
+    |L - L'| &= |L - a_n + a_n - L'|\\
+    &\leq |L - a_n| + |L' - a_n|\\
+    &< \epsilon + \epsilon \\
+    &= |L-L'|.
+\end{align*}
+So $|L-L'| < |L-L'|$, which is a contradiction. Thus we must have that $L = L'$.
+\end{prf} 
