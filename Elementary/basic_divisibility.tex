@@ -1,0 +1,52 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: JMS; 22 January 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Divisibility of a Product}
+
+\begin{xca}[Divisibility of a Product]{xca:div-prod}
+Let $a,b$ and $c$ be integers. Prove that if $a$ divides $b$, then $a$ divides $bc$. 
+\end{xca}
+
+\begin{flaw}{flaw:div-prod} 
+Suppose $a$ is even. Since $a$ divides $b$ this means $b$ is even. Therefore $bc$ is even, so that means $a$ divides $bc$. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are multiple errors
+ in the Flawed Proof \ref{flaw:div-prod}. 
+
+ 
+ \begin{description}
+    \item[WM]  There is no need to suppose the case that $a$ is even.
+    \item[EO-(WM)] The flawed proof has not considered the case where $a$ is odd. 
+    \item[N-A] The assertion ``since $a$ divides $b$ this means $b$ is even" requires more details. 
+    \item[F-FI] The implication  ``$bc$ is even, so that means $a$ divides $bc$" is false. 
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Wrong Method (WM)
+    \item Error Caused Ommision Wrong Method (EO-(WM))
+    \item Novice Assertion (N-A)
+	\item 	Fundamental False Implication (F-FI). 
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:div-prod}. 
+
+\begin{prf}{prf:div-prod} 
+Suppose that $a,b \in \Z$ and suppose that $a$ divides $b$.
+Since $a$ divides $b$, there exists some integer $k$ such that $ak = b$. Multiplying both sides by $c$ gives us that $akc = bc$. We will let $kc = l$, and note that $l$ is an integer. Thus $al = bc$, so by definition $a$ divides $bc$. 
+
+\end{prf}

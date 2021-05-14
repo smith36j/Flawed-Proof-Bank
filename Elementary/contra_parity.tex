@@ -1,0 +1,65 @@
+% Author: Kimberly Golubeva
+% Date: 27 July 2020
+% Revised: JMS 3 Feb 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Proof by Contrapositive}
+
+\begin{xca}{xca:contra_parity}
+Let $x \in \mathbb{Z}.$ Prove that if $x^2-6x+5$ is even, then $x$ is odd.  
+\end{xca}
+
+\begin{flaw}{flaw:contra_parity} 
+Suppose that $x^2-6x+5$ is even. We want to prove that $x$ is odd. By the definition of even, $x^2-6x+5 = 2k$ for some integer $k.$ So we have $x^2-6x+5 = 2k$ and, rearranging, $x^2-6x+(5-2k) = 0$. Then, using the quadratic formula, 
+\begin{align*}
+    x &= \frac{6 \pm \sqrt{6^2 - 4(1)(5-2k)}}{2} \\
+    &= \frac{6 \pm \sqrt{36 - 20 + 8k}}{2} \\
+    &= \frac{6 \pm\sqrt{16 + 8k}}{2}\;.
+\end{align*}
+Now we must show that $x = \frac{6 \pm\sqrt{16 + 8k}}{2}$ is odd. That is, we must show that $\frac{6 \pm\sqrt{16 + 8k}}{2} = 2j+1$ for some integer $j.$ So
+\begin{align*}
+    \frac{6 \pm\sqrt{16 + 8k}}{2} &= \frac{1}{2}\left(6 \pm \sqrt{16+8k}\right) \\
+    &= \frac{1}{2}\left(6 \pm \sqrt{16}\sqrt{8k}\right) \\ 
+    &= \frac{1}{2}\left(6 \pm 4\sqrt{8k}\right) 
+\end{align*}
+... not enough time to finish.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:contra_parity}. 
+
+ 
+ \begin{description}
+ 	\item[F-WM:] A direct proof may not be available with elementary methods.  An indirect proof (by contradiction, or proving the contrapositive) will be more effective .
+ 	\item[F-FS:] $\frac{1}{2}\left(6 \pm \sqrt{16+8k}\right) \neq \frac{1}{2}\left(6 \pm \sqrt{16}\sqrt{8k}\right).$
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental Wrong Method (F-WM)
+	\item Fundamental False Statement (F-FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:contra_parity}. 
+
+\begin{prf}{prf:contra_parity} 
+We will prove the contrapositive of this statement. That is, we prove that if $x$ is even, then $x^2-6x+5$ is odd. To do so, suppose that $x$ is even and write $x = 2k$ for some integer $k.$ Then
+\begin{align*}
+    x^2-6x+5 &= (2k)^2 - 6(2k) + 5 \\
+    &= 4k^2 - 12k + 5 \\
+    &= 2(2k^2-6k+2)+1.
+\end{align*}
+Now, since $2k^2-6k+2 \in \Z$, it follows that $x^2-6x+5$ is odd. Thus, since the contrapositive is true and it is logically equivalent to  the original statement, we can conclude that the original statement is true.
+\end{prf}

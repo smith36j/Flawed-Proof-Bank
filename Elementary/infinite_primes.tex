@@ -1,0 +1,47 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Infinitude of Primes}
+
+\begin{xca}[Infinitude of Primes]{xca:inf-prime}
+Prove there exist infinitely many prime numbers.  
+\end{xca}
+
+\begin{flaw}{flaw:inf-prime} %change the label
+Let $p_1, ..., p_k$ be the set of all prime numbers, where $k$ is some positive integer. Now let $N = p_1...p_k + 1$. Now we see that $N$ is not divisible by any of $p_1, ..., p_k$. But we know all integers greater than 1 can be written as a product of primes. Therefore $N$ is prime. This contradicts letting $p_1, ..., p_k$ being the set of all prime numbers. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+ in the Flawed Proof \ref{flaw:inf-prime}. %change the label
+
+ 
+ \begin{description}
+    \item[N-VG]  The flawed proof uses proof by contradiction. To set this up, the proof states ``let $p_1, ..., p_k$ be the set of all prime numbers", intending to derive a contradiction. Mathematical convention is to use the word ``assume", because we are assuming a false claim that will be contradicted.  
+    \item[C-FI]  The implication that ``N is not divisible by any of $p_1, ..., p_k$ ... Therefore N is prime" is false.  
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Novice Vocabulary Grammar (N-VG)
+	\item 	Content False Implication (C-FI). 
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:inf-prime}. %change the label
+
+\begin{prf}{prf:inf-prime} %change the label
+Assume there are finitely many primes, we will derive a contradiction. Let $p_1, ..., p_k$ be the set of all prime numbers, where $k$ is some positive integer. Now let $N = p_1...p_k + 1$. Now we see that $N$ is not divisible by any of $p_1, ..., p_k$. But we know all integers greater than 1 can be written as a product of primes. Therefore $N$ has a prime factor that is not one of $p_1, ..., p_k$. So our list of all primes is not complete - a contradiction. Therefore there must be infinitely many primes. 
+\end{prf}

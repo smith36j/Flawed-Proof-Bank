@@ -1,0 +1,53 @@
+% Author: Kimberly Golubeva
+% Date: 20 April 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Divisibility of a Product }
+
+\begin{xca}{xca:divis_product_wrongdef}
+Let $a,b$ and $c$ be integers. Prove that if $a$ divides $b$, then $a$ divides $bc$. 
+\end{xca}
+
+\begin{flaw}{flaw:divis_product_wrongdef} %change the label
+Suppose $a \mid b$. Then $a = bk$ for some $k \in \mathbb{Z}.$ Then if we multiply by $c$ on both sides, we get
+\[ ac = bck\;. \]
+Since $c$ is any integer, let $c=1$. Then
+\[ a = bck\;, \]
+which means that $a$ divides $bc$ since $a = (bc)k$, where $k$ is an integer. 
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:divis_product_wrongdef}. %change the label
+
+ 
+ \begin{description}
+ 	\item[C- VG: ] The statement that $a$ divides $b$ implies $a = bk$ is incorrect. The definition of divisibility states that if $a$ divides $b$, then $b = ak$ for some $k \in \mathbb{Z}.$
+ 	\item[C-MT: ] Since $a,b$ and $c$ are arbitrary integers, it is incorrect to assign them specific values. Thus, we cannot assume that $c=1$.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Vocabulary and Grammar (C-VG)
+	\item 	Content Misusing Theorem (C-MT)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:divis_product_wrongdef}. %change the label
+
+\begin{prf}{prf:divis_product_wrongdef} %change the label
+Suppose that $a,b \in \Z$ and suppose that $a$ divides $b$.
+Since $a$ divides $b$, there exists some integer $k$ such that $ak = b$. Multiplying both sides by $c$ gives us that $akc = bc$. We will let $kc = l$, and note that $l$ is an integer. Thus $al = bc$, so by definition $a$ divides $bc$. 
+\end{prf}

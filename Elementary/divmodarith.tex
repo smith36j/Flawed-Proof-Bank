@@ -1,0 +1,49 @@
+% Author: Christian Bagshaw
+% Date: DD MMM 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Divisibility and Modular Arithmetic}
+
+\begin{xca}[Basic Divisibility Property]{xca:divmodarith}
+Let $a,b$ be integers. Prove that $b \equiv 0 \mod a$ if and only if $a$ divides $b$. 
+\end{xca}
+
+\begin{flaw}{flaw:divmodarith} %change the label
+If $b \equiv 0 \mod a$, then $0$ divides $b-a$. So there exists some integer $n$ such that $b+0 = na$. So $a$ divides $b$. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+ in the Flawed Proof \ref{flaw:divmodarith}. 
+ 
+ \begin{description}
+  \item[C-VG] Incorrect understanding of what $b \equiv 0 \mod a$ means. 
+  \item[C-VG] Incorrect understanding of divisibility.
+    \item[F-OS]  Did not address one direction of the ``if and only if" proof. 
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Content Vocabulary and Grammar (C-VG)
+    \item Fundamental Omitted Sections (F-OS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:divmodarith}. %change the label
+
+\begin{prf}{prf:divmodarith} %change the label
+Let $a,b$ be integers. Firstly suppose $b \equiv 0 \mod a$. By definition, this means $a$ divides $b-0$. But since $b-0 = 0$, we conclude $a$ divides $b$. 
+
+Conversely suppose $a$ divides $b$. Then since $b = b-0$, we can say $a$ divides $b-0$. Thus by definition, $b \equiv 0 \mod a$.  
+\end{prf}

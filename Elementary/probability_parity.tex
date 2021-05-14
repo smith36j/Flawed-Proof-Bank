@@ -1,0 +1,69 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Probability}
+
+\begin{xca}[Parity of Sum]{xca:parity_sum}
+Let $T$ be a positive integer. Suppose an integer between 1 and $4T$ (inclusive) is randomly chosen (each of the $4T$ numbers has equal probability of being chosen). Let $N = 1 + 2 + ... + n$. What is the probability that $N$ is odd? (Hint: Remember that $N = \frac{n(n+1)}{2}$)
+\end{xca}
+
+\begin{flaw}{flaw:proof1} %change the label
+I can test different values of $T$ and find a pattern. I wrote some python code to test this for different values of $T$. I have included the output from the code. The output first gives the number $T$, and then the probability of $N$ being odd:\\
+
+1 0.5 2 0.5 3 0.5 4 0.5 5 0.5 6 0.5 7 0.5 8 0.5 9 0.5 10 0.5 11 0.5 12 0.5 13 0.5 14 0.5 15 0.5 16 0.5 17 0.5 18 0.5 19 0.5 20 0.5 21 0.5 22 0.5 23 0.5 24 0.5 25 0.5 26 0.5 27 0.5 28 0.5 29 0.5 30 0.5 31 0.5 32 0.5 33 0.5 34 0.5 35 0.5 36 0.5 37 0.5 38 0.5 39 0.5 40 0.5 41 0.5 42 0.5 43 0.5 44 0.5 45 0.5 46 0.5 47 0.5 48 0.5 49 0.5 50 0.5 51 0.5 52 0.5 53 0.5 54 0.5 55 0.5 56 0.5 57 0.5 58 0.5 59 0.5 60 0.5 61 0.5 62 0.5 63 0.5 64 0.5 65 0.5 66 0.5 67 0.5 68 0.5 69 0.5 70 0.5 71 0.5 72 0.5 73 0.5 74 0.5 75 0.5 76 0.5 77 0.5 78 0.5 79 0.5 80 0.5 81 0.5 82 0.5 83 0.5 84 0.5 85 0.5 86 0.5 87 0.5 88 0.5 89 0.5 90 0.5 91 0.5 92 0.5 93 0.5 94 0.5 95 0.5 96 0.5 97 0.5 98 0.5 99 0.5 100 0.5 101 0.5 102 0.5 103 0.5 104 0.5 105 0.5 106 0.5 107 0.5 108 0.5 109 0.5 110 0.5 111 0.5 112 0.5 113 0.5 114 0.5 115 0.5 116 0.5 117 0.5 118 0.5 119 0.5 120 0.5 121 0.5 122 0.5 123 0.5 124 0.5 125 0.5 126 0.5 127 0.5 128 0.5 129 0.5 130 0.5 131 0.5 132 0.5 133 0.5 134 0.5 135 0.5 136 0.5 137 0.5 138 0.5 139 0.5 140 0.5 141 0.5 142 0.5 143 0.5 144 0.5 145 0.5 146 0.5 147 0.5 148 0.5 149 0.5 150 0.5\\
+
+The trend is clear that the probability is $0.5$ and I have no reason to assume it will change. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:parity_sum}. 
+ 
+ \begin{description}
+    \item[N-VG] Writing in the first person (the use of ``I") is not convention in mathematics. 
+    \item[C-LU] The way the output from the code is presented is very difficult to read. 
+    \item[F-Eg] The flawed proof gave examples but did not prove the statement. 
+
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Novice Vocabulary and Grammar (N-VG)
+    \item Content Locally Unintelligible (C-LU)
+    \item Fundamental Proof by Example (F-Eg)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:parity_sum}. %change the label
+
+\begin{prf}{prf:parity_sum} %change the label
+We will show that $N$ is odd iff $n \equiv 1 \mod 4$ or $n \equiv 2 \mod 4$. \\
+
+\noindent If $n \equiv 0 \mod 4$, then we can write $n = 4k$ for some integer $k$. So 
+    $$N = \frac{4k(4k + 1)}{2} = 2k(4k + 1)$$ 
+    which is even. \\
+\noindent If $n \equiv 1 \mod 4$, we can write $n = 4k + 1$ for some integer $k$. So 
+    $$N = \frac{(4k+1)(4k + 2)}{2} = (4k + 1)(2k + 1) = 8k^2 + 6k + 1 = 2(4k^2 + 3k) + 1$$ 
+    which is odd. \\
+\noindent If $n \equiv 2 \mod 4$, we can write $n = 4k + 2$ for some integer $k$. So 
+    $$N = \frac{(4k+2)(4k + 3)}{2} = (2k + 1)(4k + 3) = 8k^2 + 10k + 3 = 2(4k^2 + 3k + 1) + 1$$ 
+    which is odd. \\
+  \noindent  If $n \equiv 3 \mod 4$, we can write $n = 4k + 3$ for some integer $k$. So 
+    $$N = \frac{(4k+3)(4k + 4)}{2} = (4k + 3)(2k + 2) = 8k^2 + 14k + 2 = 2(4k^2 + 7k + 1)$$ 
+    which is even. \\
+    
+Therefore, we know $N$ is odd iff $n \equiv 1,3 \mod 4$. There are $4T$ numbers between 1 and $4T$ inclusive. 4 divides $4T$, so there are $T$ numbers congruent to 1 mod 4, $T$ congruent to 2 mod 4, $T$ congruent to 3 mod 4 and $T$ congruent to 0 mod 4. Therefore, $2T$ satisfy the condition we want. So the probability $N$ is odd is $2T/4T = 0.5$
+\end{prf}

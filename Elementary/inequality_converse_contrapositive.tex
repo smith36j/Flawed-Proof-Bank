@@ -1,0 +1,55 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: JMS; 22 January 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Logic}
+
+\begin{xca}[Converse of a Statement]{xca:converse-1}
+Let $n$ be an integer. Prove or disprove the converse and contrapositive of the following statement:\\
+
+If $n$ is a positive integer, then $n + 3$ is a positive integer. 
+\end{xca}
+
+\begin{flaw}{flaw:converse-1}
+The converse of the statement is ``if $n+3$ is a positive integer, then $n$ is a positive integer". This statement is true. If $n+3$ is positive we can say $n+3 > 0$, which means $n > 0$, so $n$ is positive. \\
+
+The contrapositive of the statement is ``if $n+3$ is not a positive integer, then $n$ is a positive integer". This statement is false. We will provide a counterexample to show this. If $n = -4$, then $n+3 = -1$ is not a positive integer, but $n = -4$ is also not a positive integer. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+There are several errors
+ in the Flawed Proof \ref{flaw:converse-1}.
+
+ \begin{description}
+    \item[F-FI] The implication that $n+3 > 0$ means $n > 0$ is false. 
+    \item[WP] ``If $n+3$ is not a positive integer, then $n$ is a positive integer" is not the contrapositive of the statement 
+ 	
+ \end{description}
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental False Implication (F-FI)
+	\item Wrong Problem (WP)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:converse-1}. 
+
+\begin{prf}{prf:proof1} 
+Let $n\in \Z$.
+
+The converse of the statement is ``if $n+3$ is a positive integer, then $n$ is a positive integer". This statement is false. We will provide a counterexample. Let $n = -1$. We have that $n+3 = 2$ is positive, but $n = -1$ is negative.\\
+
+The contrapositive of the statement is ``if $n+3$ is not a positive integer, then $n$ is not a positive integer". This statement is true. Here is a proof:
+
+Suppose that $n+3$ is not a positive integer. Then $n+3 \leq 0$. This means $n+3 - 3 \leq 0 - 3$, so $n \leq -3 \leq  0$. Therefore $n$ is not a positive integer. 
+\end{prf}

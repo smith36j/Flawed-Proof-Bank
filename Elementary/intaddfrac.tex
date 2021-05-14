@@ -1,0 +1,54 @@
+% Author: Kimberly Golubeva
+% Date: 13 July 2020
+% Revised: JMS; 22 January 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{The Rationals}
+
+\begin{xca}{xca:intaddfrac}
+Prove or disprove the following statement. For all integers $m$ and $n$, if $m, n > 1$, then $\frac1m + \frac1n$ is not an integer.
+\end{xca}
+
+\begin{flaw}{flaw:intaddfrac}
+Suppose that $m$ and $n$ are integers and that $m,n > 1$. Since $\frac1m$ is the reciprocal of $m$ and it is not an integer and $\frac1n$ is the reciprocal of $n$ and it is not an integer, then there are no two distinct numbers such that $\frac1m + \frac1n$ can ever be an integer.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:intaddfrac}. 
+
+\subsubsection{Error codes}
+
+\begin{description}
+ 	%\item[F-FS:] The statement that $\frac1{m}$ implies that $\frac1m$ + $\frac1n$ cannot be an integer is false.
+ 	\item[C-FI:] The statement that $\frac1{m}$ and $\frac1{n}$ are not integers implies that $\frac1m + \frac1n$ is not an integer is false.
+ 	%\item[C-OS:] Did not consider the case where $m=n$.
+ 	\item[F-A:] Asserted the entire result.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	%\item 	Fundamental False Statement (F-FS)
+	\item   Content False Implication (C-FI)
+	%\item   Content Omitted Sections (C-OS)
+	\item   Fundamental Assertion (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:intaddfrac}. 
+
+\begin{prf}{prf:intaddfrac} 
+This statement is false. Its negation is: there exist integers $m$ and $n$ so that $m>1$, $n>1$ and $\frac1m + \frac1n$ is an integer. Here's a proof:
+
+Let $m,n = 2$. Then $m,n > 1$ and $\frac1m+ \frac1n = \frac12 + \frac12 = 1 \in \mathbb{Z}.$
+\end{prf} 

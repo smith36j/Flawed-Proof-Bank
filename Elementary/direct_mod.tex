@@ -1,0 +1,81 @@
+% Author: Kimberly Golubeva
+% Date: 21 July 2020
+% Revised: 
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Modular Arithmetic and Divisibility}
+
+\begin{xca}{xca:direct_mod}
+Let $p$ be an integer and suppose that $p$ is not divisible by $3.$ Prove that $p^2 \equiv 1 \text{ (mod } 3).$
+\end{xca}
+
+\begin{flaw}{flaw:direct_mod} 
+Since $3 \nmid p$, this implies that we have two cases. Namely, either \\
+$p \equiv 1 \text{ (mod } 3)$ or $p \equiv 2 \text{ (mod } 3)$. \\ 
+
+\noindent \textbf{Case 1:} $p \equiv 1 \text{ (mod } 3)$. By definition, $p = 3k+1$ for some integer $k.$ Then
+\begin{align*}
+    p^2 &= (3k+1)^2 \\
+    &= 9k^2 + 6k +1 \\
+    & = 3\left(3k^2+2k + \frac{1}{3}\right)
+\end{align*}
+I'm not sure where to go from here...\\
+
+\noindent \textbf{Case 2:} $p \equiv 2 \text{ (mod } 3)$. By definition, $p = 3k+2$ for some integer $k.$ Then
+\begin{align*}
+    p^2 &= (3k+2)^2 \\
+    &= 9k^2 + 12k +4 \\
+    & = 3\left(3k^2+4k+\frac43\right)
+\end{align*}
+I'm not sure where to go from here...
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There is only one error
+ in the Flawed Proof \ref{flaw:direct_mod}.
+
+ 
+ \begin{description}
+ 	\item[C-OS:] Failed to recognize that the first few terms in the expressions $9k^2 + 6k +1$ and $9k^2 + 12k +4$ can be factored independently of the last term, leading to the omission of the final steps in both cases. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Omitted Sections (C-OS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:direct_mod}.
+
+\begin{prf}{prf:direct_mod}
+Since $3 \nmid p$, this implies that we have two cases. Namely, either \\
+$p \equiv 1 \text{ (mod } 3)$ or $p \equiv 2 \text{ (mod } 3)$. \\ 
+
+\noindent \textbf{Case 1:} $p \equiv 1 \text{ (mod } 3)$. By definition, $p = 3k+1$ for some integer $k.$ Then
+\begin{align*}
+    p^2 &= (3k+1)^2 \\
+    &= 9k^2 + 6k +1 \\
+    & = 3(3k^2+2k)+1 \\
+    & = 3l + 1
+\end{align*}
+where $l \eqdef 3k^2+2k$ is an integer. Thus, $p^2 \equiv 1 \text{ (mod } 3).$ \\
+
+\noindent \textbf{Case 2:} $p \equiv 2 \text{ (mod } 3)$. By definition, $p = 3k+2$ for some integer $k.$ Then
+\begin{align*}
+    p^2 &= (3k+2)^2 \\
+    &= 9k^2 + 12k +4 \\
+    &= 9k^2 + 12k +3 + 1 \\
+    & = 3(3k^2+4k+1)+1 \\
+    & = 3l + 1
+\end{align*}
+where $l \eqdef 3k^2+4k+1$ is an integer. Thus, $p^2 \equiv 1 \text{ (mod } 3).$
+
+\end{prf}

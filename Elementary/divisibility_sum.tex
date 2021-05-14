@@ -1,0 +1,58 @@
+% Author: Kimberly Golubeva
+% Date: unknown
+% Revised: JMS 3 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Divisibility}
+
+\begin{xca}{xca:divisibility_sum}
+Prove that for any integers $a,b$ and $c$, if $a \mid b$ and $a \mid c$ then $a \mid (b+c).$
+\end{xca}
+
+\begin{flaw}{flaw:divisibility_sum} 
+We will consider two cases. 
+First, let $a$ be odd. Then we can randomly choose the values $a = 5$, $b = 30$ and $c=10$ to show that $a \mid (b+c)$. We know that $$\frac{30}{5} = 6 \quad\text{and} \quad \frac{10}{5} = 2.$$
+Additionally, we have that $b+c = 30 + 10 = 40$. This implies
+$$\frac{40}{5} = 8,$$
+which means that $a \mid (b+c)$ when $a$ is odd. 
+
+Now, let $a$ be even. Then we can randomly choose the values $a = 2$, $b = 12$ and $c=10$ to show that $a \mid (b+c)$. We know that $$\frac{12}{2} = 6 \quad\text{and} \quad \frac{10}{2} = 5.$$
+Additionally, we have that $b+c = 12 + 10 = 22$. This implies
+$$\frac{22}{2} = 11,$$
+which means that $a \mid (b+c)$ when $a$ is even.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:divisibility_sum}. 
+
+ 
+ \begin{description}
+ 	\item[EO-F-Eg:] Here, proof by example leads to the omission of nearly all cases, except the ones given in the example. Additionally, there is a fundamental error in the failure to recognize that 'randomly' choosing a specific example is not sufficient evidence to prove a statement with a universal quantifier.
+ 	\item[F-WM:] Dividing the proof into two cases is not the correct approach. Moreover, the definition of `divides' is not explicitly used in the proof. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Fundamental Error-caused Omission -- Fundamental -- due to Proof by Example (EO-F-Eg)
+	\item Fundamental Wrong Method (F-WM)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:divisibility_sum}. 
+
+\begin{prf}{prf:divisibility_sum} 
+Suppose that $a, b$ and $c$ are integers and that $a \mid b$ and $a \mid c$. By the definition of divisibility, we have that $b = ja$ and $c = ka$ for some integers $j$ and $k$. Then
+$$b + c = ja + ka = a(j+k),$$
+where $j+k$ is also an integer, since it is the sum of two integers. Thus, by the definition of divisibility, it follows that  $a \mid (b+c)$.
+\end{prf}

@@ -1,0 +1,59 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: JMS 23 September 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{GCD}
+
+\begin{xca}[Multiple of $\gcd$]{xca:gcd_multiple}
+Let $a$ and $b$ be positive integers. For any positive integer $n$ prove $\gcd(na, nb) = n\gcd(a,b)$. 
+\end{xca}
+
+\begin{flaw}{flaw:gcd_multiple} 
+Let $\gcd(a,b) = d$. Then we can write $a = dk$ and $b = dl$ for some integers $k,l$. Let $\gcd(na, nb) = \gcd(ndk, ndl) = n\gcd(dk, dl) = n\gcd(a,b)$. 
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:gcd_multiple}. 
+ 
+ \begin{description}
+    \item[N-VG] Incorrect use of the word ``let" in the final statement. Something is being asserted, so  ``therefore" or ``thus" should be used. 
+    \item[F-A ] The entire result is asserted in the final statement without proof. 
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Novice Vocabulary Grammar (N-VG)
+	\item Fundamental Assertion (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:gcd_multiple}. %change the label
+
+ % Corrected proof revised 23 September 2020 by Jerrod
+\begin{prf}{prf:gcd_multiple} %change the label
+Let $d = \gcd(a,b)$ and $c = \gcd(na, nb)$. We wish to show $nd = c$. By the definition of the greatest common divisor, we know $d\, |\, a$ and $d\, | \,b$.  In particular, $a = dk$ and $b=d\ell$ for some (positive) integers $k,\ell \in \Z$.  Moreover, $na = ndk$ and $nb = nd\ell$, so it follows that  $nd \, | \,na$ and $nd \, | \, nb$. 
+%By the definition of the greatest common divisor, we must have $nd \leq c$.
+Since $c = \gcd(na, nb)$, there exist integers $x$ and $y$ so that $c = xna + ynb$.
+Substituting $na = ndk$ and $nb = nd\ell$ we obtain \[ c = xndk + ynd\ell = nd(xk + y\ell),\]
+where $xk + y\ell \in \Z$, thus $nd$ divides $c$.
+So we can write $c = ndt$ for some positive integer $t \in \mathbb{Z}$. 
+Since $c=\gcd(na,nb)$ divides both $na$ and $nb$, 
+we can now say $ndt \, | \, na$ and $ndt \, | \, nb$.
+That is, there are integers $p$ and $q$ so that $na = ndtp$ and $nb = ndtq$.  Dividing by $n$, we obtain $a = dtp$ and $b=dtq$, which implies $dt \, | \, a$ and $dt \, | \, b$. 
+But by the definition of $\gcd(a,b)$ this means $dt \leq d$, which means $t = 1$ (because $d$ and $t$ are positive). Therefore $nd = c$.
+\end{prf}

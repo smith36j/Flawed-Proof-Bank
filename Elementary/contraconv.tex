@@ -1,0 +1,68 @@
+%Author: Kimberly Golubeva
+%Date: July 14, 2020
+% Revised: JMS; 22 January 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Contrapositive and Converse}
+
+\begin{xca}[]{xca:contraconv}
+Let $n$ be an integer.
+Write the contrapositive and the converse of the true statement \\
+$$``\text{If } n > 2, \text{ then } n^2 > 4."$$
+Is the contrapositive true? Is the converse true? Explain why or why not. 
+\end{xca}
+
+\begin{flaw}{flaw:contraconv}
+\begin{enumerate}
+\item Contrapositive: If $n^2 < 4$, then $n < 2.$ 
+\item Converse: If $n^2>4$, then $n>2$. \\
+\end{enumerate}
+As the original statement is true, and the contrapositive is logically equivalent to the original statement, the contrapositive is true. Despite the fact that the converse is not logically equivalent to the original statement, in this case, the converse is true. Taking the square root of both sides of $n^2>4$
+$$\sqrt{n^2} > \sqrt{4},$$
+we see that this statement implies that $n > 2.$
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:contraconv}. 
+
+ 
+\subsubsection{Error codes}
+
+\begin{description}
+ 	\item[C-O:] Failed to recognize that 'not greater than' is equivalent to 'less than or equal to', which lead to the omission of the 'or equal to' from the statement of the contrapositive.
+ 	\item[C-FS-EO:] The statement that $\sqrt{n^2} > \sqrt{4}$ implies $n > 2$ is false. This error caused the omission of the case where $n$ is negative, which is the key element of the proof. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Local Omission (C-O)
+	\item   Content False Statement Error Caused Omission (C-FS-EO)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:contraconv}. 
+
+\begin{prf}{prf:contraconv} 
+Let $n$ be an integer.
+\begin{enumerate}
+\item Contrapositive: If $n^2 \leq 4$, then $n \leq 2.$ 
+\item Converse: If $n^2>4$, then $n>2$. \\
+\end{enumerate}
+As the original statement is true, and the contrapositive is logically equivalent to the original statement, the contrapositive is true. 
+
+However, the converse is not logically equivalent to the original statement and in this case, the converse is false. 
+
+Indeed, the negation of the converse is: ``$n^2 > 4$ but $n \leq 2$." Here is a proof:
+Consider $n = -5$. Then $n^2 = 25$, which is greater than $4$, but $-5$ is not greater than $2.$
+\end{prf}
