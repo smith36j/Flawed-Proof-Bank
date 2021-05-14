@@ -1,0 +1,50 @@
+% Author: Christian Bagshaw
+% Date: September 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Bayes Theorem}
+
+\begin{xca}[Proof of Bayes Theorem]{xca:bayes}
+Let $A$ and $B$ be two events. Recall that $P(A\cap B) = P(A)P(B|A)$. Prove that
+$$P(A|B) = P(A)\frac{P(B|A)}{P(B)} $$
+\end{xca}
+
+\begin{flaw}{flaw:bayes} %change the label
+The information given that $P(A\cap B) = P(A)P(B|A)$ is obviously a red herring because the thing we are trying to show doesn't use intersections. It is obvious that $P(B)P(A|B) = P(A)P(B|A)$ because one side is just rearranging the other side. Now manipulating that equation means that obviously $$P(A|B) = P(A)\frac{P(B|A)}{P(B)}$$ like we wanted. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is only one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:bayes}. 
+ 
+ \begin{description}
+    \item[F-A] The assertion that $P(B)P(A|B) = P(A)P(B|A)$ is at the heart of the proof and needs an explanation.
+
+
+
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Fundamental Assertion (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:bayes}. %change the label
+
+\begin{prf}{prf:bayes} %change the label
+We were given that $P(A\cap B) = P(A)P(B|A)$. But note that in an intersection, $A$ and $B$ are interchangable. So we can also write $P(A\cap B) = P(B\cap A) = P(B)P(A|B)$. This means $P(B)P(A|B) = P(A)P(B|A)$. Rearranging this means 
+$$P(A|B) = P(A)\frac{P(B|A)}{P(B)}$$. 
+\end{prf}

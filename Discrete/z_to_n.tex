@@ -1,0 +1,59 @@
+% Author: Christian Bagshaw
+% Date: Sept 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{One-to-one Functions}
+
+\begin{xca}[One-to-one from. $\mathbb{Z}$ to $\mathbb{N}$]{xca:z_to_n}
+Find a function $f:\mathbb{Z} \to \mathbb{N}$ that is one-to-one, and prove that it is one-to-one. 
+\end{xca}
+
+\begin{flaw}{flaw:z_to_n} %change the label
+Let $f(n) = n$. Then this is one-to-one ( because we did this in class) and it satisfies the things being asked. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is only one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:z_to_n}. 
+ 
+ \begin{description}
+    \item[F-FS] $f(n) = n$ does not work as this is not a well-defined function from $\mathbb{Z}$ to $\mathbb{N}$. 
+
+
+
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Fundamental False Statement (F-FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:z_to_n}. %change the label
+
+\begin{prf}{prf:z_to_n} %change the label
+Define $f: \mathbb{Z} \to \mathbb{N}$ as follows:
+$$f(n) = \begin{cases}
+2|n| + 1 & x < 0\\
+2n & x \geq 0
+\end{cases}
+$$
+Now to show that this is one-to-one, let $a,b \in \mathbb{Z}$ such that $f(a) = f(b)$. Now firstly note that under $f$, all negative integers get mapped to odd integers and all non-negative integers get mapped to even integers. So if $f(a) = f(b)$ then $a,b$ are either both negative or both non-negative. We will consider each case
+\begin{itemize}
+    \item If $a,b < 0$ then $f(a) = f(b)$ means $2|a| + 1 = 2|b| + 1$, which means $|a| = |b|$. Since both are negative, this means $a=b$. 
+    \item If $a,b > 0$ then $f(a) = f(b)$ means $2a = 2b$ , which means $a=b$.
+\end{itemize}
+Therefore $f(a) = f(b)$ implies $a=b$, so $f$ is one-to-one. 
+\end{prf}

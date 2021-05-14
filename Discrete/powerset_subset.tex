@@ -1,0 +1,48 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: JMS 28 Feb 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Subsets and power sets}
+
+\begin{xca}[Subsets and power sets]{xca:powerset_subset}
+Prove that for all sets $A$ and $B$, if $A \subseteq B$, then $\style P(A) \subseteq \style P(B)$. 
+
+\noindent Here,  $\style P(X)$ denotes the power set of a set $X$.
+\end{xca}
+
+\begin{flaw}{flaw:powerset_subset} 
+$A \in B \: \Rightarrow \: A \in \style P(B) \: \Rightarrow \: \style P(A) \in \style P(B)$.  
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:powerset_subset}. 
+ 
+ \begin{description}
+    \item[C-N] Misuse of $\in$ in place of  $\subseteq$.
+    \item[N-VG] The intended logical progression (ignoring the notation error) is correct in spirit, but the proof is devoid of prose, detail and explanation. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Content Notation (C-N)
+	\item Novice Vocabulary \& Grammar (N-VG)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:powerset_subset}. 
+
+\begin{prf}{prf:powerset_subset} 
+Suppose that $A$ and $B$ are sets, and suppose that $A \subseteq B$.
+Let $S \in \style P(A)$. We wish to show $S \in \style P(B)$. Since $S \in \style P(A)$ this means $S$ is a subset of $A$. Since $S$ is a subset of $A$, and $A$ is a subset of $B$, it follows that $S \subseteq B$. This means $S \in \style P(B)$. Therefore, $\style P(A) \subseteq \style P(B)$. 
+\end{prf}

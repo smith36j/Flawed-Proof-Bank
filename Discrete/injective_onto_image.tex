@@ -1,0 +1,115 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: 22 March 2021 JMS
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Injection and Surjections}
+
+\begin{xca}[Bijection onto the Image 1]{xca: injective_onto_image_1}
+Recall that if $h: X \rightarrow Y$ is a function from a set $X$ to a set $Y$, then the image of $h$ is the set 
+\[\ran(h) = \{ y \in Y : \exists\, x \in X\, \text{so that}\, h(x) = y \}. \]
+
+\noindent Let $A$ and $B$ be sets and let $f: A \to B$ be an injective function.\\ Define a function $g:A \to \text{Im}(f)$ by $g(a) = f(a)$, for all $a \in A$.
+
+\noindent Prove that $g$ is a bijection. 
+\end{xca}
+
+\begin{flaw}{flaw: injective_onto_image_1} 
+Injective;
+\begin{itemize}
+    \item $g=F$ and $F = injection$ so $G = injection$ so the next thing is
+
+
+\item surgect:
+
+    \item The $IM$ has all the targets the function hits so if the only target that $G$ has is the targets that it hits then it hits all the targets it can so $G = SURJECTION$. 
+\end{itemize}
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw: injective_onto_image_1}.
+ 
+ \begin{description}
+    \item[N-N] The capitalization of $g$ to $G$ and of $f$ to $F$ is confusing. 
+    \item [C-FS] The statement ``$g=F$" is false. 
+    \item[N-VG] Using ``$F = injection$", ``$G = injection$" and later ``$G = SURJECTION$" does not follow mathematical conventions. 
+    \item[N-VG] In general, the proof is very hard to follow. It is not organized well, the use of bullet points is confusing and spelling/grammar is poor. 
+    \item[N-A] Ultimately, the result is asserted without sufficient justification.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Novice Notation (N-N)
+	\item Content False Statement (C-FS)
+	\item Novice Vocabulary Grammar (N-VG)
+	\item Novice Assertion (N-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+
+\begin{xca}[Bijection onto the Image 2]{xca: injective_onto_image_2}
+Recall that if $h: X \rightarrow Y$ is a function from a set $X$ to a set $Y$, then the image of $h$ is the set 
+\[\ran(h) = \{ y \in Y : \exists\, x \in X\, \text{so that}\, h(x) = y \}. \]
+
+\noindent Let $A$ and $B$ be sets and let $f: A \to B$ be an injective function.\\ Define a function $g:A \to \text{Im}(f)$ by $g(a) = f(a)$, for all $a \in A$.
+
+\noindent Prove that $g$ is a bijection. 
+\end{xca}
+
+\begin{flaw}{flaw: injective_onto_image_2} 
+Clearly $g(a)=f(a)$ for all elements $a$ of the domain $A$, so $g=f$ and $g$ is injective because $f$ is injective.
+Similarly, $g=f$ but we shrunk the codomain to the image and $g$ is obviously surjective.
+Thus, $g$ is a bijection.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw: injective_onto_image_2}.
+ 
+ \begin{description}
+    \item[C-FS] The functions $f$ and $g$ are not equal, they have different codomains.
+   % \item[C-FI] Since $g \neq f$, the implication ``$g=f$ but we shrunk the codomain to the image and $g$ is obviously surjective" is false: actually since $g\neq f$ the statement is vacuously true because the assumption is false.
+    \item[N-O/C-A] The misunderstanding of what it means for two functions to be equal has led the author to claim that the desired statement is ``obvious", omitting a detailed proof, and resulting in the assertion of the result.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item  Content False Statement (C-FS)
+   % \item Content False Implication (C-FI)
+    \item Novice Omission (N-O) / Content Assertion (C-O)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+
+
+
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proofs \ref{flaw: injective_onto_image_1} and  \ref{flaw: injective_onto_image_2}. 
+
+\begin{prf}{prf: injective_onto_image_1} 
+We will show that $g$ is both injective and surjective.\\
+
+First, we prove that $g$ is injective. Suppose that $a,a' \in A$ such that $g(a) = g(a')$.  Then, by definition of the function $g$ we have that  \[f(a) =g(a) = g(a') = f(a'),\] and since $f$ is injective we have that $a = a'$. So, $g$ is injective. \\
+
+Next, we prove that $g$ is surjective. Suppose that $b \in \text{Im}(f)$, that is, $b$ is in the codomain of $g$. Since $b \in \text{Im}(f)$, there exists some $a \in A$ such that $b = f(a)$. Then, by definition of $g$,  $b = f(a) = g(a)$. Thus $g$ is surjective. \\
+
+We have shown that $g$ is both injective and surjective; therefore, $g$ is bijective. 
+\end{prf}

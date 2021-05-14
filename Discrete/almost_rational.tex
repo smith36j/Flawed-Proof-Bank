@@ -1,0 +1,55 @@
+% Author: Christian Bagshaw
+% Date: DD MMM 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Relations}
+
+\begin{xca}[Almost Rational]{xca:almost_rational}
+Let $\sim$ be a relation on $\mathbb{Z} \times \mathbb{Z}$ defined by $(a,b) \sim (a',b')$ iff $a'b = ab'$. Prove $\sim$ is not an equivalence relation on $\mathbb{Z} \times \mathbb{Z}$. 
+\end{xca}
+
+\begin{flaw}{flaw:almost_rational} %change the label
+Need examples that contradict the definition of equivalence relation\\
+
+Reflexive: $\checkmark$\\
+
+Symmetric: $\checkmark$\\
+
+Transitive: The error must be here. In class we did this but with $b \neq 0$ so it must have something to do with that. 
+
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:almost_rational}. %change the label
+ which we have classified using  the Coding Scheme Matrix in \cite[pp.~919]{Strickland_2016}. %% this reference may change if we modify the coding scheme matrix
+ 
+ \begin{description}
+    \item[SW] The flawed proof isnt a completed proof or even written as a proof - it is really just scratch work one might have been using in the process of discovering the proof. 
+
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Scratch Work (SW)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:almost_rational}. %change the label
+
+\begin{prf}{prf:almost_rational} %change the label
+We will disprove the statement by showing this relation is not transitive. Note that $(0,0)$, $(1,1)$, $(1,2) \in \mathbb{Z} \times \mathbb{Z}$. We can see that $(1,1) \sim (0,0)$ since $1 \cdot 0 = 0 \cdot 1$. Also we can see that $(0,0) \sim (1,2)$ since $0\cdot2 = 0\cdot1$. If this relation were transitive this would imply $(1,1) \sim (1,2)$ but $1\cdot 2 \neq 1 \cdot 1$ so this is not true. Thus this relation is not transitive. 
+\end{prf}

@@ -1,0 +1,92 @@
+% Author: Kimberly Golubeva
+% Date: 28 September 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Addition and Multiplication of Congruence Relations}
+
+\begin{xca}{xca:cong_add_mult}
+Prove that if $a \equiv b\;(mod\;n)$ and $c \equiv d \;(mod\;n)$, then
+\begin{enumerate}
+    \item $(a+c) \equiv (b+d) \;(mod\;n)$\;,
+    \item $ac \equiv bd \;(mod\;n)$\;.
+\end{enumerate}
+\end{xca}
+
+\begin{flaw}{flaw:cong_add_mult} %change the label
+Suppose that $a \equiv b\;(mod\;n)$ and $c \equiv d \;(mod\;n)$\;. By the definition of congruence, there exists integers $m$ and $k$ such that 
+$$a-b = mn \quad \text{and} \quad c-d = kn\;.$$
+
+We have
+\begin{align*}
+    (a+c) - (b+d) &= n(m+k) \\
+    a-b+c-d &= n(m+k) \\
+\end{align*}
+which implies that $(a+c) \equiv (b+d)\; mod\;(n)\;.$ \\
+
+We have
+\begin{align*}
+    ac - bd &=n(cm + bk), \\
+    &= c(a-b) + b(c-d) \\
+\end{align*}
+which implies that $ac \equiv bd \;(mod\;n)$\;.
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:cong_add_mult}. %change the label
+
+ 
+ \begin{description}
+ 	\item[C-Cir:] Both portions of the proof use the conclusion in the course of the proof. In particular, the conclusions $(a+c) - (b+d) = n(m+k)$ and $ac - bd =n(cm + bk)$ are assumed at the beginning of the proof. 
+ 	\item[C-EO-Cir:] Many of the important justification steps are omitted due to the arguments being circular. 
+ 	\item[F-A:] The results are asserted as there are no justifications for the conclusions reached. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Circular Argument (C-Cir)
+	\item   Content Error-Caused Omission due to Circular Argument (C-EO-Cir)
+	\item   Fundamental Assertion (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:cong_add_mult}. %change the label
+
+\begin{prf}{prf:cong_add_mult} %change the label
+Suppose that $a \equiv b\;(mod\;n)$ and $c \equiv d \;(mod\;n)$\;. By the definition of congruence, there exists integers $m$ and $k$ such that 
+$$a-b = mn \quad \text{and} \quad c-d = kn\;.$$
+
+\noindent First we prove that  $(a+c) \equiv (b+d) \;(mod\;n)$\;.\\
+
+We have
+\begin{align*}
+    a-b+c-d &= n(m+k) \\
+    (a+c) - (b+d) &= n(m+k)\;,
+\end{align*}
+and so $n \vert (a+c) - (b+d)$ which implies that     $(a+c) \equiv (b+d)\; mod\;(n)\;.$ \\
+
+\noindent Next, we prove that $ac \equiv bd \;(mod\;n)$\;. Here, we use that fact that $-bc + bc = 0.$\\
+
+We have
+\begin{align*}
+    ac - bd &= ac + 0 -bd \\
+    &= ac + (-bc + bc) - bd \\
+    &= c(a-b) + b(c-d) \\
+    &=c(mn) + b(kn) \\
+    &=n(cm + bk)\;, 
+\end{align*}
+and so $n \vert (ac-bd)$ which implies that $ac \equiv bd \;(mod\;n)$\;.
+
+\end{prf}

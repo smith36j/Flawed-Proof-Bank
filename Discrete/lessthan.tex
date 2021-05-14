@@ -1,0 +1,54 @@
+% Author: Christian Bagshaw
+% Date: DD MMM 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Relations}
+
+\begin{xca}[Transitive Relation]{xca:order_relation}
+For this question, $0 \notin \mathbb{N}$. Let $<$ be the relation on $\mathbb{N}$ (the natural numbers) defined by 
+$$\text{for all} \: m,n \in \mathbb{N}, \: n < m  \text{ iff there exists some } p \in \mathbb{N} \text{ such that } n+p = m $$
+Prove that this is a transitive relation, but not a symmetric relation. 
+\end{xca}
+
+\begin{flaw}{flaw:order_relation} %change the label
+Let $a<b$ and $b<c$. Then of course $a<c$ so this is transitive.\\
+
+\noindent I can show this isnt symmetric because its not possible for $a<b$ and $b<a$. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is only one error
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:order_relation}. %change the label
+
+ 
+ \begin{description}
+    \item[F-A] Entire result was asserted. \item[N-VG] Use of the first person pronoun ``I'' is typically bad form in a mathematical proof.
+ 	\item[C-N] $a,b$ and $c$ are not defined. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Fundamental Assertion (F-A)
+	\item Novice Vocabulary and Grammar (N-VG)
+	\item Content Notation (C-N)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:order_relation}. %change the label
+
+\begin{prf}{prf:order_relation} %change the label
+Let $a,b,c \in \mathbb{N}$ such that $a<b$ and $b < c$. We need to show this implies $a < c$. Since $a<b$, there exists some $p \in \mathbb{N}$ such that $a+p = b$. Also since $b<c$ there exists some $q \in \mathbb{N}$ such that $b + q = c$. Now substituting gives $a + p + q = c$. Now since $p,q \in \mathbb{N}$, $p+q \in \mathbb{N}$. So let $r = p+q$. Then $a+r = c$, so $a < c$. \\
+
+To show this is not a symmetric relation, suppose there exists $a,b \in \mathbb{N}$ such that $a<b$ and $b<a$. Then there exists natural numbers $p,q$ such that $a+q = b$ and $b+p = a$. Substituting gives $b+p+q = b$, or that $p+q = 0$. This is not possible for natural numbers $p,q$. Therefore, this relation is not symmetric. 
+\end{prf}

@@ -1,0 +1,75 @@
+% Author: Kimberly Golubeva
+% Date: 20 April 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Injection}
+
+\begin{xca}{xca:injection_subtle}
+Consider $f: \mathbb{R} \rightarrow \mathbb{R}$ and $g: \mathbb{Z} \rightarrow \mathbb{Z}$ where $f(x) = 3x-4$ and $g(n) = n^4$ for all $n \in \mathbb{Z}.$ Is $f$ injective? Is $g$ injective? Prove or disprove.
+\end{xca}
+
+\begin{flaw}{flaw:injection_subtle} %change the label
+Yes, $f$ is injective. Suppose that $a, b \in \mathbb{R}$ and that $f(a) = f(b)$. Then:
+\begin{align*}
+    f(a) &= f(b) \\
+    3a-4 &= 3b-4 \\
+    3a &= 3b \\
+    a &= b\;.
+\end{align*}
+Thus, $f$ is injective. 
+
+Yes, $g$ is injective. Suppose that $a, b \in \mathbb{Z}$ and that $g(a) = g(b)$. Then:
+\begin{align*}
+    g(a) &= g(b) \\
+    \sqrt[4]{a^4} &= \sqrt[4]{b^4} \\
+    a &= b \;.
+\end{align*}
+Thus, $g$ is injective. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There is only one error
+ in the Flawed Proof \ref{flaw:injection_subtle}. %change the label
+
+ 
+ \begin{description}
+ 	\item[EO-C-FS] The entirely of the proof was omitted due to the false statement that $\sqrt[4]{a^4} = \sqrt[4]{b^4} \implies
+    a = b.$ Namely, it was assumed that $a$ and $b$	are positive.
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Error-cased Omission Content False Statement
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:injection_subtle}. %change the label
+
+\begin{prf}{prf:injection_subtle} %change the label
+Yes, $f$ is injective. Suppose that $a, b \in \mathbb{R}$ and that $f(a) = f(b)$. Then:
+\begin{align*}
+    f(a) &= f(b) \\
+    3a-4 &= 3b-4 \\
+    3a &= 3b \\
+    a &= b\;.
+\end{align*}
+Thus, $f$ is injective. 
+
+No, $g$ is not injective. To prove this, we will consider the following counterexample. Let $a = 2$ and $b=-2$. Then:
+\begin{align*}
+    g(a) &= g(b) \\
+    16 &= 16 \\
+    2^4 &= (-2)^4\;,
+\end{align*}
+and so $g(a)=g(b)=16,$ but $a=2 \neq -2 = b$. Thus, $g$ is not injective. 
+\end{prf}

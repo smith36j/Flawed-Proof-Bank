@@ -1,0 +1,48 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Counting Subsets}
+
+\begin{xca}[Subsets containing even numbers]{xca:subset_counting}
+Let $n \geq 3$ be an integer, let $N = \{1, 2, ..., n\}$. Express the number of subsets of $N$ containing at least one even number in terms of $n$. 
+\end{xca}
+
+\begin{flaw}{flaw:subset_counting} %change the label
+If it has to contain an even number, then it is a subset of $\{2, 4, ..., n\}$ (the set of even numbers less than or equal to $n$). This set has $n/2$ elements. So the number of subsets of this set is $2^{n/2}$. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+%Provide a brief classification and explanation of the errors in the Flawed Proof \ref{flaw:proof1}. %change the label
+
+There are multiple errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:subset_counting}
+ 
+ \begin{description}
+    \item[C-FI] ``it has to contain an even number'' does not imply  ``it is a subset of $\{2,4,...,n\}$''. 
+    \item[C-FS] The set $\{2,3,...,n\}$ is not the set of even numbers less than or equal to $n$ if $n$ is odd. \item[C-FS] The set $\{2,4,...,n\}$ does not have $n/2$ elements if $n$ is odd. 
+
+ 	
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+    \item Content False Implication (C-FI)
+    \item Content False Statement (C-FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:subset_counting}. %change the label
+
+\begin{prf}{prf:proof1} %change the label
+Firstly, we know the total number of subsets of $N$ is $2^n$. A subset that contains no even numbers is a subset of $O = \{1,3,...,n\}$ if $n$ is odd or $O = \{1,3,...,n-1\}$ if $n$ is even. The size of $O$ is $n/2$ if $n$ is even, or $\ceil{n/2}$ if $n$ is odd. Either way, we can say the size of $O$ is $\ceil{n/2}$. Thus, the number of subsets of $O$ is $2^{\ceil{n/2}}$. Therefore, the number of subsets of $N$ containing at least one even number would be $2^n - 2^{\ceil{n/2}}$. 
+\end{prf}

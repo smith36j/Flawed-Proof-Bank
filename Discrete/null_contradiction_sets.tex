@@ -1,0 +1,59 @@
+% Author: Kimberly Golubeva
+% Date: 10 August 2020
+% Revised: 22 March 2021 JMS
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Set Containment Involving the Empty Set}
+
+\begin{xca}{xca:null_contradiction_sets}
+Recall that for any two sets $X$ and $Y$, we define 
+\[ X \setminus Y = \{ x\in X : x \notin Y \}. \]
+
+\noindent Prove or disprove the following statement. 
+
+\noindent For all sets $A,B$ and $C,$ if $A \setminus C = \varnothing,$ then $A \setminus B \subseteq C.$
+\end{xca}
+
+\begin{flaw}{flaw:null_contradiction_sets} 
+This statement is true. Suppose that $x \in A \setminus B.$ We want to prove that $x \in C$. So since $x \in A \setminus B,$ then $x \in A$ and $x \notin B$. Since $A \setminus C = \varnothing$, this means that $x \in A$ and $x \in C$ since if something is in $A$, then it cannot be in not $C$ (because that is equal to the empty set). Thus, $x \in C.$ 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:null_contradiction_sets}.
+
+ 
+ \begin{description}
+ 	\item[N-VG:] Failed to define $A, B$ and $C$. Failed to assume that $A \setminus C = \varnothing.$
+ %%	\item[F-WM:] Used direct proof instead of proof by contradiction. 
+ 	\item[F-A:] Entire result is asserted in the last sentence. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Novice Vocabulary and Grammar (N-VG)
+%%	\item   Fundamental Wrong Method (F-WM)
+	\item   Fundamental Assertions (F-A)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:null_contradiction_sets} that uses Proof by Contradiction.
+
+\begin{prf}{prf:null_contradiction_sets1} 
+Suppose that $A,B$ and $C$ are sets and that $A \setminus C = \varnothing.$ Suppose that $x \in A \setminus B.$ We want to prove that $x \in C$ and we will do this by contradiction. So suppose that $x \notin C.$ Since $x \in A \setminus B$, we get that $x \in A.$ Since $x \in A$ and $x \notin C,$ we get $x \in A \setminus C$, but this contradicts the assumption that $A \setminus C = \varnothing$. Thus, $x \in C$ and we conclude that $A\setminus B \subset C$. 
+\end{prf}
+
+The following is a corrected, direct version of Flawed Proof \ref{flaw:null_contradiction_sets}.
+
+\begin{prf}{prf:null_contradiction_sets2} 
+Suppose that $A,B$ and $C$ are sets and that $A \setminus C = \varnothing.$ Suppose that $x \in A \setminus B.$ In particular, $x \in A$.  Since $x \in A$ and $A \setminus C = \varnothing$, it follows from the definition of the set-difference that $x \in C$.  Thus, $A\setminus B \subset C$.
+\end{prf}

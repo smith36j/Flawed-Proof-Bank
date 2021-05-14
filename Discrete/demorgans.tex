@@ -1,0 +1,60 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: JMS, 22 Feb 2021
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Set Unions and Intersections}
+
+\begin{xca}[De Morgan's Law ]{xca:demorgans}
+Let $U$ be a set.
+Prove that for all subsets $A$ and $B$ of $U$, $$(A\cup B)^c = A^c \cap B^c.$$
+Here $A^c$ denotes the complement of $A$ in $U$, that is $$A^c = U \setminus A = \{x \in U : x \notin A\}.$$
+\end{xca}
+
+\begin{flaw}{flaw:demorgans} 
+$x \in (A\cup B)^c$ means $x \notin A$ nor $B$ means $x \notin A$ or $x \notin B$ means $x \in A^c $ or $x \in B^c$ means $x \in A^c \cap B^c$. \\
+
+$x \in A^c \cap B^c$ means $x \in A^c $ or $x \in B^c$ means $x \notin A$ or $x \notin B$ means $x \notin A$ nor $B$ means $x \in (A\cup B)^c$. 
+
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:demorgans}. 
+ 
+ \begin{description}
+    \item[N-VG] In general, the flawed proof is poorly written. The repetitive use of the word  ``means", and each paragraph being one run on sentence makes it difficult to read. 
+    \item[F-FA] The assertion ``$x \notin A$ nor $B$ means $x \notin A$ or $x \notin B$" is incorrect.
+    \item[F-FA] The assertion ``$x \in A^c$ or $x \in B^c$ means $x \in A^c \cap B^c$ is incorrect.
+    \item[F-FA] The assertion ``$x \in A^c \cap B^c$ means $x \in A^c$ or $x \in B^c$" is incorrect.
+    \item [F-FA] The assertion ``$x \notin A$ or $x \notin B$ means $x \notin A$ nor $B$" is incorrect. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Novice Vocabulary Grammar (N-VG)
+	\item Fundamental False Assertion (F-FA)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:demorgans}. 
+
+\begin{prf}{prf:demorgans} 
+Suppose that $A$ and $B$ are subsets of $U$.  
+
+First, we will prove that $(A\cup B)^c$ is a subset of $A^c \cap B^c$.
+Suppose that $x \in (A\cup B)^c$.  That is, $x \in U$ by $x \notin A \cup B$.  Since $x \notin A \cup B$, it follows that $x \notin A$ and $x \notin B$.  By definition of the complement, $x \in A^c$ and $x \in B^c$, and $x \in A^c \cap B^c$.  Thus, $(A\cup B)^c$ is contained in $A^c \cap B^c$.
+
+Now, we will prove that $A^c \cap B^c$ is a subset of $(A\cup B)^c$.  
+Suppose that $y \in A^c \cap B^c$.  Then $y \in A^c$ and $y \in B^c$.  That is, $y \in U$ but $y \notin A$ and $y \notin B$.  Moreover, $y \notin A\cup B$.  Thus $y \in (A\cup B)^c$ and $A^c \cap B^c$ is contained in $(A \cup B)^c$.
+
+Therefore, $(A\cup B)^c \subset (A^c \cap B^c)$ and $(A^c \cap B^c) \subset (A\cup B)^c$, which means $(A\cup B)^c = A^c \cap B^c$.
+\end{prf}

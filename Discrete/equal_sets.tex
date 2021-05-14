@@ -1,0 +1,57 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Rvised: JMS 28 Feb 2020
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Equality of Sets}
+
+\begin{xca}[Equality of Sets]{xca:equal_sets}
+Let $S = \{x \in \mathbb{R} \: | \: x^2 < x\}$ and let $T = \{x \in \mathbb{R} \: | \: 0 < x < 1\}$. 
+
+\noindent Prove that $S = T$.
+\end{xca}
+
+\begin{flaw}{flaw:equal_sets} 
+
+$0 < x < 1$ implies $0 < x^2 < x$, but squares are always positive so we just get that $x^2 < x$.
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:equal_sets}.
+
+ \begin{description}
+    \item[N-A] The claim ``$0 < x < 1$ implies $0 < x^2 < x$" requires more justification.
+    \item[F-OS] The flawed proof only shows $T \subseteq S$, but does not show $S \subseteq T$.
+    \item[N-VG] In general, more detail is required and the proof does not follow good mathematical writing conventions; for instance $x$ is undefined.  It not clear what has been shown and what this has to do with the desired claim.
+ \end{description}
+
+
+\subsubsection{Error codes}
+\begin{itemize}
+	\item Novice Assertion (N-A)
+	\item Fundamental Omitted Section (F-OS)
+	\item Novice Vocabular \& Grammar (N-VG)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:equal_sets}. 
+
+\begin{prf}{prf:equal_sets}
+Firstly we will show $T \subseteq S$. Let $x \in T$. This means $0 < x < 1$. Since $x$ is positive we can multiply the inequality by $x$, giving $0 < x^2 < x$. In particular, $x^2 < x$. So $x \in S$. Thus $T \subseteq S$. \\
+
+Next we will show $S \subseteq T$. Let $x \in S$. This means $x^2 < x$. Rearranging and factoring we obtain 
+\[x(x-1) = x^2 -x < 0.\]
+ Since the product $x(x-1)$ is negative, one of $x$ and $x-1$ is positive and the other is negative. If $x-1>0$, then $x>1>0$. So, in order for $x$ and $x-1$ to have opposite signs, we must have $x-1<0$ and $x>0$, which implies $0<x<1$. So $x \in T$. Thus $S \subseteq T$. \\
+
+Since $S \subseteq T$ and $T \subseteq S$, we can conclude that $S=T$.
+\end{prf} 

@@ -1,0 +1,50 @@
+% Author: Kimberly Golubeva
+% Date: 10 August 2020
+% Revised: 22 March 2021 JMS
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Composition of Injective Functions}
+
+\begin{xca}{xca:injective_comp}
+Recall that ``injective" means ``one-to-one".
+
+\noindent Prove or disprove the following statement. If $f:A \rightarrow B$ and $g:B \rightarrow C$ are injective functions, then $g \circ f : A \rightarrow C$ is injective.
+\end{xca}
+
+\begin{flaw}{flaw:injective_comp} 
+Suppose that $f:A \rightarrow B$ and $g:B \rightarrow C$ are injective functions. Let $a_1, a_2 \in A$. Then $f(a_1) = f(a_2)$ and so $g(f(a_1)) = g(f(a_2))$. Thus, $g \circ f$ is injective. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:injective_comp}. 
+
+ 
+ \begin{description}
+ 	\item[C-VG:] Misunderstanding the definition of what it means for the function $g\circ f: A \rightarrow C$ to be injective.
+ 	\item[F-A:] Asserted entire result by supposing that $a_1 = a_2.$ 
+ 	\item[C-LO:] Components of proof are not in logical order due to misuse of the C-VG error. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+	\item 	Content Vocabulary and Grammar (C-VG)
+	\item   Fundamental Assertions (F-A)
+	\item   Content Logical Order (C-LO)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:injective_comp}. 
+
+\begin{prf}{prf:injective_comp} 
+Suppose $f:A \rightarrow B$ and $g:B \rightarrow C$ are injective functions. We want to prove that $g \circ f : A \rightarrow C$ is injective. So suppose that $a_1, a_2 \in A$ such that $(g \circ f)(a_1) = (g \circ f)(a_2).$ That is, $g(f(a_1))=g(f(a_2)).$ Since $g$ is injective, it must be the case that $f(a_1)=f(a_2).$ Similarly, since $f$ is injective, we have $a_1=a_2.$ Thus, $g \circ f$ is injective. 
+\end{prf}

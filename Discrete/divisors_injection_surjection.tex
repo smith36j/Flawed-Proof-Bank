@@ -1,0 +1,59 @@
+% Author: Christian Bagshaw
+% Date: August 2020
+% Revised: 22 March 2021 JMS
+% Lauren DeDieu, Jerrod M.~Smith, Kimberly Golubeva and Christian Bagshaw
+% A Resource Bank for Writing Intensive Mathematics Courses
+% This work is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+\section{Surjections and Injections}
+
+\begin{xca}[Divisors function]{xca:divisor_function}
+Let $\N = \{1, 2, 3, \ldots \}$ be the set of positive integers.
+
+\noindent Define the function $\sigma :\mathbb{N} \to \mathbb{N}$ via 
+$$\sigma (n) = \sum_{d \in \mathbb{N}\:\text{and}\: d|n}1$$
+Prove that $\sigma $  is surjective but not injective. 
+\end{xca}
+
+\begin{flaw}{flaw:divisor_function} 
+The first thing to notice is that $\sigma (n)$ is simply counting the number of divisors of $n$. Let $n$ be the product of the first $m$ primes. Then $\sigma (n) = m$, so $\sigma $ is surjective.   \\
+
+To show $\sigma $ is not injective we need to find examples where $m = n$ but $\sigma (m) \neq \sigma (n)$. We can write $12 = 4*3$ which means $\sigma (12) = 2$ but also $12 = 2*2*3$ so $\sigma (12) = 3$. So $\sigma $ is not injective. 
+\end{flaw}
+
+\clearpage
+\subsection{Error classification}
+
+There are several errors
+% is only one error ... etc.
+ in the Flawed Proof \ref{flaw:divisor_function}. 
+ 
+ \begin{description}
+    \item[N-O] $m$ and $n$ are not defined.
+    \item[C-FS] If $n$ is the product of the first $m$ primes, this does not mean $\sigma (n) = m$.
+    \item[C-VG] The statement ``To show $\sigma $ is not injective we need to find examples where $m = n$ but $\sigma (m) \neq \sigma (n)$" shows a fundamental misunderstanding of what it means for $\sigma$ to be a function, as well as for a function to be injective. 
+    \item[C-FS] Both computations of $\sigma (12)$ in the final paragraph are incorrect. The way in which the computations were justified shows a fundamental misunderstanding of the function $\sigma $. 
+ \end{description}
+
+ 
+\subsubsection{Error codes}
+\begin{itemize}
+ \item Novice Omission (N-O)
+ \item Content False Statement (C-FS)
+ \item Content Vocabular and Grammar (C-VG)
+	\item Content False Statement (C-FS)
+\end{itemize}
+See Section \ref{sec-error} for more information about error classifications.
+
+\clearpage
+\subsection{Corrected proof}
+
+The following is a corrected version of Flawed Proof \ref{flaw:divisor_function}. 
+
+\begin{prf}{prf:divisor_function} 
+The first thing to notice is that if $k\in \N$, then $\sigma(k) $ is precisely the number of positive divisors of $k$. \\
+
+To prove that $\sigma$ is surjective, we have to show for each $m \in \mathbb{N}$ there exists some $n \in \mathbb{N}$ such that $\sigma (n) = m$.  Suppose that $m\in \N$. Let $n = 2^{m-1} \in \N$. By unique prime factorization, the only divisors of $n$ are the powers of 2 less than or equal to $n$, namely $2^0, 2^1, ..., 2^{m-1}$. In particular, this means $n$ has $m$ divisors, so $\sigma (n) = m$. Thus $\sigma (n)$ is surjective.  \\
+
+To show $\sigma $ is not injective we need to find two integers $m,n \in \mathbb{N}$ such that $\sigma (m) = \sigma (n)$ but $m \neq n$. Let $m = 3$ and $n = 2$. Both $2$ and $3$ are prime and thus have two positive divisors, so $\sigma (2) =2= \sigma (3)$, but of course $2 \neq 3$. 
+\end{prf}
