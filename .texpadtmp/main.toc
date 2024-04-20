@@ -1,0 +1,402 @@
+\contentsline {chapter}{\numberline {1}How do students learn to write proofs?}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}How to use this document}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Overview of error classification}{10}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Abbreviated Error Codes}{11}{subsection.1.3.1}%
+\contentsline {part}{I\hspace {1em}Flawed Proofs}{13}{part.1}%
+\contentsline {chapter}{\numberline {2}Elementary Topics}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Logic}{16}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Error classification}{17}{subsection.2.1.1}%
+\contentsline {subsubsection}{Error codes}{17}{section*.2}%
+\contentsline {subsection}{\numberline {2.1.2}Corrected proof}{18}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Divisibility of a Product}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Error classification}{20}{subsection.2.2.1}%
+\contentsline {subsubsection}{Error codes}{20}{section*.3}%
+\contentsline {subsection}{\numberline {2.2.2}Corrected proof}{21}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Contrapositive and Converse}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Error classification}{23}{subsection.2.3.1}%
+\contentsline {subsubsection}{Error codes}{23}{section*.4}%
+\contentsline {subsubsection}{Error codes}{23}{section*.5}%
+\contentsline {subsection}{\numberline {2.3.2}Corrected proof}{24}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Properties of Integers}{25}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Error classification}{26}{subsection.2.4.1}%
+\contentsline {subsubsection}{Error codes}{26}{section*.6}%
+\contentsline {subsection}{\numberline {2.4.2}Corrected proof}{27}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}The Rationals}{28}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Error classification}{29}{subsection.2.5.1}%
+\contentsline {subsubsection}{Error codes}{29}{section*.7}%
+\contentsline {subsubsection}{Error codes}{29}{section*.8}%
+\contentsline {subsection}{\numberline {2.5.2}Corrected proof}{30}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Divisibility}{31}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Error classification}{32}{subsection.2.6.1}%
+\contentsline {subsubsection}{Error codes}{32}{section*.9}%
+\contentsline {subsection}{\numberline {2.6.2}Corrected proof}{33}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Divisibility and Modular Arithmetic}{34}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Error classification}{35}{subsection.2.7.1}%
+\contentsline {subsubsection}{Error codes}{35}{section*.10}%
+\contentsline {subsection}{\numberline {2.7.2}Corrected proof}{36}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Proof by Contrapositive}{37}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Error classification}{38}{subsection.2.8.1}%
+\contentsline {subsubsection}{Error codes}{38}{section*.11}%
+\contentsline {subsection}{\numberline {2.8.2}Corrected proof}{39}{subsection.2.8.2}%
+\contentsline {section}{\numberline {2.9}Modular Arithmetic and Divisibility}{40}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Error classification}{41}{subsection.2.9.1}%
+\contentsline {subsubsection}{Error codes}{41}{section*.12}%
+\contentsline {subsection}{\numberline {2.9.2}Corrected proof}{42}{subsection.2.9.2}%
+\contentsline {section}{\numberline {2.10}GCD}{43}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Error classification}{44}{subsection.2.10.1}%
+\contentsline {subsubsection}{Error codes}{44}{section*.13}%
+\contentsline {subsection}{\numberline {2.10.2}Corrected proof}{45}{subsection.2.10.2}%
+\contentsline {section}{\numberline {2.11}The Parity Property}{46}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Error classification}{47}{subsection.2.11.1}%
+\contentsline {subsubsection}{Error codes}{47}{section*.14}%
+\contentsline {subsubsection}{Error codes}{47}{section*.15}%
+\contentsline {subsection}{\numberline {2.11.2}Corrected proof}{48}{subsection.2.11.2}%
+\contentsline {section}{\numberline {2.12}Infinitude of Primes}{49}{section.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}Error classification}{50}{subsection.2.12.1}%
+\contentsline {subsubsection}{Error codes}{50}{section*.16}%
+\contentsline {subsection}{\numberline {2.12.2}Corrected proof}{51}{subsection.2.12.2}%
+\contentsline {chapter}{\numberline {3}Mathematical Induction}{53}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mathematical Induction with Divisibility}{54}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Error classification}{55}{subsection.3.1.1}%
+\contentsline {subsubsection}{Error codes}{55}{section*.17}%
+\contentsline {subsection}{\numberline {3.1.2}Corrected proof}{56}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Summation Formula Induction}{57}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Error classification}{59}{subsection.3.2.1}%
+\contentsline {subsubsection}{Error codes}{59}{section*.18}%
+\contentsline {subsection}{\numberline {3.2.2}Corrected proof}{60}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Binary Notation}{61}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Error classification}{62}{subsection.3.3.1}%
+\contentsline {subsubsection}{Error codes}{62}{section*.19}%
+\contentsline {subsection}{\numberline {3.3.2}Corrected proof}{63}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Inequality Induction}{64}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Error classification}{65}{subsection.3.4.1}%
+\contentsline {subsubsection}{Error codes}{65}{section*.20}%
+\contentsline {subsection}{\numberline {3.4.2}Corrected proof}{66}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Strong Induction}{67}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Error classification}{68}{subsection.3.5.1}%
+\contentsline {subsubsection}{Error codes}{68}{section*.21}%
+\contentsline {subsection}{\numberline {3.5.2}Corrected proof}{69}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Induction Using Pascal's Identity}{70}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Error classification}{71}{subsection.3.6.1}%
+\contentsline {subsubsection}{Error codes}{71}{section*.22}%
+\contentsline {subsection}{\numberline {3.6.2}Corrected proof}{72}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Induction and Well-Ordering}{73}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Error classification}{74}{subsection.3.7.1}%
+\contentsline {subsubsection}{Error codes}{74}{section*.23}%
+\contentsline {subsection}{\numberline {3.7.2}Corrected proof}{75}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}A recursive sequence}{76}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Error classification}{77}{subsection.3.8.1}%
+\contentsline {subsubsection}{Error codes}{77}{section*.24}%
+\contentsline {subsection}{\numberline {3.8.2}Corrected proof}{78}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}Strong Induction with Sequences}{79}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Error classification}{80}{subsection.3.9.1}%
+\contentsline {subsubsection}{Error codes}{80}{section*.25}%
+\contentsline {subsection}{\numberline {3.9.2}Corrected proof}{81}{subsection.3.9.2}%
+\contentsline {chapter}{\numberline {4}Discrete Mathematics}{83}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Set Unions and Intersections}{84}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Error classification}{85}{subsection.4.1.1}%
+\contentsline {subsubsection}{Error codes}{85}{section*.26}%
+\contentsline {subsection}{\numberline {4.1.2}Corrected proof}{86}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Equality of Sets}{87}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Error classification}{88}{subsection.4.2.1}%
+\contentsline {subsubsection}{Error codes}{88}{section*.27}%
+\contentsline {subsection}{\numberline {4.2.2}Corrected proof}{89}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Subsets and power sets}{90}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Error classification}{91}{subsection.4.3.1}%
+\contentsline {subsubsection}{Error codes}{91}{section*.28}%
+\contentsline {subsection}{\numberline {4.3.2}Corrected proof}{92}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Subsets and power sets again}{93}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Error classification}{94}{subsection.4.4.1}%
+\contentsline {subsubsection}{Error codes}{94}{section*.29}%
+\contentsline {subsection}{\numberline {4.4.2}Corrected proof}{95}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Set Containment}{96}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Error classification}{97}{subsection.4.5.1}%
+\contentsline {subsubsection}{Error codes}{97}{section*.30}%
+\contentsline {subsection}{\numberline {4.5.2}Corrected proof}{98}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Set Containment Involving the Empty Set}{99}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Error classification}{100}{subsection.4.6.1}%
+\contentsline {subsubsection}{Error codes}{100}{section*.31}%
+\contentsline {subsection}{\numberline {4.6.2}Corrected proof}{101}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Composition of Injective Functions}{102}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Error classification}{103}{subsection.4.7.1}%
+\contentsline {subsubsection}{Error codes}{103}{section*.32}%
+\contentsline {subsection}{\numberline {4.7.2}Corrected proof}{104}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Surjections and Injections}{105}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Error classification}{106}{subsection.4.8.1}%
+\contentsline {subsubsection}{Error codes}{106}{section*.33}%
+\contentsline {subsection}{\numberline {4.8.2}Corrected proof}{107}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Injection and Surjections}{108}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Error classification}{109}{subsection.4.9.1}%
+\contentsline {subsubsection}{Error codes}{109}{section*.34}%
+\contentsline {subsection}{\numberline {4.9.2}Error classification}{111}{subsection.4.9.2}%
+\contentsline {subsubsection}{Error codes}{111}{section*.35}%
+\contentsline {subsection}{\numberline {4.9.3}Corrected proof}{112}{subsection.4.9.3}%
+\contentsline {section}{\numberline {4.10}Cartesian Product Set Equality}{113}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Error classification}{114}{subsection.4.10.1}%
+\contentsline {subsubsection}{Error codes}{114}{section*.36}%
+\contentsline {subsection}{\numberline {4.10.2}Corrected proof}{115}{subsection.4.10.2}%
+\contentsline {section}{\numberline {4.11}Cartesian Product Set Equality Again}{116}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Error classification}{117}{subsection.4.11.1}%
+\contentsline {subsubsection}{Error codes}{117}{section*.37}%
+\contentsline {subsection}{\numberline {4.11.2}Corrected proof}{118}{subsection.4.11.2}%
+\contentsline {section}{\numberline {4.12}Relations}{119}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Error classification}{120}{subsection.4.12.1}%
+\contentsline {subsubsection}{Error codes}{120}{section*.38}%
+\contentsline {subsection}{\numberline {4.12.2}Corrected proof}{121}{subsection.4.12.2}%
+\contentsline {section}{\numberline {4.13}Constructing Rationals from Integers}{122}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Error classification}{123}{subsection.4.13.1}%
+\contentsline {subsubsection}{Error codes}{123}{section*.39}%
+\contentsline {subsection}{\numberline {4.13.2}Corrected proof}{124}{subsection.4.13.2}%
+\contentsline {section}{\numberline {4.14}Counting Subsets}{125}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Error classification}{126}{subsection.4.14.1}%
+\contentsline {subsubsection}{Error codes}{126}{section*.40}%
+\contentsline {subsection}{\numberline {4.14.2}Corrected proof}{127}{subsection.4.14.2}%
+\contentsline {section}{\numberline {4.15}Card Combinations}{128}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Error classification}{129}{subsection.4.15.1}%
+\contentsline {subsubsection}{Error codes}{129}{section*.41}%
+\contentsline {subsection}{\numberline {4.15.2}Corrected proof}{130}{subsection.4.15.2}%
+\contentsline {section}{\numberline {4.16}Conditional Probability}{131}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Error classification}{132}{subsection.4.16.1}%
+\contentsline {subsubsection}{Error codes}{132}{section*.42}%
+\contentsline {subsection}{\numberline {4.16.2}Corrected proof}{133}{subsection.4.16.2}%
+\contentsline {section}{\numberline {4.17}Properties of Functions: One-to-one and Onto}{134}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Error classification}{135}{subsection.4.17.1}%
+\contentsline {subsubsection}{Error codes}{135}{section*.43}%
+\contentsline {subsection}{\numberline {4.17.2}Corrected proof}{136}{subsection.4.17.2}%
+\contentsline {section}{\numberline {4.18}The Graph of a Matrix}{137}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Error classification}{138}{subsection.4.18.1}%
+\contentsline {subsubsection}{Error codes}{138}{section*.44}%
+\contentsline {subsection}{\numberline {4.18.2}Corrected proof}{139}{subsection.4.18.2}%
+\contentsline {section}{\numberline {4.19}Addition and Multiplication of Congruence Relations}{140}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Error classification}{141}{subsection.4.19.1}%
+\contentsline {subsubsection}{Error codes}{141}{section*.45}%
+\contentsline {subsection}{\numberline {4.19.2}Corrected proof}{142}{subsection.4.19.2}%
+\contentsline {section}{\numberline {4.20}Bayes Theorem}{143}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Error classification}{144}{subsection.4.20.1}%
+\contentsline {subsubsection}{Error codes}{144}{section*.46}%
+\contentsline {subsection}{\numberline {4.20.2}Corrected proof}{145}{subsection.4.20.2}%
+\contentsline {section}{\numberline {4.21}One-to-one Functions}{146}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Error classification}{147}{subsection.4.21.1}%
+\contentsline {subsubsection}{Error codes}{147}{section*.47}%
+\contentsline {subsection}{\numberline {4.21.2}Corrected proof}{148}{subsection.4.21.2}%
+\contentsline {section}{\numberline {4.22}Relations}{149}{section.4.22}%
+\contentsline {subsection}{\numberline {4.22.1}Error classification}{150}{subsection.4.22.1}%
+\contentsline {subsubsection}{Error codes}{150}{section*.48}%
+\contentsline {subsection}{\numberline {4.22.2}Corrected proof}{151}{subsection.4.22.2}%
+\contentsline {section}{\numberline {4.23}Equivalence Relations}{152}{section.4.23}%
+\contentsline {subsection}{\numberline {4.23.1}Error classification}{153}{subsection.4.23.1}%
+\contentsline {subsubsection}{Error codes}{153}{section*.49}%
+\contentsline {subsection}{\numberline {4.23.2}Corrected proof}{154}{subsection.4.23.2}%
+\contentsline {section}{\numberline {4.24}Set Containment Version Two}{155}{section.4.24}%
+\contentsline {subsection}{\numberline {4.24.1}Error classification}{156}{subsection.4.24.1}%
+\contentsline {subsubsection}{Error codes}{156}{section*.50}%
+\contentsline {subsection}{\numberline {4.24.2}Corrected proof}{157}{subsection.4.24.2}%
+\contentsline {section}{\numberline {4.25}Surjection}{158}{section.4.25}%
+\contentsline {subsection}{\numberline {4.25.1}Error classification}{159}{subsection.4.25.1}%
+\contentsline {subsubsection}{Error codes}{159}{section*.51}%
+\contentsline {subsection}{\numberline {4.25.2}Corrected proof}{160}{subsection.4.25.2}%
+\contentsline {section}{\numberline {4.26}Injection}{161}{section.4.26}%
+\contentsline {subsection}{\numberline {4.26.1}Error classification}{162}{subsection.4.26.1}%
+\contentsline {subsubsection}{Error codes}{162}{section*.52}%
+\contentsline {subsection}{\numberline {4.26.2}Corrected proof}{163}{subsection.4.26.2}%
+\contentsline {chapter}{\numberline {5}Linear Algebra}{165}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Skew-Symmetric Matrices}{166}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Error classification}{167}{subsection.5.1.1}%
+\contentsline {subsubsection}{Error codes}{167}{section*.53}%
+\contentsline {subsection}{\numberline {5.1.2}Corrected proof}{168}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Intersection of Subspaces}{169}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Error classification}{170}{subsection.5.2.1}%
+\contentsline {subsubsection}{Error codes}{170}{section*.54}%
+\contentsline {subsection}{\numberline {5.2.2}Corrected proof}{171}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Sum of Subspaces}{172}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Error classification}{173}{subsection.5.3.1}%
+\contentsline {subsubsection}{Error codes}{173}{section*.55}%
+\contentsline {subsection}{\numberline {5.3.2}Corrected proof}{174}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Subspaces and Nullspace}{175}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Error classification}{176}{subsection.5.4.1}%
+\contentsline {subsubsection}{Error codes}{176}{section*.56}%
+\contentsline {subsection}{\numberline {5.4.2}Corrected proof}{177}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Linear Independence}{178}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Error classification}{179}{subsection.5.5.1}%
+\contentsline {subsubsection}{Error codes}{179}{section*.57}%
+\contentsline {subsection}{\numberline {5.5.2}Corrected proof}{180}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Linear Independence of Subsets}{181}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Error classification}{182}{subsection.5.6.1}%
+\contentsline {subsubsection}{Error codes}{182}{section*.58}%
+\contentsline {subsection}{\numberline {5.6.2}Corrected proof}{183}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Uniqueness of Basis Representation}{184}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Error classification}{185}{subsection.5.7.1}%
+\contentsline {subsubsection}{Error codes}{185}{section*.59}%
+\contentsline {subsection}{\numberline {5.7.2}Corrected proof}{186}{subsection.5.7.2}%
+\contentsline {section}{\numberline {5.8}Orthogonality and Linear Independence}{187}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Error classification}{188}{subsection.5.8.1}%
+\contentsline {subsubsection}{Error codes}{188}{section*.60}%
+\contentsline {subsection}{\numberline {5.8.2}Corrected proof}{189}{subsection.5.8.2}%
+\contentsline {section}{\numberline {5.9}Similar Matrices}{190}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Error classification}{191}{subsection.5.9.1}%
+\contentsline {subsubsection}{Error codes}{191}{section*.61}%
+\contentsline {subsection}{\numberline {5.9.2}Corrected proof}{192}{subsection.5.9.2}%
+\contentsline {section}{\numberline {5.10}Column Space}{193}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Error classification}{194}{subsection.5.10.1}%
+\contentsline {subsubsection}{Error codes}{194}{section*.62}%
+\contentsline {subsection}{\numberline {5.10.2}Corrected proof}{195}{subsection.5.10.2}%
+\contentsline {section}{\numberline {5.11}Properties of Column Space}{196}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Error classification}{197}{subsection.5.11.1}%
+\contentsline {subsubsection}{Error codes}{197}{section*.63}%
+\contentsline {subsection}{\numberline {5.11.2}Corrected proof}{198}{subsection.5.11.2}%
+\contentsline {section}{\numberline {5.12}Definition of a Vector space}{199}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Error classification}{203}{subsection.5.12.1}%
+\contentsline {subsubsection}{Error codes}{203}{section*.64}%
+\contentsline {subsection}{\numberline {5.12.2}Corrected proof}{204}{subsection.5.12.2}%
+\contentsline {section}{\numberline {5.13}Definition of a Subspace}{208}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Error classification}{209}{subsection.5.13.1}%
+\contentsline {subsubsection}{Error codes}{209}{section*.65}%
+\contentsline {subsection}{\numberline {5.13.2}Corrected proof}{210}{subsection.5.13.2}%
+\contentsline {section}{\numberline {5.14}Span}{211}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Error classification}{212}{subsection.5.14.1}%
+\contentsline {subsubsection}{Error codes}{212}{section*.66}%
+\contentsline {subsection}{\numberline {5.14.2}Corrected proof}{213}{subsection.5.14.2}%
+\contentsline {section}{\numberline {5.15}Zero is in the Span}{214}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Error classification}{215}{subsection.5.15.1}%
+\contentsline {subsubsection}{Error codes}{215}{section*.67}%
+\contentsline {subsection}{\numberline {5.15.2}Corrected proof}{216}{subsection.5.15.2}%
+\contentsline {section}{\numberline {5.16}Basis of a Polynomial Space }{217}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Error classification}{218}{subsection.5.16.1}%
+\contentsline {subsubsection}{Error codes}{218}{section*.68}%
+\contentsline {subsection}{\numberline {5.16.2}Corrected proof}{219}{subsection.5.16.2}%
+\contentsline {section}{\numberline {5.17}Basis}{220}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Error classification}{221}{subsection.5.17.1}%
+\contentsline {subsubsection}{Error codes}{221}{section*.69}%
+\contentsline {subsection}{\numberline {5.17.2}Corrected proof}{222}{subsection.5.17.2}%
+\contentsline {section}{\numberline {5.18}Linear Transformations and Matrices}{223}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Error classification}{224}{subsection.5.18.1}%
+\contentsline {subsubsection}{Error codes}{224}{section*.70}%
+\contentsline {subsection}{\numberline {5.18.2}Corrected proof}{225}{subsection.5.18.2}%
+\contentsline {section}{\numberline {5.19}Linear Transformations}{226}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Error classification}{227}{subsection.5.19.1}%
+\contentsline {subsubsection}{Error codes}{227}{section*.71}%
+\contentsline {subsection}{\numberline {5.19.2}Corrected proof}{228}{subsection.5.19.2}%
+\contentsline {section}{\numberline {5.20}Linear Maps on Complex Vector Spaces}{229}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Error classification}{230}{subsection.5.20.1}%
+\contentsline {subsubsection}{Error codes}{230}{section*.72}%
+\contentsline {subsection}{\numberline {5.20.2}Corrected proof}{231}{subsection.5.20.2}%
+\contentsline {section}{\numberline {5.21}One-to-One and Onto}{232}{section.5.21}%
+\contentsline {subsection}{\numberline {5.21.1}Error classification}{233}{subsection.5.21.1}%
+\contentsline {subsubsection}{Error codes}{233}{section*.73}%
+\contentsline {subsection}{\numberline {5.21.2}Corrected proof}{234}{subsection.5.21.2}%
+\contentsline {section}{\numberline {5.22}Composition of Linear Transformations}{235}{section.5.22}%
+\contentsline {subsection}{\numberline {5.22.1}Error classification}{236}{subsection.5.22.1}%
+\contentsline {subsubsection}{Error codes}{236}{section*.74}%
+\contentsline {subsection}{\numberline {5.22.2}Corrected proof}{237}{subsection.5.22.2}%
+\contentsline {section}{\numberline {5.23}Isomorphism of a Linear Transformation}{238}{section.5.23}%
+\contentsline {subsection}{\numberline {5.23.1}Error classification}{239}{subsection.5.23.1}%
+\contentsline {subsubsection}{Error codes}{239}{section*.75}%
+\contentsline {subsection}{\numberline {5.23.2}Corrected proof}{240}{subsection.5.23.2}%
+\contentsline {section}{\numberline {5.24}Inverse Linear Transformation}{241}{section.5.24}%
+\contentsline {subsection}{\numberline {5.24.1}Error classification}{242}{subsection.5.24.1}%
+\contentsline {subsubsection}{Error codes}{242}{section*.76}%
+\contentsline {subsection}{\numberline {5.24.2}Corrected proof}{243}{subsection.5.24.2}%
+\contentsline {section}{\numberline {5.25}Orthogonal Sets}{244}{section.5.25}%
+\contentsline {subsection}{\numberline {5.25.1}Error classification}{245}{subsection.5.25.1}%
+\contentsline {subsubsection}{Error codes}{245}{section*.77}%
+\contentsline {subsection}{\numberline {5.25.2}Corrected proof}{246}{subsection.5.25.2}%
+\contentsline {section}{\numberline {5.26}Gram-Schmidt Procedure in a Polynomial Space}{247}{section.5.26}%
+\contentsline {subsection}{\numberline {5.26.1}Error classification}{250}{subsection.5.26.1}%
+\contentsline {subsubsection}{Error codes}{250}{section*.78}%
+\contentsline {subsection}{\numberline {5.26.2}Corrected proof}{251}{subsection.5.26.2}%
+\contentsline {section}{\numberline {5.27}Orthogonal Matrices}{253}{section.5.27}%
+\contentsline {subsection}{\numberline {5.27.1}Error classification}{254}{subsection.5.27.1}%
+\contentsline {subsubsection}{Error codes}{254}{section*.79}%
+\contentsline {subsection}{\numberline {5.27.2}Corrected proof}{255}{subsection.5.27.2}%
+\contentsline {section}{\numberline {5.28}Orthogonal Diagonalization}{256}{section.5.28}%
+\contentsline {subsection}{\numberline {5.28.1}Error classification}{258}{subsection.5.28.1}%
+\contentsline {subsubsection}{Error codes}{258}{section*.80}%
+\contentsline {subsection}{\numberline {5.28.2}Corrected proof}{259}{subsection.5.28.2}%
+\contentsline {section}{\numberline {5.29}Change of Basis Computation}{261}{section.5.29}%
+\contentsline {subsection}{\numberline {5.29.1}Error classification}{263}{subsection.5.29.1}%
+\contentsline {subsubsection}{Error codes}{263}{section*.81}%
+\contentsline {subsection}{\numberline {5.29.2}Corrected proof}{264}{subsection.5.29.2}%
+\contentsline {chapter}{\numberline {6}Advanced Topics}{265}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Well-Ordering Principle}{266}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Error classification}{267}{subsection.6.1.1}%
+\contentsline {subsubsection}{Error codes}{267}{section*.82}%
+\contentsline {subsection}{\numberline {6.1.2}Corrected proof}{268}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Conjugation Identities}{269}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Error classification}{270}{subsection.6.2.1}%
+\contentsline {subsubsection}{Error codes}{270}{section*.83}%
+\contentsline {subsection}{\numberline {6.2.2}Corrected proof}{271}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Conjugation of a Complex Polynomial}{272}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Error classification}{273}{subsection.6.3.1}%
+\contentsline {subsubsection}{Error codes}{273}{section*.84}%
+\contentsline {subsection}{\numberline {6.3.2}Corrected proof}{274}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Factoring Complex Polynomials}{275}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Error classification}{276}{subsection.6.4.1}%
+\contentsline {subsubsection}{Error codes}{276}{section*.85}%
+\contentsline {subsection}{\numberline {6.4.2}Corrected proof}{277}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Complex Trigonometric Functions}{278}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Error classification}{279}{subsection.6.5.1}%
+\contentsline {subsubsection}{Error codes}{279}{section*.86}%
+\contentsline {subsection}{\numberline {6.5.2}Corrected proof}{280}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Definition of an Infinite Limit}{281}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Error classification}{282}{subsection.6.6.1}%
+\contentsline {subsubsection}{Error codes}{282}{section*.87}%
+\contentsline {subsection}{\numberline {6.6.2}Corrected proof}{283}{subsection.6.6.2}%
+\contentsline {section}{\numberline {6.7}Convergent Sequences: Unique Limit}{284}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Error classification}{285}{subsection.6.7.1}%
+\contentsline {subsubsection}{Error codes}{285}{section*.88}%
+\contentsline {subsection}{\numberline {6.7.2}Corrected proof}{286}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.8}Convergent Sequences: Bounded}{287}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Error classification}{288}{subsection.6.8.1}%
+\contentsline {subsubsection}{Error codes}{288}{section*.89}%
+\contentsline {subsection}{\numberline {6.8.2}Corrected proof}{289}{subsection.6.8.2}%
+\contentsline {section}{\numberline {6.9}Equivalence Classes of Real Numbers}{290}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Error classification}{291}{subsection.6.9.1}%
+\contentsline {subsubsection}{Error codes}{291}{section*.90}%
+\contentsline {subsection}{\numberline {6.9.2}Corrected proof}{292}{subsection.6.9.2}%
+\contentsline {section}{\numberline {6.10}Convergent Sequences are Cauchy}{293}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Error classification}{294}{subsection.6.10.1}%
+\contentsline {subsubsection}{Error codes}{294}{section*.91}%
+\contentsline {subsection}{\numberline {6.10.2}Corrected proof}{295}{subsection.6.10.2}%
+\contentsline {section}{\numberline {6.11}Cauchy Sequences}{296}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Error classification}{297}{subsection.6.11.1}%
+\contentsline {subsubsection}{Error codes}{297}{section*.92}%
+\contentsline {subsection}{\numberline {6.11.2}Corrected proof}{298}{subsection.6.11.2}%
+\contentsline {section}{\numberline {6.12}Interior and Boundary of a Subset of $\mathbb {R}$}{299}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Error classification}{300}{subsection.6.12.1}%
+\contentsline {subsubsection}{Error codes}{300}{section*.93}%
+\contentsline {subsection}{\numberline {6.12.2}Corrected proof}{301}{subsection.6.12.2}%
+\contentsline {section}{\numberline {6.13}Compactness}{302}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Error classification}{303}{subsection.6.13.1}%
+\contentsline {subsubsection}{Error codes}{303}{section*.94}%
+\contentsline {subsection}{\numberline {6.13.2}Corrected proof}{304}{subsection.6.13.2}%
+\contentsline {section}{\numberline {6.14}Least Upper Bounds}{305}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Error classification}{306}{subsection.6.14.1}%
+\contentsline {subsubsection}{Error codes}{306}{section*.95}%
+\contentsline {subsection}{\numberline {6.14.2}Corrected proof}{307}{subsection.6.14.2}%
+\contentsline {section}{\numberline {6.15}Gaussian Integers}{308}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Error classification}{309}{subsection.6.15.1}%
+\contentsline {subsubsection}{Error codes}{309}{section*.96}%
+\contentsline {subsection}{\numberline {6.15.2}Corrected proof}{310}{subsection.6.15.2}%
+\contentsline {section}{\numberline {6.16}Primitive Roots of Unity}{311}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Error classification}{312}{subsection.6.16.1}%
+\contentsline {subsubsection}{Error codes}{312}{section*.97}%
+\contentsline {subsection}{\numberline {6.16.2}Corrected proof}{313}{subsection.6.16.2}%
+\contentsline {section}{\numberline {6.17}Fundamental Theorem of Algebra}{314}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Error classification}{315}{subsection.6.17.1}%
+\contentsline {subsubsection}{Error codes}{315}{section*.98}%
+\contentsline {subsection}{\numberline {6.17.2}Corrected proof}{316}{subsection.6.17.2}%
+\contentsline {section}{\numberline {6.18}Ring Theory}{317}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Error classification}{318}{subsection.6.18.1}%
+\contentsline {subsubsection}{Error codes}{318}{section*.99}%
+\contentsline {subsection}{\numberline {6.18.2}Corrected proof}{319}{subsection.6.18.2}%
+\contentsline {part}{II\hspace {1em}Additional Resources}{321}{part.2}%
+\contentsline {chapter}{\numberline {7}Activities and Assessments}{323}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Online Discussion Board Activity}{324}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Peer Evaluation Activity}{325}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Proof-Writing Reflection}{326}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Rubrics and Resources}{329}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The Proof Writing Handbook}{330}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Peer-Evaluation Rubrics}{331}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Summative Rubrics}{336}{section.8.3}%
+\contentsline {chapter}{Bibliography}{341}{section.8.3}%

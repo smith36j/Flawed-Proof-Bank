@@ -1,0 +1,16 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{Selden_2003}
+Annie Selden and John Selden, \emph{Validations of proofs considered as texts: Can undergraduates tell whether an argument proves a theorem?}, Journal for Research in Mathematics Education \textbf{34} (2003), no.~1, 4--36.
+
+\bibitem{Strickland_2016}
+S.~Strickland and B.~Rand, \emph{A framework for identifying and classifying undergraduate student proof errors}, PRIMUS \textbf{26} (2016), no.~10, 905--921.
+
+\end{thebibliography}

@@ -1,0 +1,144 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/Jerrod/Documents/GitHub/Flawed-Proof-Bank/.texpadtmp/main.aux
+A level-1 auxiliary file: Error/section-error-classification.aux
+A level-1 auxiliary file: Elementary/inequality_converse_contrapositive.aux
+A level-1 auxiliary file: Elementary/basic_divisibility.aux
+A level-1 auxiliary file: Elementary/contraconv.aux
+A level-1 auxiliary file: Elementary/negevenint.aux
+A level-1 auxiliary file: Elementary/intaddfrac.aux
+A level-1 auxiliary file: Elementary/divisibility_sum.aux
+A level-1 auxiliary file: Elementary/divmodarith.aux
+A level-1 auxiliary file: Elementary/contra_parity.aux
+A level-1 auxiliary file: Elementary/direct_mod.aux
+A level-1 auxiliary file: Elementary/gcd_multiple.aux
+A level-1 auxiliary file: Elementary/parityproperty.aux
+A level-1 auxiliary file: Elementary/infinite_primes.aux
+A level-1 auxiliary file: Induction/ind-div-hyp-fa.aux
+A level-1 auxiliary file: Induction/sum_induction.aux
+A level-1 auxiliary file: Induction/binary.aux
+A level-1 auxiliary file: Induction/inequality_induction.aux
+A level-1 auxiliary file: Induction/induction_multiple_base_cases.aux
+A level-1 auxiliary file: Induction/pascal_induction.aux
+A level-1 auxiliary file: Induction/wop_induction.aux
+A level-1 auxiliary file: Induction/recursive_induction.aux
+A level-1 auxiliary file: Induction/sequence_induction.aux
+A level-1 auxiliary file: Discrete/demorgans.aux
+A level-1 auxiliary file: Discrete/equal_sets.aux
+A level-1 auxiliary file: Discrete/powerset_subset.aux
+A level-1 auxiliary file: Discrete/powerset_subsetagain.aux
+A level-1 auxiliary file: Discrete/set_containment.aux
+A level-1 auxiliary file: Discrete/null_contradiction_sets.aux
+A level-1 auxiliary file: Discrete/injective_comp.aux
+A level-1 auxiliary file: Discrete/divisors_injection_surjection.aux
+A level-1 auxiliary file: Discrete/injective_onto_image.aux
+A level-1 auxiliary file: Discrete/cart_product.aux
+A level-1 auxiliary file: Discrete/cart_product_again.aux
+A level-1 auxiliary file: Discrete/almost_rational.aux
+A level-1 auxiliary file: Discrete/rat_from_int.aux
+A level-1 auxiliary file: Discrete/counting_subsets.aux
+A level-1 auxiliary file: Discrete/card_combo.aux
+A level-1 auxiliary file: Discrete/condish_coins.aux
+A level-1 auxiliary file: Discrete/onetoone_notonto.aux
+A level-1 auxiliary file: Discrete/matrix_graf.aux
+A level-1 auxiliary file: Discrete/cong_add_mult.aux
+A level-1 auxiliary file: Discrete/bayes_proof.aux
+A level-1 auxiliary file: Discrete/z_to_n.aux
+A level-1 auxiliary file: Discrete/lessthan.aux
+A level-1 auxiliary file: Discrete/equiv_mod.aux
+A level-1 auxiliary file: Discrete/set_containment_subtle.aux
+A level-1 auxiliary file: Discrete/surjection_backwards.aux
+A level-1 auxiliary file: Discrete/injection_subtle.aux
+A level-1 auxiliary file: Linear_Algebra/skewsym.aux
+A level-1 auxiliary file: Linear_Algebra/intersect_subspaces.aux
+A level-1 auxiliary file: Linear_Algebra/sumsubspaces.aux
+A level-1 auxiliary file: Linear_Algebra/lin_sub_v1.aux
+A level-1 auxiliary file: Linear_Algebra/lin-ind-col-sp.aux
+A level-1 auxiliary file: Linear_Algebra/lin_ind_subset.aux
+A level-1 auxiliary file: Linear_Algebra/uniqueness_basis_rep.aux
+A level-1 auxiliary file: Linear_Algebra/orthogindependence.aux
+A level-1 auxiliary file: Linear_Algebra/similar_matrices_eigenvalues.aux
+A level-1 auxiliary file: Linear_Algebra/column_space_containment.aux
+A level-1 auxiliary file: Linear_Algebra/columnsspace_invert.aux
+A level-1 auxiliary file: Linear_Algebra/mult_add_vectorspace.aux
+A level-1 auxiliary file: Linear_Algebra/polynomial_subspace.aux
+A level-1 auxiliary file: Linear_Algebra/span_minimal_subspace.aux
+A level-1 auxiliary file: Linear_Algebra/0inspan.aux
+A level-1 auxiliary file: Linear_Algebra/basis_span_poly.aux
+A level-1 auxiliary file: Linear_Algebra/basis_polynomial_space.aux
+A level-1 auxiliary file: Linear_Algebra/matrices_linear.aux
+A level-1 auxiliary file: Linear_Algebra/lin_op_trace.aux
+A level-1 auxiliary file: Linear_Algebra/scalar_op.aux
+A level-1 auxiliary file: Linear_Algebra/one_to_one_and_onto.aux
+A level-1 auxiliary file: Linear_Algebra/comp_lin_trans.aux
+A level-1 auxiliary file: Linear_Algebra/iso_trans.aux
+A level-1 auxiliary file: Linear_Algebra/compose_inverses.aux
+A level-1 auxiliary file: Linear_Algebra/ortho_intersect.aux
+A level-1 auxiliary file: Linear_Algebra/gram_sch_poly.aux
+A level-1 auxiliary file: Linear_Algebra/ortho_inverses.aux
+A level-1 auxiliary file: Linear_Algebra/ortho_diag.aux
+A level-1 auxiliary file: Linear_Algebra/change_of_basis.aux
+A level-1 auxiliary file: Advanced/prime_product_well_ordering.aux
+A level-1 auxiliary file: Advanced/conj_identities.aux
+A level-1 auxiliary file: Advanced/conj_complex_poly.aux
+A level-1 auxiliary file: Advanced/factor_complex_poly.aux
+A level-1 auxiliary file: Advanced/sin_sinh.aux
+A level-1 auxiliary file: Advanced/root_limit.aux
+A level-1 auxiliary file: Advanced/unique_limit.aux
+A level-1 auxiliary file: Advanced/bounded_seq.aux
+A level-1 auxiliary file: Advanced/equiv_class_reals.aux
+A level-1 auxiliary file: Advanced/conv_cauchy.aux
+A level-1 auxiliary file: Advanced/almost_real.aux
+A level-1 auxiliary file: Advanced/int_bound_R.aux
+A level-1 auxiliary file: Advanced/compact_subset.aux
+A level-1 auxiliary file: Advanced/Q_notcomplete.aux
+A level-1 auxiliary file: Advanced/gaussian_integers.aux
+A level-1 auxiliary file: Advanced/primitive_roots.aux
+A level-1 auxiliary file: Advanced/ftoa.aux
+A level-1 auxiliary file: Advanced/rings.aux
+A level-1 auxiliary file: Activity/discussion_board_1.aux
+A level-1 auxiliary file: Activity/discussion_board_2.aux
+A level-1 auxiliary file: Activity/reflection.aux
+The style file: amsplain.bst
+Database file #1: ../sotl.bib
+You've used 2 entries,
+            2213 wiz_defined-function locations,
+            616 strings with 7359 characters,
+and the built_in function-call counts, 663 in all, are:
+= -- 61
+> -- 26
+< -- 0
++ -- 11
+- -- 8
+* -- 61
+:= -- 110
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 22
+empty$ -- 54
+format.name$ -- 8
+if$ -- 129
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 4
+newline$ -- 16
+num.names$ -- 4
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 52
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 8
+width$ -- 3
+write$ -- 27
