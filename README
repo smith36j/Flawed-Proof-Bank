@@ -1,8 +1,20 @@
 A Resource Bank for Writing Intensive Mathematics Courses
 
-Visit http://proof.ucalgaryblogs.ca for a project description (this link broken as of November 2023, working on fixing it or finding a new location as of April 2024).
+Current version is: Flawed_Proof_Resource_04_2024(Bagshaw_DeDieu_Golubeva_Smith)
 
-Contant jerrod.smith@ucalgary.ca or lauren.dedieu@ucalgary.ca
+The resources in the first part of this document consist of:
+
+1. sample flawed proofs,
+2. classifications and brief explanations of the major errors in each flawed proof, and
+3. ‘corrected’1 versions of the proofs.
+
+The flawed proofs are based on real errors observed in course artifacts collected from student participants. These resources are largely intended as prompts for discussion activities. We recommend that learners first engage with the flawed proof (with or with-out access to the corrected proof) and attempt to identify and correct the errors. Learners should then discuss their findings with peers, compare how they would correct the proof, and perhaps discuss how they would evaluate or assess the proof with a rubric. Of course, learners could also use this resource individually to practice reading, understanding, and correcting flawed mathematical writing.
+
+In the second part of this document, we’ve included sample activities and assessments, and sample rubrics or self- and peer-evaluation activities.
+
+Visit https://github.com/smith36j/Flawed-Proof-Bank/ for access to a PDF file of the resource bank. The file "main.tex" will compile when all subdirectories in this repository are downloaded (these folders contain the individual item sources files).
+
+Contact lauren.dedieu@ucalgary.ca or jerrod.smith@ucalgary.ca.
 
 This work was financially supported by a grant from the Taylor Institute for Teaching and Learning at the University of Calgary.
 
